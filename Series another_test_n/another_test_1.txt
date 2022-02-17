@@ -1,0 +1,131 @@
+
+# SELECTED (* WR >90%)
+MultiOffsetLamboV0*
+BB_RPB_TSL*
+BB_RPB_TSL_BI*
+GodStraNew_SMAonly*
+NASOSv5_mod3*
+NFIX_BB_RPB*
+
+BinHV45
+VWAP
+BinClucMadSMADevelop
+CombinedBinHClucAndMADV6
+CombinedBinHAndClucV8XH
+CombinedBinHAndClucV8
+Combined_NFIv7_SMA
+Combined_NFIv6_SMA
+NFI46OffsetHOA1
+NFI46Offset
+
+
+
+# POTENTIEL
+MACDStrategy_crossed
+Miku_PP_v3
+new_turtle
+
+
+
+
+
+
+# config-bt-4--days90 (sur oracle)
+docker-compose run --rm freqtrade backtesting --timerange=20221109-20220209 --config user_data/config-bt-4.json --strategy NostalgiaForInfinityX
+P	ADP	WR	ADT	MOT	DD	SL	UCSL	RSL	USL	TSL	USS	ROI	IRIBS	PAE	notes
+
+docker-compose run --rm freqtrade backtesting --timerange=20220101-20220209 --config user_data/config-bt-4.json --timeframe 5m --strategy-list
+
+# config-bt-4--days30
+docker-compose run --rm freqtrade backtesting --config user_data/config-bt-4.json --strategy NostalgiaForInfinityX
+docker-compose run --rm freqtrade backtesting --timerange=20220101-20220209 --config user_data/config-bt-4.json --strategy NostalgiaForInfinityX
+P	ADP	WR	ADT	MOT	DD	SL	UCSL	RSL	USL	TSL	USS	ROI	IRIBS	PAE	notes					notesi!
+
+
+
+
+# config-bt-4--days147 (--timerange=20210911-20220205) (4.9 mois)
+docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4.json --strategy NostalgiaForInfinityX
+P	ADP	WR	ADT	MOT	DD	SL	UCSL	RSL	USL	TSL	USS	ROI	IRIBS	notes
+
+# config-bt-4-BINANCE --days147 (--timerange=20210911-20220205) (4.9 mois)
+docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4-binance.json --strategy NostalgiaForInfinityX
+P	ADP	WR	ADT	MOT	DD	SL	UCSL	RSL	USL	TSL	USS	ROI	IRIBS	PAE	notes
+
+
+# conclusion
+
+
+# config-bt-4--days30
+WR mini 80%
+
+
+#21
+2022-01-01 00:00:00 -> 2022-02-09 00:00:00 | Max open trades : 5
+============================================================================= STRATEGY SUMMARY ============================================================================
+|              Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |             Drawdown |
+|-----------------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------+----------------------|
+|           NFIX_BB_RPB |     58 |           2.37 |         137.63 |           310.227 |          31.02 |        3:35:00 |    56     0     2  96.6 |  10.175 USDT   0.86% |?
+
+
+#20
+2022-01-01 00:00:00 -> 2022-02-09 00:00:00 | Max open trades : 5
+========================================================================== STRATEGY SUMMARY =========================================================================
+|        Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |             Drawdown |
+|-----------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------+----------------------|
+
+| NFI46OffsetHOA1 |    222 |           0.55 |         121.67 |           263.278 |          26.33 |        1:16:00 |   181     0    41  81.5 | 110.713 USDT   9.04% |
+|     NFI46Offset |    196 |           0.69 |         134.94 |           296.905 |          29.69 |        1:16:00 |   167     0    29  85.2 |  86.761 USDT   7.08% |
+=====================================================================================================================================================================
+#19
+2022-01-01 00:00:00 -> 2022-02-09 00:00:00 | Max open trades : 5
+========================================================================== STRATEGY SUMMARY ==========================================================================
+|         Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |             Drawdown |
+|------------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------+----------------------|
+|     NASOSv5_mod3 |    133 |           2.19 |         290.88 |           762.510 |          76.25 |       11:36:00 |   122     0    11  91.7 | 172.939 USDT   8.94% |
+|     NASOSv5_mod2 |     53 |           2.52 |         133.32 |           300.921 |          30.09 |       11:43:00 |    49     0     4  92.5 |  80.882 USDT   5.97% |
+|     NASOSv5_mod1 |    123 |           1.55 |         190.86 |           434.580 |          43.46 |        9:22:00 |   112     0    11  91.1 | 169.152 USDT  14.17% |
+
+|                  Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |             Drawdown |
+|---------------------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------+----------------------|
+|                Miku_PP_v3 |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |   0.000 USDT   0.00% |
+
+|             Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |      Avg Duration |   Win  Draw  Loss  Win% |             Drawdown |
+|----------------------+--------+----------------+----------------+-------------------+----------------+-------------------+-------------------------+----------------------|
+
+| MACDStrategy_crossed |    197 |          -0.70 |        -137.26 |          -288.941 |         -28.89 |          20:07:00 |   177     0    20  89.8 | 436.705 USDT  40.76% |
+
+|               Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |     Avg Duration |   Win  Draw  Loss  Win% |             Drawdown |
+|------------------------+--------+----------------+----------------+-------------------+----------------+------------------+-------------------------+----------------------|
+|     GodStraNew_SMAonly |     25 |           5.27 |         131.82 |           288.469 |          28.85 |          5:01:00 |    22     3     0   100 |   0.000 USDT   0.00% |
+
+|            Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |    Avg Duration |   Win  Draw  Loss  Win% |             Drawdown |
+|---------------------+--------+----------------+----------------+-------------------+----------------+-----------------+-------------------------+----------------------|
+|  Combined_NFIv7_SMA |    147 |           0.80 |         117.33 |           247.042 |          24.70 |         4:12:00 |   123     0    24  83.7 | 183.732 USDT  14.44% |
+|  Combined_NFIv6_SMA |    133 |           0.95 |         126.53 |           262.039 |          26.20 |         3:50:00 |   110     0    23  82.7 | 113.376 USDT   9.17% |
+
+|                   Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |             Drawdown |
+|----------------------------+--------+---------------+----------------+-------------------+----------------+----------------+-------------------------+----------------------|!
+|   CombinedBinHClucAndMADV6 |    165 |           0.53 |          87.50 |           185.429 |          18.54 |        1:21:00 |   138     0    27  83.6 |  53.153 USDT   4.87% |
+|    CombinedBinHAndClucV8XH |     73 |           0.70 |          51.30 |           103.108 |          10.31 |        2:22:00 |    63     0    10  86.3 |  67.299 USDT   6.45% |
+|      CombinedBinHAndClucV8 |    133 |           0.93 |         123.94 |           271.258 |          27.13 |        2:28:00 |   115     0    18  86.5 |  74.614 USDT   6.45% |
+
+|             Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |             Drawdown |
+|----------------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------+----------------------|
+| BinClucMadSMADevelop |    122 |           1.25 |         152.11 |           344.473 |          34.45 |        1:30:00 |   104     8    10  85.2 |  71.577 USDT   5.49% |
+
+|           Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |              Drawdown |
+|--------------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------+-----------------------|
+|      BB_RPB_TSL_BI |     92 |           1.79 |         164.75 |           379.216 |          37.92 |        2:57:00 |    83     0     9  90.2 |   96.751 USDT   7.01% |
+|         BB_RPB_TSL |    115 |           1.29 |         148.72 |           330.840 |          33.08 |        2:29:00 |   106     0     9  92.2 |  109.484 USDT   8.43% |
+
+|      Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |             Drawdown |
+|---------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------+----------------------|
+|          VWAP |    150 |          -0.18 |         -26.28 |           -78.586 |          -7.86 |        4:11:00 |   131     0    19  87.3 | 301.946 USDT  28.46% |
+
+|           Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |             Drawdown |
+|--------------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------+----------------------|
+| MultiOffsetLamboV0 |     54 |           0.30 |          16.32 |            29.337 |           2.93 |        0:55:00 |    49     0     5  90.7 |  65.186 USDT   6.22% |
+|            BinHV45 |    652 |           0.15 |         100.22 |           199.584 |          19.96 |        1:35:00 |   541     0   111  83.0 | 218.872 USDT  18.10% |
+
+

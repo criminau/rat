@@ -1,0 +1,37 @@
+
+edit 14/02/22
+
+# Result 
+she did profit. please check Series another_test_3b
+
+
+Trade ID: 3 (since 9 hours ago)
+Current Pair: SUPER/USDT
+Amount: 186.9466 (199.58429131 USDT)
+Buy Tag: local uptrend nfi 32 
+Open Rate: 1.06760000
+Current Rate: 1.03630000
+Current Profit: -3.13%
+Initial Stoploss: 0.01067600 (-99.00%)
+Stoploss: 0.87932410 (-13.14%)
+Stoploss distance: -0.15697590 (-15.15%)
+
+🔵 Kucoin: Buying SHILL/USDT (#5)
+Buy Tag: cofi 
+Amount: 797.01320000
+Open Rate: 0.25190000
+Current Rate: 0.25190000
+Total: (200.768 USDT, 177.238 EUR)
+
+
+Daily Profit over the last 7 days:
+Day         Profit USDT    Profit EUR    Trades
+----------  -------------  ------------  --------
+2022-02-17  5.977 USDT     5.276 EUR     1 trades
+2022-02-16  6.369 USDT     5.622 EUR     1 trades
+2022-02-15  0.000 USDT     0.000 EUR     0 trades
+2022-02-14  1.633 USDT     1.441 EUR     1 trades
+2022-02-13  0.000 USDT     0.000 EUR     0 trades
+2022-02-12  0.000 USDT     0.000 EUR     0 trades
+2022-02-11  0.000 USDT     0.000 EUR     0 trades
+

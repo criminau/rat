@@ -1,0 +1,34 @@
+
+edit 14/02/22
+
+# Result 
+she did profit. please check Series another_test_3b
+
+
+Daily Profit over the last 7 days:
+Day         Profit USDT    Profit EUR    Trades
+----------  -------------  ------------  --------
+2022-02-17  1.625 USDT     1.435 EUR     1 trades
+2022-02-16  3.455 USDT     3.051 EUR     8 trades
+2022-02-15  1.841 USDT     1.626 EUR     1 trades
+2022-02-14  9.882 USDT     8.726 EUR     7 trades
+2022-02-13  0.000 USDT     0.000 EUR     0 trades
+2022-02-12  0.000 USDT     0.000 EUR     0 trades
+2022-02-11  0.000 USDT     0.000 EUR     0 trades
+
+no active trade
+
+Mode: Dry-run
+Exchange: kucoin
+Stake per trade: unlimited USDT
+Max open Trades: 7
+Minimum ROI: {'0': 0.103, '3': 0.05, '5': 0.033, '61': 0.027, '125': 0.011, '292': 0.005}
+Ask strategy: 
+{"price_side": "bid", "use_order_book": false, "order_book_top": 1}
+Bid strategy: 
+{"price_side": "ask", "ask_last_balance": 0, "use_order_book": false, "order_book_top": 1, "check_depth_of_market": {"enabled": false, "bids_to_ask_delta": 1}}
+Stoploss: -0.99
+Position adjustment: Off
+Timeframe: 5m
+Strategy: ClucHAnix_hhll
+Current state: running

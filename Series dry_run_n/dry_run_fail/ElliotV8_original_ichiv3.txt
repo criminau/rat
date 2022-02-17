@@ -1,0 +1,1018 @@
+
+dry-run :
+ratcom3bot, [14.02.22 17:12]
+Daily Profit over the last 7 days:
+Day         Profit USDT    Profit EUR    Trades
+----------  -------------  ------------  ---------
+2022-02-14  -4.686 USDT    -4.152 EUR    1 trades
+2022-02-13  -36.387 USDT   -32.246 EUR   14 trades
+2022-02-12  -1.629 USDT    -1.444 EUR    4 trades
+2022-02-11  0.000 USDT     0.000 EUR     0 trades
+2022-02-10  0.000 USDT     0.000 EUR     0 trades
+2022-02-09  0.000 USDT     0.000 EUR     0 trades
+2022-02-08  0.000 USDT     0.000 EUR     0 trades
+
+
+
+a voir en dry-run mais pas la best des bests !
+
+le dry-run-3 est UN ECHEC.
+donc on configure le SL. les SL mangent les gains, littéralement. (3%?) ou monter le MOT. ça va pas résoudre le WR.
+
+elle sait pas ouvrir. NO DRY-RUN.
+rien ne prouve que le 60% WR va rester à 60% dans un bear market.
+
+
+# config-bt-4--days90
+docker-compose run --rm freqtrade backtesting --config user_data/config-bt-4.json --strategy ElliotV8_original_ichiv3
+P	ADP	WR	ADT	MOT	DD	SL	UCSL	RSL	USL	TSL	USS	ROI	
+459.58%	5.16%	76.8%	16.08	5	6.61%	-0.08	f	y	171	y	y	f
+380.15%	4.27%	81.8%	14.75	5	8.25%	-0.08	f	y	237	y	f	f
+234.77%	2.64%	72.7%	16.65	5	9.90%	-0.08	f	y	119	y	f	y
+274.3%	3.08%	73.6%	16.91	5	8.31%	-0.08	f	y	113	y	y	y
+28.24%	0.32%	66.2%	14.56	5	24.61%	-0.08	f	y	117	f	y	y
+349.49%	3.93%	76.8%	16.89	6	5.99%	-0.08	f	y	181	y	y	f	
+322.94%	3.63%	81.9%	15.76	6	7.65%	-0.08	f	y	251	y	f	f
+4.37%	0.05%	53.5%	21.24	6	19.45%	-0.03	f	y	789	f	y	y	
+17.48%	0.2%	60.3%	18.8	6	17.47%	-0.04	f	y	528	f	y	y	
+16.58%	0.19%	60.6%	19.55	9	11.43%	-0.04	f	y	543	f	y	y
+
+
+le ROI est a 100% WR sur un SL à 1%, idem pour USS. mais à perte.
+
+# config-bt-4--days30
+P	ADP	WR	ADT	MOT	DD	SL	UCSL	RSL	USL	TSL	USS	ROI
+100.34%	3.46%	81%	13.07	5	9.56%	-0.08	f	y	37	y	y	f
+96.42%	3.32%	84.2%	12.24	5	10.87%	-0.08	f	y	53	y	f	f
+66.90%	2.31%	73.8%	13.41	5	10.66%	-0.08	f	y	28	y	f	y
+66.69%	2.40%	75.2%	13.62	5	10.57%	-0.08	f	y	27+3	y	y	y
+28.9%	1%	68.1%	11.45	5	13.62%	-0.08	f	y	29+3	f	y	y
+89.38%	3.08%	81.5%	13.62	6	8.01%	-0.08	f	y	38+3	y	y	f	
+95.16%	3.11%	84.9%	13	6	9.11%	-0.08	f	y	53+3	y	f	f
+80.98%	2.79%	76.9%	14.66	6	8.42%	-0.05	f	y	95+3	y	f	f	
+
+
+# config-bt-4--days147 (--timerange=20210911-20220205) (4.9 mois)
+docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4.json --strategy ElliotV8_original_ichiv3
+P	ADP	WR	ADT	MOT	DD	SL	UCSL	RSL	USL	TSL	USS	ROI	notes
+3651.98%24.84%	77.6%	22.75	6	8.01%	-0.08	f	y	413	y	y	f	(INSANE, DANGEROUS)
+1862.78%12.67%	75.1%	23.37	6	9.04%	-0.08	f	y	295	y	y	y	(INSANE, need dry-run)
+
+
+# config-bt-4-BINANCE --days147 (--timerange=20210911-20220205) (4.9 mois)
+docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4-binance.json --strategy ElliotV8_original_ichiv3
+P	ADP	WR	ADT	MOT	DD	SL	UCSL	RSL	USL	TSL	USS	ROI	notes
+75.07%	0.51%	65.5%	8.88	6	16.67%	-0.08	f	y	5	y	y	y	deception (IRIBS?)
+85.17%	0.58%	65.8%	8.88	6	14.54%	-0.08	f	y	5	y	y	y	no IRIBS
+129.46%	0.88%	68.9%	8.76	6	16.33%	-0.08	f	y	5	y	y	f	sans uss (IRIBS!) CONFIRMED
+156.68%	1.07%	73%	8.61	6	18.60%	-0.08	f	y	5	y	f	f	no IRIBS
+96.62%	0.66%	73.3%	8.73	9	12.50%	-0.08	f	y	5	y	f	f	f
+
+# conclusion
+
+Plus il ya de volatilité et de paire + le WR ++, le DD --- le gain ++..
+
+USS baisse le DD car il ne joue pas sur le WR.
+Sinon sans USS, la strat joue sur le WR et le SL. Elle prend ses profits sur le TSL.
+
+lorsque l'on analyse le 147jours, il faut rester prudent. d'où les tests avec ROI.
+
+ELle aime un grand nombre de paire !! Elle est à son aise lorsqu'elle vends rapidement :
+
+1800/50 = 31.8
+3500/50 = 60
+75/2 = 37
+120/2 = 60
+Les USS casse le WR.
+
+
+# analyse
+-8% sur le SL. -> 19%.
+2.59% profit. -> 81%
+
+90 MOT6 USS
+sur 1503 trade.194+167 sont annulés par le USS. 960 TSL 181 SL 
+USS = -0% TSL = 2.5% aVG SL -8%
+
+90 MOT6
+1403 trades, 251SL + 1149TSL
+-8% sur le SL. -> 19%.
+2.59% profit. -> 81%
+
+USS protege des pertes qui baisse le DD. a utliser au début, durant 1 mois. Puis passer sans le DD. donc avec un WR de 80%.
+Ne pas toucher au SL.
+
+
+docker-compose run --rm freqtrade backtesting --config user_data/config-bt-4.json --strategy ElliotV8_original_ichiv3
+
+## stock
+
+"""
+    # ROI table:
+    minimal_roi = {
+        "0": 0.08,
+        "20": 0.04,
+        "40": 0.032,
+        "87": 0.016,
+        "201": 0,
+        "202": -1
+    }
+"""
+    minimal_roi = {"0": 10,}
+
+# config-bt-4--days90
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-11-13 09:20:00 |
+| Backtesting to         | 2022-02-10 09:30:00 |
+| Max open trades        | 9                   |
+|                        |                     |
+| Total/Daily Avg Trades | 1619 / 18.19        |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 2332.577 USDT       |
+| Absolute profit        | 1332.577 USDT       |
+| Total profit %         | 133.26%             |
+| Trades per day         | 18.19               |
+| Avg. daily profit %    | 1.50%               |
+| Avg. stake amount      | 168.893 USDT        |
+| Total trade volume     | 273437.124 USDT     |
+|                        |                     |
+| Best Pair              | ROSE/USDT 94.18%    |
+| Worst Pair             | ADS/USDT -32.55%    |
+| Best trade             | ROSE/USDT 7.99%     |
+| Worst trade            | RMRK/USDT -8.18%    |
+| Best day               | 111.669 USDT        |
+| Worst day              | -82.781 USDT        |
+| Days win/draw/lose     | 54 / 4 / 32         |
+| Avg. Duration Winners  | 0:49:00             |
+| Avg. Duration Loser    | 2:42:00             |
+| Rejected Buy signals   | 6254                |
+|                        |                     |
+| Min balance            | 982.201 USDT        |
+| Max balance            | 2482.175 USDT       |
+| Drawdown (Account)     | 6.03%               |
+| Drawdown               | 149.599 USDT        |
+| Drawdown high          | 1482.175 USDT       |
+| Drawdown low           | 1332.577 USDT       |
+| Drawdown Start         | 2022-02-07 20:00:00 |
+| Drawdown End           | 2022-02-10 03:05:00 |
+| Market change          | -27.01%             |
+================================================
+
+
+## ElliotV8_original_ichiv3 MOT 5 SL -0.08 TSL True USS True ROI False
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-11-13 09:20:00 |
+| Backtesting to         | 2022-02-10 09:30:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 1431 / 16.08        |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 5595.840 USDT       |
+| Absolute profit        | 4595.840 USDT       |
+| Total profit %         | 459.58%             |
+| Trades per day         | 16.08               |
+| Avg. daily profit %    | 5.16%               |
+| Avg. stake amount      | 455.638 USDT        |
+| Total trade volume     | 652017.634 USDT     |
+|                        |                     |
+| Best Pair              | ROSE/USDT 107.45%   |
+| Worst Pair             | ADS/USDT -18.70%    |
+| Best trade             | 1EARTH/USDT 13.75%  |
+| Worst trade            | RMRK/USDT -8.18%    |
+| Best day               | 529.800 USDT        |
+| Worst day              | -245.420 USDT       |
+| Days win/draw/lose     | 57 / 4 / 29         |
+| Avg. Duration Winners  | 1:11:00             |
+| Avg. Duration Loser    | 4:56:00             |
+| Rejected Buy signals   | 84779               |
+|                        |                     |
+| Min balance            | 973.337 USDT        |
+| Max balance            | 5927.024 USDT       |
+| Drawdown (Account)     | 6.61%               |
+| Drawdown               | 391.685 USDT        |
+| Drawdown high          | 4927.024 USDT       |
+| Drawdown low           | 4535.338 USDT       |
+| Drawdown Start         | 2022-02-08 03:50:00 |
+| Drawdown End           | 2022-02-09 12:45:00 |
+| Market change          | -27.01%             |
+================================================
+
+## ElliotV8_original_ichiv3 MOT 5 SL -0.08 TSL True USS False ROI False
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-11-13 09:20:00 |
+| Backtesting to         | 2022-02-10 09:30:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 1313 / 14.75        |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 4801.501 USDT       |
+| Absolute profit        | 3801.501 USDT       |
+| Total profit %         | 380.15%             |
+| Trades per day         | 14.75               |
+| Avg. daily profit %    | 4.27%               |
+| Avg. stake amount      | 397.784 USDT        |
+| Total trade volume     | 522290.664 USDT     |
+|                        |                     |
+| Best Pair              | QRDO/USDT 93.52%    |
+| Worst Pair             | ABBC/USDT -25.51%   |
+| Best trade             | 1EARTH/USDT 13.75%  |
+| Worst trade            | RMRK/USDT -8.18%    |
+| Best day               | 492.742 USDT        |
+| Worst day              | -317.494 USDT       |
+| Days win/draw/lose     | 55 / 4 / 31         |
+| Avg. Duration Winners  | 1:57:00             |
+| Avg. Duration Loser    | 7:50:00             |
+| Rejected Buy signals   | 145698              |
+|                        |                     |
+| Min balance            | 921.678 USDT        |
+| Max balance            | 5165.803 USDT       |
+| Drawdown (Account)     | 8.25%               |
+| Drawdown               | 425.958 USDT        |
+| Drawdown high          | 4165.803 USDT       |
+| Drawdown low           | 3739.845 USDT       |
+| Drawdown Start         | 2022-02-08 05:25:00 |
+| Drawdown End           | 2022-02-08 15:35:00 |
+| Market change          | -27.01%             |
+================================================
+
+## ElliotV8_original_ichiv3 MOT 5 SL -0.08 TSL True USS False ROI True
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-11-13 09:20:00 |
+| Backtesting to         | 2022-02-10 09:30:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 1482 / 16.65        |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 3347.705 USDT       |
+| Absolute profit        | 2347.705 USDT       |
+| Total profit %         | 234.77%             |
+| Trades per day         | 16.65               |
+| Avg. daily profit %    | 2.64%               |
+| Avg. stake amount      | 365.949 USDT        |
+| Total trade volume     | 542336.464 USDT     |
+|                        |                     |
+| Best Pair              | ROSE/USDT 80.14%    |
+| Worst Pair             | ADS/USDT -32.10%    |
+| Best trade             | ROSE/USDT 7.99%     |
+| Worst trade            | RMRK/USDT -8.18%    |
+| Best day               | 240.147 USDT        |
+| Worst day              | -190.604 USDT       |
+| Days win/draw/lose     | 51 / 4 / 35         |
+| Avg. Duration Winners  | 0:51:00             |
+| Avg. Duration Loser    | 2:49:00             |
+| Rejected Buy signals   | 50088               |
+|                        |                     |
+| Min balance            | 971.044 USDT        |
+| Max balance            | 3715.600 USDT       |
+| Drawdown (Account)     | 9.90%               |
+| Drawdown               | 367.896 USDT        |
+| Drawdown high          | 2715.600 USDT       |
+| Drawdown low           | 2347.705 USDT       |
+| Drawdown Start         | 2022-02-07 19:15:00 |
+| Drawdown End           | 2022-02-10 03:05:00 |
+| Market change          | -27.01%             |
+================================================
+
+## ElliotV8_original_ichiv3 MOT 5 SL -0.08 TSL True USS True ROI True
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-11-13 09:20:00 |
+| Backtesting to         | 2022-02-10 09:30:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 1505 / 16.91        |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 3743.009 USDT       |
+| Absolute profit        | 2743.009 USDT       |
+| Total profit %         | 274.30%             |
+| Trades per day         | 16.91               |
+| Avg. daily profit %    | 3.08%               |
+| Avg. stake amount      | 387.794 USDT        |
+| Total trade volume     | 583630.068 USDT     |
+|                        |                     |
+| Best Pair              | ROSE/USDT 99.90%    |
+| Worst Pair             | ADS/USDT -32.55%    |
+| Best trade             | ROSE/USDT 7.99%     |
+| Worst trade            | RMRK/USDT -8.18%    |
+| Best day               | 284.770 USDT        |
+| Worst day              | -181.242 USDT       |
+| Days win/draw/lose     | 53 / 4 / 33         |
+| Avg. Duration Winners  | 0:49:00             |
+| Avg. Duration Loser    | 2:41:00             |
+| Rejected Buy signals   | 47594               |
+|                        |                     |
+| Min balance            | 963.284 USDT        |
+| Max balance            | 4082.380 USDT       |
+| Drawdown (Account)     | 8.31%               |
+| Drawdown               | 339.372 USDT        |
+| Drawdown high          | 3082.380 USDT       |
+| Drawdown low           | 2743.009 USDT       |
+| Drawdown Start         | 2022-02-07 19:15:00 |
+| Drawdown End           | 2022-02-10 03:05:00 |
+| Market change          | -27.01%             |
+================================================
+
+## ElliotV8_original_ichiv3 MOT 5 SL -0.08 TSL False USS True ROI True
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-11-13 09:20:00 |
+| Backtesting to         | 2022-02-10 09:30:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 1296 / 14.56        |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 1282.419 USDT       |
+| Absolute profit        | 282.419 USDT        |
+| Total profit %         | 28.24%              |
+| Trades per day         | 14.56               |
+| Avg. daily profit %    | 0.32%               |
+| Avg. stake amount      | 211.206 USDT        |
+| Total trade volume     | 273722.534 USDT     |
+|                        |                     |
+| Best Pair              | QRDO/USDT 66.76%    |
+| Worst Pair             | 1EARTH/USDT -50.28% |
+| Best trade             | RMRK/USDT 7.99%     |
+| Worst trade            | ADS/USDT -8.20%     |
+| Best day               | 104.521 USDT        |
+| Worst day              | -146.385 USDT       |
+| Days win/draw/lose     | 43 / 4 / 43         |
+| Avg. Duration Winners  | 1:13:00             |
+| Avg. Duration Loser    | 2:44:00             |
+| Rejected Buy signals   | 59158               |
+|                        |                     |
+| Min balance            | 880.317 USDT        |
+| Max balance            | 1425.081 USDT       |
+| Drawdown (Account)     | 24.61%              |
+| Drawdown               | 287.335 USDT        |
+| Drawdown high          | 167.652 USDT        |
+| Drawdown low           | -119.683 USDT       |
+| Drawdown Start         | 2021-11-24 23:25:00 |
+| Drawdown End           | 2021-12-05 16:35:00 |
+| Market change          | -27.01%             |
+================================================
+
+# config-bt-4--days30
+## ElliotV8_original_ichiv3 MOT 5 SL -0.08 TSL True USS True ROI False
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2022-01-09 09:20:00 |
+| Backtesting to         | 2022-02-07 16:45:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 379 / 13.07         |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 2003.430 USDT       |
+| Absolute profit        | 1003.430 USDT       |
+| Total profit %         | 100.34%             |
+| Trades per day         | 13.07               |
+| Avg. daily profit %    | 3.46%               |
+| Avg. stake amount      | 254.801 USDT        |
+| Total trade volume     | 96569.499 USDT      |
+|                        |                     |
+| Best Pair              | 1EARTH/USDT 42.89%  |
+| Worst Pair             | ADS/USDT -17.43%    |
+| Best trade             | 1EARTH/USDT 8.66%   |
+| Worst trade            | 1EARTH/USDT -8.18%  |
+| Best day               | 179.050 USDT        |
+| Worst day              | -55.942 USDT        |
+| Days win/draw/lose     | 18 / 3 / 9          |
+| Avg. Duration Winners  | 1:24:00             |
+| Avg. Duration Loser    | 5:10:00             |
+| Rejected Buy signals   | 21651               |
+|                        |                     |
+| Min balance            | 992.587 USDT        |
+| Max balance            | 2007.391 USDT       |
+| Drawdown (Account)     | 9.56%               |
+| Drawdown               | 111.545 USDT        |
+| Drawdown high          | 166.694 USDT        |
+| Drawdown low           | 55.149 USDT         |
+| Drawdown Start         | 2022-01-16 23:15:00 |
+| Drawdown End           | 2022-01-22 21:05:00 |
+| Market change          | -9.13%              |
+================================================
+
+## ElliotV8_original_ichiv3 MOT 5 SL -0.08 TSL True USS False ROI False
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2022-01-09 09:20:00 |
+| Backtesting to         | 2022-02-07 16:45:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 355 / 12.24         |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 1964.241 USDT       |
+| Absolute profit        | 964.241 USDT        |
+| Total profit %         | 96.42%              |
+| Trades per day         | 12.24               |
+| Avg. daily profit %    | 3.32%               |
+| Avg. stake amount      | 246.734 USDT        |
+| Total trade volume     | 87590.493 USDT      |
+|                        |                     |
+| Best Pair              | 1EARTH/USDT 34.53%  |
+| Worst Pair             | ABBC/USDT -16.37%   |
+| Best trade             | 1EARTH/USDT 8.65%   |
+| Worst trade            | 1EARTH/USDT -8.18%  |
+| Best day               | 197.755 USDT        |
+| Worst day              | -71.072 USDT        |
+| Days win/draw/lose     | 19 / 3 / 8          |
+| Avg. Duration Winners  | 2:24:00             |
+| Avg. Duration Loser    | 9:01:00             |
+| Rejected Buy signals   | 36845               |
+|                        |                     |
+| Min balance            | 987.484 USDT        |
+| Max balance            | 1968.124 USDT       |
+| Drawdown (Account)     | 10.87%              |
+| Drawdown               | 121.127 USDT        |
+| Drawdown high          | 114.678 USDT        |
+| Drawdown low           | -6.449 USDT         |
+| Drawdown Start         | 2022-01-16 23:20:00 |
+| Drawdown End           | 2022-01-22 21:05:00 |
+| Market change          | -9.13%              |
+================================================
+
+## ElliotV8_original_ichiv3 MOT 5 SL -0.08 TSL True USS False ROI True
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2022-01-09 09:20:00 |
+| Backtesting to         | 2022-02-07 16:45:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 389 / 13.41         |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 1668.956 USDT       |
+| Absolute profit        | 668.956 USDT        |
+| Total profit %         | 66.90%              |
+| Trades per day         | 13.41               |
+| Avg. daily profit %    | 2.31%               |
+| Avg. stake amount      | 240.918 USDT        |
+| Total trade volume     | 93716.993 USDT      |
+|                        |                     |
+| Best Pair              | 1EARTH/USDT 49.37%  |
+| Worst Pair             | ADS/USDT -20.01%    |
+| Best trade             | 1EARTH/USDT 7.99%   |
+| Worst trade            | 1EARTH/USDT -8.18%  |
+| Best day               | 110.337 USDT        |
+| Worst day              | -54.635 USDT        |
+| Days win/draw/lose     | 17 / 3 / 10         |
+| Avg. Duration Winners  | 0:57:00             |
+| Avg. Duration Loser    | 2:40:00             |
+| Rejected Buy signals   | 16583               |
+|                        |                     |
+| Min balance            | 976.044 USDT        |
+| Max balance            | 1672.255 USDT       |
+| Drawdown (Account)     | 10.66%              |
+| Drawdown               | 136.739 USDT        |
+| Drawdown high          | 283.319 USDT        |
+| Drawdown low           | 146.580 USDT        |
+| Drawdown Start         | 2022-01-26 20:40:00 |
+| Drawdown End           | 2022-01-28 10:40:00 |
+| Market change          | -9.13%              |
+================================================
+
+## ElliotV8_original_ichiv3 MOT 5 SL -0.08 TSL True USS True ROI True
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2022-01-09 09:20:00 |
+| Backtesting to         | 2022-02-07 16:45:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 395 / 13.62         |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 1696.914 USDT       |
+| Absolute profit        | 696.914 USDT        |
+| Total profit %         | 69.69%              |
+| Trades per day         | 13.62               |
+| Avg. daily profit %    | 2.40%               |
+| Avg. stake amount      | 241.776 USDT        |
+| Total trade volume     | 95501.325 USDT      |
+|                        |                     |
+| Best Pair              | 1EARTH/USDT 51.94%  |
+| Worst Pair             | ADS/USDT -20.45%    |
+| Best trade             | 1EARTH/USDT 7.99%   |
+| Worst trade            | 1EARTH/USDT -8.18%  |
+| Best day               | 121.080 USDT        |
+| Worst day              | -54.613 USDT        |
+| Days win/draw/lose     | 17 / 3 / 10         |
+| Avg. Duration Winners  | 0:55:00             |
+| Avg. Duration Loser    | 2:36:00             |
+| Rejected Buy signals   | 16035               |
+|                        |                     |
+| Min balance            | 976.738 USDT        |
+| Max balance            | 1700.269 USDT       |
+| Drawdown (Account)     | 10.57%              |
+| Drawdown               | 135.398 USDT        |
+| Drawdown high          | 281.520 USDT        |
+| Drawdown low           | 146.122 USDT        |
+| Drawdown Start         | 2022-01-26 20:40:00 |
+| Drawdown End           | 2022-01-28 10:40:00 |
+| Market change          | -9.13%              |
+================================================
+
+## ElliotV8_original_ichiv3 MOT 5 SL -0.08 TSL False USS True ROI True
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2022-01-09 09:20:00 |
+| Backtesting to         | 2022-02-07 16:45:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 332 / 11.45         |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 1289.015 USDT       |
+| Absolute profit        | 289.015 USDT        |
+| Total profit %         | 28.90%              |
+| Trades per day         | 11.45               |
+| Avg. daily profit %    | 1.00%               |
+| Avg. stake amount      | 214.213 USDT        |
+| Total trade volume     | 71118.881 USDT      |
+|                        |                     |
+| Best Pair              | RMRK/USDT 25.68%    |
+| Worst Pair             | ADS/USDT -34.00%    |
+| Best trade             | 1EARTH/USDT 7.99%   |
+| Worst trade            | ADS/USDT -8.20%     |
+| Best day               | 79.189 USDT         |
+| Worst day              | -46.512 USDT        |
+| Days win/draw/lose     | 14 / 3 / 13         |
+| Avg. Duration Winners  | 1:20:00             |
+| Avg. Duration Loser    | 2:41:00             |
+| Rejected Buy signals   | 16501               |
+|                        |                     |
+| Min balance            | 963.715 USDT        |
+| Max balance            | 1296.502 USDT       |
+| Drawdown (Account)     | 13.62%              |
+| Drawdown               | 157.707 USDT        |
+| Drawdown high          | 157.966 USDT        |
+| Drawdown low           | 0.260 USDT          |
+| Drawdown Start         | 2022-01-26 16:25:00 |
+| Drawdown End           | 2022-01-31 20:10:00 |
+| Market change          | -9.13%              |
+================================================
+
+147 days !!!
+
+
+=========================================================== BACKTESTING REPORT ===========================================================
+|        Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|-------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|   RMRK/USDT |    176 |           0.91 |         161.02 |          3765.722 |         376.57 |        1:20:00 |   139     0    37  79.0 |
+|   ROSE/USDT |    120 |           1.22 |         146.23 |          3648.193 |         364.82 |        1:22:00 |   100     0    20  83.3 |
+|   ELON/USDT |    246 |           0.91 |         223.45 |          3296.616 |         329.66 |        0:37:00 |   199     0    47  80.9 |
+|   QRDO/USDT |    171 |           0.87 |         149.22 |          3004.727 |         300.47 |        1:42:00 |   131     0    40  76.6 |
+|   BLOK/USDT |    199 |           0.95 |         189.98 |          1873.097 |         187.31 |        0:48:00 |   166     0    33  83.4 |
+|    PYR/USDT |    214 |           0.64 |         137.55 |          1862.466 |         186.25 |        1:28:00 |   166     0    48  77.6 |
+|    KDA/USDT |    206 |           0.85 |         176.01 |          1847.299 |         184.73 |        1:19:00 |   166     0    40  80.6 |
+|     AI/USDT |    182 |           0.72 |         131.32 |          1698.914 |         169.89 |        1:39:00 |   138     0    44  75.8 |
+|    QNT/USDT |     44 |           0.77 |          33.95 |          1599.334 |         159.93 |        2:23:00 |    34     0    10  77.3 |
+| 1EARTH/USDT |    108 |           0.16 |          16.82 |          1202.032 |         120.20 |        0:43:00 |    81     0    27  75.0 |
+|   SAND/USDT |     85 |           0.96 |          81.67 |          1072.089 |         107.21 |        1:35:00 |    67     0    18  78.8 |
+|    LRC/USDT |    100 |           0.33 |          33.07 |          1036.945 |         103.69 |        1:46:00 |    76     0    24  76.0 |
+|   MANA/USDT |     83 |           0.83 |          68.84 |           995.046 |          99.50 |        1:38:00 |    66     0    17  79.5 |
+|    FTM/USDT |     53 |           1.31 |          69.36 |           945.165 |          94.52 |        2:34:00 |    47     0     6  88.7 |
+|    BAX/USDT |     77 |           0.44 |          33.98 |           926.784 |          92.68 |        1:21:00 |    57     0    20  74.0 |
+|    VRA/USDT |     62 |           0.93 |          57.40 |           900.792 |          90.08 |        2:12:00 |    51     0    11  82.3 |
+|   RNDR/USDT |    140 |           0.20 |          28.10 |           800.240 |          80.02 |        1:54:00 |   101     0    39  72.1 |
+|   EGLD/USDT |     28 |           1.40 |          39.19 |           784.000 |          78.40 |        2:13:00 |    23     0     5  82.1 |
+|  GALAX/USDT |    137 |           0.51 |          69.44 |           767.163 |          76.72 |        1:29:00 |   103     0    34  75.2 |
+|   ATOM/USDT |     27 |           0.62 |          16.83 |           714.172 |          71.42 |        3:04:00 |    21     0     6  77.8 |
+|   NEAR/USDT |     33 |           0.53 |          17.65 |           705.803 |          70.58 |        4:05:00 |    25     0     8  75.8 |
+|    TEL/USDT |     48 |           1.33 |          63.98 |           685.270 |          68.53 |        2:18:00 |    41     0     7  85.4 |
+|    CRO/USDT |     41 |           0.76 |          31.27 |           650.292 |          65.03 |        2:09:00 |    32     0     9  78.0 |
+|    ACA/USDT |      7 |           1.47 |          10.29 |           605.409 |          60.54 |        1:01:00 |     6     0     1  85.7 |
+|   2CRZ/USDT |    133 |           0.18 |          23.34 |           563.691 |          56.37 |        1:28:00 |    96     0    37  72.2 |
+|    ENJ/USDT |     32 |           1.06 |          33.78 |           541.754 |          54.18 |        2:40:00 |    28     0     4  87.5 |
+|    BAT/USDT |     33 |           0.85 |          28.20 |           506.194 |          50.62 |        1:30:00 |    26     0     7  78.8 |
+|   HBAR/USDT |      7 |           2.07 |          14.49 |           406.405 |          40.64 |        3:26:00 |     7     0     0   100 |
+|   MOVR/USDT |     60 |           0.87 |          52.16 |           383.338 |          38.33 |        2:11:00 |    47     0    13  78.3 |
+|   SHIB/USDT |    113 |           0.27 |          30.39 |           377.519 |          37.75 |        1:11:00 |    87     0    26  77.0 |
+|   LUNA/USDT |     25 |           0.67 |          16.80 |           244.589 |          24.46 |        2:47:00 |    19     0     6  76.0 |
+|    BAL/USDT |      4 |           1.72 |           6.87 |           244.224 |          24.42 |        3:18:00 |     4     0     0   100 |
+|    SOL/USDT |     11 |           1.26 |          13.91 |           242.275 |          24.23 |        3:27:00 |     9     0     2  81.8 |
+|   AAVE/USDT |      7 |          -0.67 |          -4.72 |           165.310 |          16.53 |        1:40:00 |     5     0     2  71.4 |
+|    CRV/USDT |     32 |          -0.82 |         -26.14 |           164.118 |          16.41 |        5:17:00 |    19     0    13  59.4 |
+|    ONE/USDT |     52 |           0.61 |          31.59 |           139.403 |          13.94 |        2:16:00 |    42     0    10  80.8 |
+|   AVAX/USDT |     27 |           0.53 |          14.28 |            67.184 |           6.72 |        3:43:00 |    20     0     7  74.1 |
+|    FIL/USDT |      4 |           1.01 |           4.02 |            58.335 |           5.83 |        3:26:00 |     3     0     1  75.0 |
+|    ADA/USDT |      3 |           0.95 |           2.86 |            44.329 |           4.43 |       10:15:00 |     2     0     1  66.7 |
+|    DOT/USDT |      6 |           0.76 |           4.55 |            39.877 |           3.99 |        2:55:00 |     5     0     1  83.3 |
+|   ALGO/USDT |     16 |          -0.27 |          -4.27 |            32.017 |           3.20 |        3:41:00 |    10     0     6  62.5 |
+|    ICP/USDT |     10 |           0.71 |           7.11 |            31.969 |           3.20 |        3:03:00 |     9     0     1  90.0 |
+|    XLM/USDT |      3 |           2.11 |           6.33 |            24.069 |           2.41 | 1 day, 2:57:00 |     3     0     0   100 |
+|    LTC/USDT |      2 |           0.49 |           0.98 |            15.009 |           1.50 |        5:15:00 |     1     0     1  50.0 |
+|    UNI/USDT |      2 |           2.37 |           4.73 |            13.655 |           1.37 |        1:40:00 |     2     0     0   100 |
+|    TRX/USDT |      3 |           2.38 |           7.14 |            12.657 |           1.27 |        1:42:00 |     3     0     0   100 |
+|    XRP/USDT |      1 |           0.40 |           0.40 |            12.141 |           1.21 |       15:05:00 |     1     0     0   100 |
+|  THETA/USDT |      7 |           1.58 |          11.07 |             8.829 |           0.88 |        0:47:00 |     6     0     1  85.7 |
+|   DOGE/USDT |     18 |           0.49 |           8.87 |             6.964 |           0.70 |        1:43:00 |    14     0     4  77.8 |
+|    VET/USDT |      3 |           0.19 |           0.58 |             0.937 |           0.09 |        9:50:00 |     2     0     1  66.7 |
+|    BCH/USDT |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+|    BTC/USDT |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+|    ETH/USDT |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+|   LINK/USDT |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+|    AXS/USDT |     18 |           0.11 |           2.01 |            -9.123 |          -0.91 |        3:05:00 |    14     0     4  77.8 |
+|    FTT/USDT |      2 |          -1.88 |          -3.75 |           -49.332 |          -4.93 |        8:50:00 |     0     0     2     0 |
+|   AGIX/USDT |     27 |           0.76 |          20.51 |           -77.334 |          -7.73 |        4:14:00 |    20     0     7  74.1 |
+|    EOS/USDT |      3 |          -1.22 |          -3.67 |          -106.126 |         -10.61 |        6:12:00 |     2     0     1  66.7 |
+|  1INCH/USDT |     17 |          -0.51 |          -8.75 |          -222.935 |         -22.29 |        4:35:00 |    11     0     6  64.7 |
+|    ADX/USDT |      5 |          -2.28 |         -11.42 |          -265.587 |         -26.56 |        2:28:00 |     3     0     2  60.0 |
+|  MATIC/USDT |     19 |          -0.27 |          -5.13 |          -381.656 |         -38.17 |        3:21:00 |    10     0     9  52.6 |
+|  BASIC/USDT |     13 |          -0.89 |         -11.52 |          -458.181 |         -45.82 |        1:17:00 |     7     0     6  53.8 |
+|   ABBC/USDT |     27 |           0.10 |           2.68 |          -641.387 |         -64.14 |        3:38:00 |    17     0    10  63.0 |
+|    ADS/USDT |     12 |          -1.56 |         -18.70 |         -1002.926 |        -100.29 |        2:20:00 |     5     0     7  41.7 |
+|       TOTAL |   3344 |           0.67 |        2238.20 |         36519.776 |        3651.98 |        1:44:00 |  2595     0   749  77.6 |
+========================================================== BUY TAG STATS ===========================================================
+|   TAG |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|-------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+| TOTAL |   3344 |           0.67 |        2238.20 |         36519.776 |        3651.98 |        1:44:00 |  2595     0   749  77.6 |
+======================================================= SELL REASON STATS ========================================================
+|        Sell Reason |   Sells |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|--------------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+| trailing_stop_loss |    2161 |   2161     0     0   100 |           2.63 |        5679.44 |         98211.9   |         946.57 |
+|        sell_signal |     769 |    434     0   335  56.4 |          -0.08 |         -59.71 |         -1278.63  |          -9.95 |
+|          stop_loss |     413 |      0     0   413     0 |          -8.18 |       -3379.92 |        -60314.6   |        -563.32 |
+|         force_sell |       1 |      0     0     1     0 |          -1.61 |          -1.61 |           -98.889 |          -0.27 |
+======================================================== LEFT OPEN TRADES REPORT ========================================================
+|       Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+| BASIC/USDT |      1 |          -1.61 |          -1.61 |           -98.889 |          -9.89 |        6:30:00 |     0     0     1     0 |
+|      TOTAL |      1 |          -1.61 |          -1.61 |           -98.889 |          -9.89 |        6:30:00 |     0     0     1     0 |
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-09-11 00:00:00 |
+| Backtesting to         | 2022-02-05 00:00:00 |
+| Max open trades        | 6                   |
+|                        |                     |
+| Total/Daily Avg Trades | 3344 / 22.75        |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 37519.776 USDT      |
+| Absolute profit        | 36519.776 USDT      |
+| Total profit %         | 3651.98%            |
+| Trades per day         | 22.75               |
+| Avg. daily profit %    | 24.84%              |
+| Avg. stake amount      | 1761.718 USDT       |
+| Total trade volume     | 5891185.263 USDT    |
+|                        |                     |
+| Best Pair              | ELON/USDT 223.45%   |
+| Worst Pair             | CRV/USDT -26.14%    |
+| Best trade             | ELON/USDT 14.03%    |
+| Worst trade            | KDA/USDT -8.18%     |
+| Best day               | 2619.028 USDT       |
+| Worst day              | -1157.967 USDT      |
+| Days win/draw/lose     | 103 / 5 / 40        |
+| Avg. Duration Winners  | 1:01:00             |
+| Avg. Duration Loser    | 4:14:00             |
+| Rejected Buy signals   | 78023               |
+|                        |                     |
+| Min balance            | 1004.924 USDT       |
+| Max balance            | 37678.609 USDT      |
+| Drawdown (Account)     | 8.01%               |
+| Drawdown               | 2315.036 USDT       |
+| Drawdown high          | 27909.372 USDT      |
+| Drawdown low           | 25594.335 USDT      |
+| Drawdown Start         | 2022-01-16 23:15:00 |
+| Drawdown End           | 2022-01-22 21:05:00 |
+| Market change          | 59.24%              |
+================================================
+
+147 days wth ROI
+
+2022-02-12 19:49:55,130 - freqtrade.misc - INFO - dumping json to "/freqtrade/user_data/backtest_results/.last_result.json"
+Result for strategy ElliotV8_original_ichiv3
+=========================================================== BACKTESTING REPORT ===========================================================
+|        Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|-------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|   ELON/USDT |    249 |           0.85 |         210.88 |          1853.395 |         185.34 |        0:34:00 |   200     0    49  80.3 |
+|   QRDO/USDT |    172 |           0.79 |         135.99 |          1852.721 |         185.27 |        1:15:00 |   129     0    43  75.0 |
+|   RMRK/USDT |    180 |           0.70 |         126.37 |          1827.928 |         182.79 |        1:07:00 |   138     0    42  76.7 |
+|   ROSE/USDT |    125 |           1.07 |         133.55 |          1827.083 |         182.71 |        1:01:00 |   103     0    22  82.4 |
+|   BLOK/USDT |    207 |           1.02 |         211.89 |          1316.720 |         131.67 |        0:40:00 |   171     0    36  82.6 |
+|    PYR/USDT |    223 |           0.50 |         111.78 |          1036.337 |         103.63 |        1:10:00 |   169     0    54  75.8 |
+|    QNT/USDT |     46 |           0.94 |          43.08 |           987.034 |          98.70 |        1:27:00 |    35     0    11  76.1 |
+|    FTM/USDT |     57 |           1.54 |          87.51 |           858.343 |          85.83 |        1:24:00 |    51     0     6  89.5 |
+|   SAND/USDT |     96 |           0.87 |          83.81 |           833.848 |          83.38 |        1:04:00 |    75     0    21  78.1 |
+|    KDA/USDT |    208 |           0.68 |         141.79 |           787.343 |          78.73 |        0:55:00 |   163     0    45  78.4 |
+|     AI/USDT |    184 |           0.44 |          81.86 |           772.593 |          77.26 |        1:11:00 |   136     0    48  73.9 |
+|    BAX/USDT |     77 |           0.41 |          31.54 |           554.271 |          55.43 |        0:49:00 |    56     0    21  72.7 |
+| 1EARTH/USDT |    108 |           0.13 |          14.28 |           541.051 |          54.11 |        0:42:00 |    80     0    28  74.1 |
+|    VRA/USDT |     64 |           0.80 |          51.47 |           506.443 |          50.64 |        1:37:00 |    49     0    15  76.6 |
+|    LRC/USDT |    104 |           0.13 |          13.80 |           427.541 |          42.75 |        1:20:00 |    74     0    30  71.2 |
+|   ATOM/USDT |     28 |           0.62 |          17.39 |           401.749 |          40.17 |        1:57:00 |    21     0     7  75.0 |
+|   MANA/USDT |     83 |           0.52 |          43.38 |           378.889 |          37.89 |        1:09:00 |    63     0    20  75.9 |
+|   2CRZ/USDT |    139 |           0.17 |          23.82 |           362.441 |          36.24 |        0:58:00 |   102     0    37  73.4 |
+|   RNDR/USDT |    141 |          -0.01 |          -0.77 |           358.631 |          35.86 |        1:23:00 |    98     0    43  69.5 |
+|   NEAR/USDT |     34 |           0.39 |          13.37 |           322.850 |          32.29 |        2:02:00 |    21     0    13  61.8 |
+|   EGLD/USDT |     29 |           1.01 |          29.27 |           315.351 |          31.54 |        1:20:00 |    23     0     6  79.3 |
+|    TEL/USDT |     50 |           0.97 |          48.60 |           272.744 |          27.27 |        1:14:00 |    40     0    10  80.0 |
+|   MOVR/USDT |     59 |           0.76 |          44.63 |           268.641 |          26.86 |        1:27:00 |    45     0    14  76.3 |
+|    BAT/USDT |     35 |           0.51 |          17.72 |           260.479 |          26.05 |        1:08:00 |    27     0     8  77.1 |
+|    ACA/USDT |      7 |           1.19 |           8.36 |           255.130 |          25.51 |        0:55:00 |     6     0     1  85.7 |
+|    CRO/USDT |     43 |           0.43 |          18.60 |           244.897 |          24.49 |        1:25:00 |    31     0    12  72.1 |
+|    ONE/USDT |     52 |           0.60 |          31.30 |           215.347 |          21.53 |        1:32:00 |    40     0    12  76.9 |
+|  GALAX/USDT |    145 |           0.26 |          37.97 |           188.146 |          18.81 |        1:05:00 |   107     0    38  73.8 |
+|    ENJ/USDT |     37 |           0.54 |          19.91 |           186.686 |          18.67 |        1:34:00 |    28     0     9  75.7 |
+|   SHIB/USDT |    116 |           0.26 |          30.45 |           142.570 |          14.26 |        0:55:00 |    86     0    30  74.1 |
+|    CRV/USDT |     32 |          -0.63 |         -20.20 |           139.640 |          13.96 |        2:17:00 |    18     0    14  56.2 |
+|   HBAR/USDT |      7 |           1.14 |           7.97 |           126.560 |          12.66 |        2:26:00 |     6     0     1  85.7 |
+|   AVAX/USDT |     27 |           0.79 |          21.33 |           106.290 |          10.63 |        1:56:00 |    21     0     6  77.8 |
+|  THETA/USDT |      7 |           2.34 |          16.40 |           104.212 |          10.42 |        0:46:00 |     6     0     1  85.7 |
+|    BAL/USDT |      4 |           0.71 |           2.85 |            88.053 |           8.81 |        2:08:00 |     3     0     1  75.0 |
+|   AAVE/USDT |      7 |          -0.58 |          -4.05 |            80.354 |           8.04 |        1:20:00 |     5     0     2  71.4 |
+|    EOS/USDT |      3 |           1.13 |           3.39 |            63.982 |           6.40 |        1:25:00 |     2     0     1  66.7 |
+|    ICP/USDT |     10 |           0.43 |           4.28 |            47.305 |           4.73 |        2:10:00 |     8     0     2  80.0 |
+|    ADA/USDT |      3 |           0.99 |           2.96 |            26.427 |           2.64 |        2:30:00 |     2     0     1  66.7 |
+|    SOL/USDT |     11 |           0.66 |           7.23 |            25.295 |           2.53 |        1:59:00 |     8     0     3  72.7 |
+|    DOT/USDT |      6 |           1.14 |           6.85 |            15.432 |           1.54 |        1:32:00 |     4     0     2  66.7 |
+|    XLM/USDT |      3 |           1.24 |           3.72 |            11.947 |           1.19 |        1:47:00 |     3     0     0   100 |
+|    LTC/USDT |      3 |           0.33 |           1.00 |            10.463 |           1.05 |        2:07:00 |     2     0     1  66.7 |
+|    TRX/USDT |      3 |           1.71 |           5.12 |             8.823 |           0.88 |        1:38:00 |     3     0     0   100 |
+|    UNI/USDT |      2 |           1.60 |           3.20 |             7.953 |           0.80 |        1:38:00 |     2     0     0   100 |
+|    FIL/USDT |      4 |           0.54 |           2.18 |             5.789 |           0.58 |        2:39:00 |     2     0     2  50.0 |
+|    VET/USDT |      3 |          -0.59 |          -1.76 |             0.699 |           0.07 |        3:00:00 |     1     0     2  33.3 |
+|    BCH/USDT |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+|    BTC/USDT |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+|    ETH/USDT |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+|   LINK/USDT |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+|    FTT/USDT |      2 |          -1.19 |          -2.38 |           -43.961 |          -4.40 |        3:25:00 |     0     0     2     0 |
+|    XRP/USDT |      1 |          -2.70 |          -2.70 |           -53.479 |          -5.35 |        3:25:00 |     0     0     1     0 |
+|    AXS/USDT |     18 |          -0.73 |         -13.23 |           -55.800 |          -5.58 |        2:16:00 |    10     0     8  55.6 |
+|   LUNA/USDT |     26 |          -0.05 |          -1.19 |           -61.169 |          -6.12 |        1:38:00 |    17     0     9  65.4 |
+|   DOGE/USDT |     18 |           0.04 |           0.79 |           -84.242 |          -8.42 |        1:29:00 |    11     0     7  61.1 |
+|   AGIX/USDT |     28 |           0.09 |           2.47 |          -102.777 |         -10.28 |        1:50:00 |    17     0    11  60.7 |
+|   ALGO/USDT |     16 |          -0.72 |         -11.56 |          -115.964 |         -11.60 |        1:44:00 |     9     0     7  56.2 |
+|    ADX/USDT |      5 |          -1.84 |          -9.21 |          -138.995 |         -13.90 |        2:00:00 |     3     0     2  60.0 |
+|  1INCH/USDT |     17 |          -0.08 |          -1.32 |          -150.408 |         -15.04 |        1:09:00 |    10     0     7  58.8 |
+|   ABBC/USDT |     27 |           0.23 |           6.24 |          -158.719 |         -15.87 |        1:27:00 |    16     0    11  59.3 |
+|  MATIC/USDT |     19 |          -0.21 |          -3.95 |          -216.985 |         -21.70 |        2:13:00 |    10     0     9  52.6 |
+|  BASIC/USDT |     13 |          -1.33 |         -17.35 |          -415.257 |         -41.53 |        1:03:00 |     7     0     6  53.8 |
+|    ADS/USDT |     12 |          -2.48 |         -29.77 |          -800.906 |         -80.09 |        1:46:00 |     5     0     7  41.7 |
+|       TOTAL |   3435 |           0.54 |        1842.90 |         18627.761 |        1862.78 |        1:09:00 |  2578     0   857  75.1 |
+========================================================== BUY TAG STATS ===========================================================
+|   TAG |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|-------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+| TOTAL |   3435 |           0.54 |        1842.90 |         18627.761 |        1862.78 |        1:09:00 |  2578     0   857  75.1 |
+======================================================= SELL REASON STATS ========================================================
+|        Sell Reason |   Sells |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|--------------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+| trailing_stop_loss |    1737 |   1737     0     0   100 |           2.42 |        4198.35 |          45246.4  |         699.73 |
+|                roi |     942 |    519     0   423  55.1 |          -0.15 |        -138.52 |          -2154.59 |         -23.09 |
+|        sell_signal |     461 |    322     0   139  69.8 |           0.43 |         197.29 |           1927.87 |          32.88 |
+|          stop_loss |     295 |      0     0   295     0 |          -8.18 |       -2414.23 |         -26391.9  |        -402.37 |
+====================================================== LEFT OPEN TRADES REPORT ======================================================
+|   Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|  TOTAL |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-09-11 00:00:00 |
+| Backtesting to         | 2022-02-05 00:00:00 |
+| Max open trades        | 6                   |
+|                        |                     |
+| Total/Daily Avg Trades | 3435 / 23.37        |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 19627.761 USDT      |
+| Absolute profit        | 18627.761 USDT      |
+| Total profit %         | 1862.78%            |
+| Trades per day         | 23.37               |
+| Avg. daily profit %    | 12.67%              |
+| Avg. stake amount      | 1119.621 USDT       |
+| Total trade volume     | 3845896.605 USDT    |
+|                        |                     |
+| Best Pair              | BLOK/USDT 211.89%   |
+| Worst Pair             | ADS/USDT -29.77%    |
+| Best trade             | GALAX/USDT 7.99%    |
+| Worst trade            | QNT/USDT -8.18%     |
+| Best day               | 1280.479 USDT       |
+| Worst day              | -795.587 USDT       |
+| Days win/draw/lose     | 99 / 5 / 43         |
+| Avg. Duration Winners  | 0:43:00             |
+| Avg. Duration Loser    | 2:29:00             |
+| Rejected Buy signals   | 31952               |
+|                        |                     |
+| Min balance            | 1001.807 USDT       |
+| Max balance            | 19684.732 USDT      |
+| Drawdown (Account)     | 9.04%               |
+| Drawdown               | 1666.573 USDT       |
+| Drawdown high          | 17441.134 USDT      |
+| Drawdown low           | 15774.562 USDT      |
+| Drawdown Start         | 2022-01-26 21:05:00 |
+| Drawdown End           | 2022-01-28 10:40:00 |
+| Market change          | 59.24%              |
+================================================
+
+BINANCE ROI ON
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-09-11 00:00:00 |
+| Backtesting to         | 2022-02-05 00:00:00 |
+| Max open trades        | 6                   |
+|                        |                     |
+| Total/Daily Avg Trades | 1305 / 8.88         |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 1750.666 USDT       |
+| Absolute profit        | 750.666 USDT        |
+| Total profit %         | 75.07%              |
+| Trades per day         | 8.88                |
+| Avg. daily profit %    | 0.51%               |
+| Avg. stake amount      | 200.334 USDT        |
+| Total trade volume     | 261436.097 USDT     |
+|                        |                     |
+| Best Pair              | ROSE/USDT 95.72%    |
+| Worst Pair             | SHIB/USDT -43.39%   |
+| Best trade             | BAT/USDT 4.67%      |
+| Worst trade            | SHIB/USDT -8.18%    |
+| Best day               | 105.522 USDT        |
+| Worst day              | -84.936 USDT        |
+| Days win/draw/lose     | 85 / 13 / 49        |
+| Avg. Duration Winners  | 0:57:00             |
+| Avg. Duration Loser    | 2:02:00             |
+| Rejected Buy signals   | 3881                |
+|                        |                     |
+| Min balance            | 982.478 USDT        |
+| Max balance            | 1750.666 USDT       |
+| Drawdown (Account)     | 16.67%              |
+| Drawdown               | 208.835 USDT        |
+| Drawdown high          | 252.679 USDT        |
+| Drawdown low           | 43.844 USDT         |
+| Drawdown Start         | 2021-10-09 01:30:00 |
+| Drawdown End           | 2021-11-01 08:35:00 |
+| Market change          | -2.72%              |
+================================================
+
+|  TOTAL |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-09-11 00:00:00 |
+| Backtesting to         | 2022-02-05 00:00:00 |
+| Max open trades        | 6                   |
+|                        |                     |
+| Total/Daily Avg Trades | 1288 / 8.76         |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 2294.856 USDT       |
+| Absolute profit        | 1294.856 USDT       |
+| Total profit %         | 129.49%             |
+| Trades per day         | 8.76                |
+| Avg. daily profit %    | 0.88%               |
+| Avg. stake amount      | 227.226 USDT        |
+| Total trade volume     | 292667.666 USDT     |
+|                        |                     |
+| Best Pair              | ROSE/USDT 106.98%   |
+| Worst Pair             | SHIB/USDT -25.77%   |
+| Best trade             | MANA/USDT 8.06%     |
+| Worst trade            | SHIB/USDT -8.18%    |
+| Best day               | 137.429 USDT        |
+| Worst day              | -98.426 USDT        |
+| Days win/draw/lose     | 87 / 14 / 46        |
+| Avg. Duration Winners  | 1:24:00             |
+| Avg. Duration Loser    | 3:31:00             |
+| Rejected Buy signals   | 5724                |
+|                        |                     |
+| Min balance            | 1004.856 USDT       |
+| Max balance            | 2294.856 USDT       |
+| Drawdown (Account)     | 16.33%              |
+| Drawdown               | 212.536 USDT        |
+| Drawdown high          | 301.572 USDT        |
+| Drawdown low           | 89.036 USDT         |
+| Drawdown Start         | 2021-10-09 01:30:00 |
+| Drawdown End           | 2021-11-01 02:25:00 |
+| Market change          | -2.72%              |
+================================================
+INSTABLE.
+
+FULL ROI ? IRIBS False
+
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-09-11 00:00:00 |
+| Backtesting to         | 2022-02-05 00:00:00 |
+| Max open trades        | 6                   |
+|                        |                     |
+| Total/Daily Avg Trades | 1306 / 8.88         |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 1851.671 USDT       |
+| Absolute profit        | 851.671 USDT        |
+| Total profit %         | 85.17%              |
+| Trades per day         | 8.88                |
+| Avg. daily profit %    | 0.58%               |
+| Avg. stake amount      | 205.557 USDT        |
+| Total trade volume     | 268456.988 USDT     |
+|                        |                     |
+| Best Pair              | ROSE/USDT 95.72%    |
+| Worst Pair             | SHIB/USDT -35.10%   |
+| Best trade             | 1INCH/USDT 7.99%    |
+| Worst trade            | SHIB/USDT -8.18%    |
+| Best day               | 108.585 USDT        |
+| Worst day              | -87.211 USDT        |
+| Days win/draw/lose     | 85 / 13 / 49        |
+| Avg. Duration Winners  | 0:57:00             |
+| Avg. Duration Loser    | 2:03:00             |
+| Rejected Buy signals   | 3881                |
+|                        |                     |
+| Min balance            | 982.478 USDT        |
+| Max balance            | 1851.671 USDT       |
+| Drawdown (Account)     | 14.54%              |
+| Drawdown               | 182.014 USDT        |
+| Drawdown high          | 251.811 USDT        |
+| Drawdown low           | 69.797 USDT         |
+| Drawdown Start         | 2021-10-09 01:30:00 |
+| Drawdown End           | 2021-11-01 08:35:00 |
+| Market change          | -2.72%              |
+================================================
+
+NO ROI, NO IRIBS, NO USS.
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-09-11 00:00:00 |
+| Backtesting to         | 2022-02-05 00:00:00 |
+| Max open trades        | 6                   |
+|                        |                     |
+| Total/Daily Avg Trades | 1266 / 8.61         |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 2566.824 USDT       |
+| Absolute profit        | 1566.824 USDT       |
+| Total profit %         | 156.68%             |
+| Trades per day         | 8.61                |
+| Avg. daily profit %    | 1.07%               |
+| Avg. stake amount      | 230.646 USDT        |
+| Total trade volume     | 291998.216 USDT     |
+|                        |                     |
+| Best Pair              | ROSE/USDT 83.92%    |
+| Worst Pair             | SHIB/USDT -26.63%   |
+| Best trade             | RNDR/USDT 9.37%     |
+| Worst trade            | SHIB/USDT -8.18%    |
+| Best day               | 160.169 USDT        |
+| Worst day              | -107.712 USDT       |
+| Days win/draw/lose     | 86 / 14 / 47        |
+| Avg. Duration Winners  | 2:01:00             |
+| Avg. Duration Loser    | 4:37:00             |
+| Rejected Buy signals   | 9427                |
+|                        |                     |
+| Min balance            | 1004.856 USDT       |
+| Max balance            | 2566.824 USDT       |
+| Drawdown (Account)     | 18.60%              |
+| Drawdown               | 245.011 USDT        |
+| Drawdown high          | 317.606 USDT        |
+| Drawdown low           | 72.595 USDT         |
+| Drawdown Start         | 2021-10-09 01:30:00 |
+| Drawdown End           | 2021-10-28 18:45:00 |
+| Market change          | -2.72%              |
+================================================
+bcp de DD !!
+
+NO ROI, NO IRIBS, NO USS. MOT 9.
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-09-11 00:00:00 |
+| Backtesting to         | 2022-02-05 00:00:00 |
+| Max open trades        | 9                   |
+|                        |                     |
+| Total/Daily Avg Trades | 1283 / 8.73         |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 1966.237 USDT       |
+| Absolute profit        | 966.237 USDT        |
+| Total profit %         | 96.62%              |
+| Trades per day         | 8.73                |
+| Avg. daily profit %    | 0.66%               |
+| Avg. stake amount      | 141.065 USDT        |
+| Total trade volume     | 180986.722 USDT     |
+|                        |                     |
+| Best Pair              | ROSE/USDT 88.86%    |
+| Worst Pair             | SHIB/USDT -22.80%   |
+| Best trade             | RNDR/USDT 9.37%     |
+| Worst trade            | SHIB/USDT -8.18%    |
+| Best day               | 87.008 USDT         |
+| Worst day              | -70.030 USDT        |
+| Days win/draw/lose     | 86 / 14 / 47        |
+| Avg. Duration Winners  | 2:04:00             |
+| Avg. Duration Loser    | 4:36:00             |
+| Rejected Buy signals   | 661                 |
+|                        |                     |
+| Min balance            | 1003.237 USDT       |
+| Max balance            | 1966.237 USDT       |
+| Drawdown (Account)     | 12.50%              |
+| Drawdown               | 154.205 USDT        |
+| Drawdown high          | 233.510 USDT        |
+| Drawdown low           | 79.305 USDT         |
+| Drawdown Start         | 2021-10-09 01:30:00 |
+| Drawdown End           | 2021-10-28 18:45:00 |
+| Market change          | -2.72%              |
+================================================

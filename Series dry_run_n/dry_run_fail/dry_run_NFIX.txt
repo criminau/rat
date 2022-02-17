@@ -1,0 +1,73 @@
+Version: 2022.1, Strategy version:  v11.0.242
+
+# Results
+1 week dry-run: -> LOOSING MONEY.
+# why
+
+dans la base de données, on observe qu'elle a acheté 3x du CLV. sans jamais le vendre. a chaque fois 3*70. le même trade ID.
+Dans l'affaire du **CLV** (c'est la même pour ANC), la même config, lancé 1 semaine plus tard, avec + de paire sélectionné (BBRNG2+Cluchll), n'a pas choisi CLV dans la whitelist.
+
+donc on se pose trois questions :
+
+- le type d'ordre "limit" est-il justifié ?
+- la volumepairlist, dont la mise à jour mensuelle de la volatilité n'est-elle pas trop exagérée ? -> 7jours suffisent ?
+- Désactivation forcée du PAE.
+
+
+
+
+Trade ID: 2 (since 5 days ago)
+Current Pair: CLV/USDT
+Amount: 652.9441 (339.56992626 USDT)
+Buy Tag: 3 31 
+Open Rate: 0.52005972
+Current Rate: 0.40920000
+Current Profit: -21.47%
+Initial Stoploss: 0.32364000 (-40.00%)
+Stoploss: 0.32724000 (-40.00%)
+Stoploss distance: -0.08196000 (-20.03%)
+
+Trade ID: 8 (since a day ago)
+Current Pair: ANC/USDT
+Amount: 90.726 (201.4843008 USDT)
+Buy Tag: 42 
+Open Rate: 2.22080000
+Current Rate: 2.15240000
+Current Profit: -3.27%
+Stoploss: 0.02220800 (-99.00%)
+Stoploss distance: -2.13019200 (-98.97%)
+
+Trade ID: 9 (since 9 hours ago)
+Current Pair: SUPER/USDT
+Amount: 189.0808 (201.48451035 USDT)
+Buy Tag: 26 
+Open Rate: 1.06560000
+Current Rate: 1.03480000
+Current Profit: -3.08%
+Stoploss: 0.01065600 (-99.00%)
+Stoploss distance: -1.02414400 (-98.97%)
+
+Daily Profit over the last 7 days:
+Day         Profit USDT    Profit EUR    Trades
+----------  -------------  ------------  --------
+2022-02-17  0.000 USDT     0.000 EUR     0 trades
+2022-02-16  0.000 USDT     0.000 EUR     0 trades
+2022-02-15  0.000 USDT     0.000 EUR     0 trades
+2022-02-14  0.000 USDT     0.000 EUR     0 trades
+2022-02-13  6.552 USDT     5.770 EUR     2 trades
+2022-02-12  5.808 USDT     5.116 EUR     2 trades
+2022-02-11  5.238 USDT     4.613 EUR     2 trades
+
+ROI: Closed trades
+∙ 17.599 USDT (1.26%) (1.76 Σ%)
+∙ 15.509 EUR
+ROI: All trades
+∙ -62.306 USDT (-2.30%) (-6.23 Σ%)
+∙ -54.907 EUR
+Total Trade Count: 8
+First Trade opened: 5 days ago
+Latest Trade opened: a day ago
+Win / Loss: 6 / 0
+Avg. Duration: 10:26:38
+Best Performing: KDA/USDT: 2.30%
+
