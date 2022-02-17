@@ -11,16 +11,16 @@ All notes are in french and mix of british.
 
 ## Series another_test_n
 
-- another_test_1 -> first selection;
-- another_test_2 -> from SELECTED(1) in another_test_1 : second selection.
-- another_test_3 -> from SELECTED in another_test_2 : m30 days kucoin stress test. (advanced)
+- another_test_1
+- another_test_2
+- another_test_3
 
 ## Series dry_run_n
 
-- dry_run_fail -> more than 3 days out.
-- dry_run_live -> testing.
-- dry_run_win -> minimum 7days in ++.
-- dry_run_archive -> not the other folder.
+- dry_run_fail
+- dry_run_live
+- dry_run_win
+- dry_run_archive
 
 ## Series live_n
 
