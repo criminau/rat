@@ -1,0 +1,1223 @@
+
+## test 2.1 (= le 2)
+
+##
+
+## potentiel (lol)
+new_turtle
+Miku_PP_v3
+
+## eliminated
+
+MACDStrategy_crossed
+
+## list
+
+
+GodStraNew_SMAonly Hacklemost NostalgiaForInfinityX tesla7 ClucHAnix_hhll BB_RPB_TSL_RNG_2 BB_RPB_TSLmeneguzzo BB_RPB_TSL VWAP SMAOG NASOSv5_mod3 BinClucMadSMADevelop
+
+## config-bt-4-binance --days147 (--timerange=20210911-20220205) (4.9 mois) (oracle) (binance)
+docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4-binance.json --timeframe 5m --strategy-list GodStraNew_SMAonly Hacklemost NostalgiaForInfinityX tesla7 ClucHAnix_hhll BB_RPB_TSL_RNG_2 BB_RPB_TSLmeneguzzo BB_RPB_TSL VWAP SMAOG NASOSv5_mod3 BinClucMadSMADevelop
+2021-09-11 00:00:00 -> 2022-02-05 00:00:00 | Max open trades : 5
+============================================================================= STRATEGY SUMMARY ============================================================================
+|              Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |             Drawdown |
+|-----------------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------+----------------------|
+|    GodStraNew_SMAonly |     31 |           5.45 |         168.89 |           385.809 |          38.58 |        4:49:00 |    29     2     0   100 |   0.000 USDT   0.00% |
+|            Hacklemost |    136 |           1.28 |         173.47 |           397.589 |          39.76 |       10:44:00 |   133     0     3  97.8 | 159.025 USDT  10.22% |
+| NostalgiaForInfinityX |    119 |           2.43 |         289.36 |           776.074 |          77.61 |       19:57:00 |   118     0     1  99.2 | 243.593 USDT  12.06% |
+|                tesla7 |     54 |           0.01 |           0.43 |            -0.958 |          -0.10 |        2:12:00 |    41     0    13  75.9 |  49.528 USDT   4.91% |
+|        ClucHAnix_hhll |    700 |           0.51 |         354.96 |           962.318 |          96.23 |        1:49:00 |   609     0    91  87.0 | 310.081 USDT  14.56% |
+|      BB_RPB_TSL_RNG_2 |    229 |           0.94 |         216.24 |           474.316 |          47.43 |        3:14:00 |   202     0    27  88.2 | 288.288 USDT  19.72% |
+|   BB_RPB_TSLmeneguzzo |    169 |           1.82 |         307.61 |           816.459 |          81.65 |        1:28:00 |   156     0    13  92.3 |  81.902 USDT   4.57% |
+|            BB_RPB_TSL |    231 |           1.25 |         289.57 |           744.615 |          74.46 |        2:13:00 |   209     0    22  90.5 | 206.344 USDT  12.12% |
+|                  VWAP |    307 |           0.26 |          80.28 |           128.601 |          12.86 |        4:25:00 |   276     0    31  89.9 | 260.060 USDT  19.99% |
+|                 SMAOG |    462 |           0.27 |         125.76 |           258.014 |          25.80 |        2:50:00 |   384     0    78  83.1 | 251.171 USDT  19.41% |
+|          NASOSv5_mod3 |    288 |           1.39 |         399.89 |          1051.216 |         105.12 | 1 day, 1:08:00 |   263     0    25  91.3 | 657.051 USDT  33.80% |
+|  BinClucMadSMADevelop |    314 |           0.64 |         201.00 |           454.582 |          45.46 |        1:41:00 |   261    19    34  83.1 | 199.904 USDT  13.66% |
+===========================================================================================================================================================================
+
+
+
+## config-bt-4 --days147 (--timerange=20210911-20220205) (4.9 mois) (oracle) (kucoin) (market +62%)
+docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4.json --timeframe 5m --strategy-list GodStraNew_SMAonly Hacklemost NostalgiaForInfinityX tesla7 ClucHAnix_hhll BB_RPB_TSL_RNG_2 BB_RPB_TSLmeneguzzo BB_RPB_TSL VWAP SMAOG NASOSv5_mod3 BinClucMadSMADevelop
+2021-09-11 00:00:00 -> 2022-02-05 00:00:00 | Max open trades : 5
+============================================================================= STRATEGY SUMMARY =============================================================================
+|              Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |              Drawdown |
+|-----------------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------+-----------------------|
+|    GodStraNew_SMAonly |     41 |           5.24 |         214.94 |           514.985 |          51.50 |        5:16:00 |    39     2     0   100 |    0.000 USDT   0.00% |++
+|            Hacklemost |    421 |           0.65 |         271.93 |           658.352 |          65.84 |        9:25:00 |   406     0    15  96.4 |  835.782 USDT  33.51% |DD
+| NostalgiaForInfinityX |    327 |           2.43 |         794.03 |          3842.060 |         384.21 |       14:36:00 |   324     0     3  99.1 | 2449.826 USDT  33.60% |DD
+|                tesla7 |    811 |           0.91 |         739.60 |          3282.522 |         328.25 |        1:36:00 |   676     1   134  83.4 |  253.629 USDT   7.70% |--
+|        ClucHAnix_hhll |   1922 |           1.16 |        2233.25 |         78738.695 |        7873.87 |        1:32:00 |  1756     0   166  91.4 | 5945.120 USDT  14.58% |DD
+|      BB_RPB_TSL_RNG_2 |    754 |           2.17 |        1638.07 |         22962.242 |        2296.22 |        3:08:00 |   702     0    52  93.1 | 2951.410 USDT  21.14% |DD
+|   BB_RPB_TSLmeneguzzo |    426 |           2.48 |        1057.66 |          6940.488 |         694.05 |        1:20:00 |   410     0    16  96.2 |  436.354 USDT   5.28% |
+|            BB_RPB_TSL |    717 |           1.99 |        1428.27 |         15360.585 |        1536.06 |        1:49:00 |   669     0    48  93.3 | 1422.445 USDT   8.43% |
+|                  VWAP |    883 |           0.95 |         836.76 |          3985.007 |         398.50 |        2:03:00 |   829     0    54  93.9 | 1722.374 USDT  28.46% |DD
+|                 SMAOG |   1578 |           0.69 |        1081.70 |          7041.377 |         704.14 |        2:06:00 |  1353     0   225  85.7 |  624.187 USDT   7.45% |--
+|          NASOSv5_mod3 |    763 |           2.44 |        1859.74 |         39725.019 |        3972.50 |       14:10:00 |   723     0    40  94.8 | 7443.605 USDT  24.46% |DD
+|  BinClucMadSMADevelop |   1143 |           1.24 |        1419.78 |         14587.013 |        1458.70 |        1:22:00 |   984    64    95  86.1 | 2699.771 USDT  22.94% |DD--
+============================================================================================================================================================================
+Ici, nous observons :
+GodStraNew_SMAonly a fait peu de trade ??, et peu de profit mais elle EST FIABLE.
+Hacklemost, a priori elle n'aimerais pas la volatilité et les faibles volumes, le DD c'est too much. -> 3.1. remonter le SL? (test perso)
+NostalgiaForInfinityX, 99.1%WR. why not, -> SL -0.33%? SL -0.7 ? (kucoin décembre) DD to much. (test perso)
+tesla7, SL à remonter ? il va effondrer le WR.
+ClucHAnix_hhll, affolante en periode bull market ! (test perso)
+BB_RPB_TSL_RNG_2, a besoin d'être travaillée. (test perso)
+BB_RPB_TSLmeneguzzo, plus prudente que BB_RPB_TSL_RNG_2, mais moins de profit.
+BB_RPB_TSL, meneguzzo sait passer un bear market.
+VWAP, travaillr le ROI  et le SL. ça va jouer sur le WR.
+NASOSv5_mod3, hmm, profit, bull run, DD bear market. (december, remember).
+BinClucMadSMADevelop, du DD, du bas WR, pour moins de profit.
+
+Beaucoup de DD, cela peut signifier que elles ne fonctionnent qu'en bull market. Ou bien que leur SL est mal positionné.
+
+docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4.json --strategy NASOSv5_mod3
+
+## NASOSv5_mod3
+=========================================================== BUY TAG STATS ===========================================================
+|    TAG |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|   ewo1 |    630 |           2.17 |        1364.87 |         24893.663 |        2489.37 |       16:34:00 |   593     0    37  94.1 |
+| ewolow |    140 |           3.73 |         522.88 |         17116.975 |        1711.70 |        2:40:00 |   137     0     3  97.9 |
+|  TOTAL |    770 |           2.45 |        1887.75 |         42010.638 |        4201.06 |       14:02:00 |   730     0    40  94.8 |
+======================================================= SELL REASON STATS ========================================================
+|        Sell Reason |   Sells |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|--------------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+| trailing_stop_loss |     729 |    729     0     0   100 |           4.03 |        2937.76 |         85207.6   |         587.55 |
+|          stop_loss |      33 |      0     0    33     0 |         -30.14 |        -994.65 |        -41146.2   |        -198.93 |
+|        sell_signal |       6 |      0     0     6     0 |          -8.22 |         -49.3  |         -1542.94  |          -9.86 |
+|         force_sell |       2 |      1     0     1  50.0 |          -3.04 |          -6.08 |          -507.918 |          -1.22 |
+========================================================= LEFT OPEN TRADES REPORT =========================================================
+|       Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |     Avg Duration |   Win  Draw  Loss  Win% |
+|------------+--------+----------------+----------------+-------------------+----------------+------------------+-------------------------|
+| BASIC/USDT |      1 |           0.21 |           0.21 |            18.191 |           1.82 |          6:15:00 |     1     0     0   100 |
+|  ABBC/USDT |      1 |          -6.29 |          -6.29 |          -526.109 |         -52.61 | 7 days, 14:20:00 |     0     0     1     0 |
+|      TOTAL |      2 |          -3.04 |          -6.08 |          -507.918 |         -50.79 | 3 days, 22:18:00 |     1     0     1  50.0 |
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-09-11 00:00:00 |
+| Backtesting to         | 2022-02-05 00:00:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 770 / 5.24          |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 43010.638 USDT      |
+| Absolute profit        | 42010.638 USDT      |
+| Total profit %         | 4201.06%            |
+| Trades per day         | 5.24                |
+| Avg. daily profit %    | 28.58%              |
+| Avg. stake amount      | 2970.502 USDT       |
+| Total trade volume     | 2287286.803 USDT    |
+|                        |                     |
+| Best Pair              | ELON/USDT 353.79%   |
+| Worst Pair             | AAVE/USDT -30.14%   |
+| Best trade             | AI/USDT 15.80%      |
+| Worst trade            | 2CRZ/USDT -30.17%   |
+| Best day               | 5529.357 USDT       |
+| Worst day              | -4210.150 USDT      |
+| Days win/draw/lose     | 105 / 21 / 22       |
+| Avg. Duration Winners  | 6:47:00             |
+| Avg. Duration Loser    | 6 days, 2:38:00     |
+| Rejected Buy signals   | 552463              |
+|                        |                     |
+| Min balance            | 1008.362 USDT       |
+| Max balance            | 43597.295 USDT      |
+| Drawdown (Account)     | 24.46%              |
+| Drawdown               | 7768.191 USDT       |
+| Drawdown high          | 30755.799 USDT      |
+| Drawdown low           | 22987.608 USDT      |
+| Drawdown Start         | 2021-11-27 21:30:00 |
+| Drawdown End           | 2021-12-04 05:40:00 |
+| Market change          | 61.59%              |
+================================================
+
+## VWAP
+========================================================== BUY TAG STATS ===========================================================
+|   TAG |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|-------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+| TOTAL |    898 |           0.95 |         849.56 |          4109.019 |         410.90 |        2:01:00 |   843     0    55  93.9 |
+===================================================== SELL REASON STATS =====================================================
+|   Sell Reason |   Sells |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|---------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+|           roi |     842 |    842     0     0   100 |           2    |        1682.83 |         10781.3   |         336.57 |
+|     stop_loss |      55 |      0     0    55     0 |         -15.17 |        -834.34 |         -6682.77  |        -166.87 |
+|    force_sell |       1 |      1     0     0   100 |           1.07 |           1.07 |            10.449 |           0.21 |
+======================================================= LEFT OPEN TRADES REPORT ========================================================
+|     Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |    Avg Duration |   Win  Draw  Loss  Win% |
+|----------+--------+----------------+----------------+-------------------+----------------+-----------------+-------------------------|
+| AXS/USDT |      1 |           1.07 |           1.07 |            10.449 |           1.04 | 2 days, 9:10:00 |     1     0     0   100 |
+|    TOTAL |      1 |           1.07 |           1.07 |            10.449 |           1.04 | 2 days, 9:10:00 |     1     0     0   100 |
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-09-11 00:00:00 |
+| Backtesting to         | 2022-02-05 00:00:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 898 / 6.11          |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 5109.019 USDT       |
+| Absolute profit        | 4109.019 USDT       |
+| Total profit %         | 410.90%             |
+| Trades per day         | 6.11                |
+| Avg. daily profit %    | 2.80%               |
+| Avg. stake amount      | 650.199 USDT        |
+| Total trade volume     | 583878.829 USDT     |
+|                        |                     |
+| Best Pair              | BLOK/USDT 132.31%   |
+| Worst Pair             | CRV/USDT -35.52%    |
+| Best trade             | 2CRZ/USDT 2.30%     |
+| Worst trade            | QRDO/USDT -15.17%   |
+| Best day               | 239.714 USDT        |
+| Worst day              | -939.621 USDT       |
+| Days win/draw/lose     | 118 / 16 / 14       |
+| Avg. Duration Winners  | 1:10:00             |
+| Avg. Duration Loser    | 15:00:00            |
+| Rejected Buy signals   | 27549               |
+|                        |                     |
+| Min balance            | 1003.960 USDT       |
+| Max balance            | 6202.240 USDT       |
+| Drawdown (Account)     | 28.46%              |
+| Drawdown               | 1765.221 USDT       |
+| Drawdown high          | 5202.240 USDT       |
+| Drawdown low           | 3437.019 USDT       |
+| Drawdown Start         | 2022-01-07 14:40:00 |
+| Drawdown End           | 2022-01-22 20:25:00 |
+| Market change          | 64.21%              |
+================================================
+## BB_RPB_TSL
+======================================================================= BUY TAG STATS =======================================================================
+|                            TAG |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------------------------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|                         clucHA |    246 |           2.18 |         536.77 |          6880.403 |         688.04 |        1:32:00 |   232     0    14  94.3 |
+|                           ewo2 |    117 |           1.76 |         205.51 |          2123.280 |         212.33 |        2:11:00 |   105     0    12  89.7 |
+|                         sqzmom |     57 |           1.49 |          84.86 |          1113.622 |         111.36 |        2:10:00 |    52     0     5  91.2 |
+|           local_uptrend clucHA |     14 |           3.40 |          47.53 |           559.650 |          55.96 |        0:34:00 |    14     0     0   100 |
+|                         nfi_13 |     16 |           2.53 |          40.41 |           522.871 |          52.29 |        1:34:00 |    16     0     0   100 |
+|                           cofi |     20 |           2.32 |          46.43 |           440.619 |          44.06 |        2:07:00 |    19     0     1  95.0 |
+|                      bb clucHA |     11 |           2.86 |          31.48 |           415.532 |          41.55 |        2:53:00 |    11     0     0   100 |
+|                          gumbo |     35 |           1.74 |          61.02 |           384.773 |          38.48 |        2:45:00 |    32     0     3  91.4 |
+|                         bb ewo |      7 |           3.11 |          21.75 |           312.603 |          31.26 |        0:51:00 |     7     0     0   100 |
+|                         nfi_32 |      9 |           2.81 |          25.30 |           292.783 |          29.28 |        0:34:00 |     9     0     0   100 |
+|                         nfix_5 |      7 |           2.41 |          16.86 |           174.629 |          17.46 |        1:05:00 |     7     0     0   100 |
+|      ewo2 clucHA nfi_32 nfix_5 |      2 |           4.67 |           9.34 |           173.777 |          17.38 |        0:15:00 |     2     0     0   100 |
+|                  clucHA nfi_38 |      2 |           3.22 |           6.44 |           155.350 |          15.53 |        0:18:00 |     2     0     0   100 |
+|                 bb ewo2 clucHA |      4 |           2.21 |           8.86 |           149.333 |          14.93 |        1:31:00 |     4     0     0   100 |
+|                             bb |     27 |           1.82 |          49.14 |           146.873 |          14.69 |        1:16:00 |    26     0     1  96.3 |
+|                   clucHA gumbo |      2 |           2.30 |           4.59 |           123.300 |          12.33 |        0:42:00 |     2     0     0   100 |
+|                    ewo2 clucHA |     17 |           1.90 |          32.26 |           102.881 |          10.29 |        1:42:00 |    16     0     1  94.1 |
+|             local_uptrend ewo2 |      1 |           4.59 |           4.59 |            82.000 |           8.20 |        1:15:00 |     1     0     0   100 |
+|             ewo2 clucHA nfix_5 |      2 |           2.42 |           4.84 |            76.879 |           7.69 |        0:42:00 |     2     0     0   100 |
+|                        bb ewo2 |      5 |           3.67 |          18.34 |            75.155 |           7.52 |        0:11:00 |     5     0     0   100 |
+|                      local_dip |      2 |           1.69 |           3.37 |            70.323 |           7.03 |        0:15:00 |     2     0     0   100 |
+|                  bb ewo clucHA |      3 |           2.98 |           8.95 |            68.712 |           6.87 |        0:22:00 |     3     0     0   100 |
+|                    ewo2 nfi_32 |      3 |           3.70 |          11.09 |            68.534 |           6.85 |        1:08:00 |     3     0     0   100 |
+|    local_uptrend clucHA nfi_32 |      1 |           6.79 |           6.79 |            67.169 |           6.72 |        0:10:00 |     1     0     0   100 |
+|                   gumbo sqzmom |      2 |           4.61 |           9.21 |            65.768 |           6.58 |        0:55:00 |     2     0     0   100 |
+|                            ewo |      9 |           1.90 |          17.11 |            64.644 |           6.46 |        1:10:00 |     8     0     1  88.9 |
+|        local_uptrend local_dip |      1 |           1.57 |           1.57 |            48.131 |           4.81 |        0:35:00 |     1     0     0   100 |
+|      local_uptrend ewo2 clucHA |      2 |           4.41 |           8.82 |            40.578 |           4.06 |        0:28:00 |     2     0     0   100 |
+|                    ewo2 nfix_5 |      1 |           3.31 |           3.31 |            35.362 |           3.54 |        0:15:00 |     1     0     0   100 |
+|                         nfi_33 |      1 |           2.31 |           2.31 |            35.110 |           3.51 |        2:40:00 |     1     0     0   100 |
+|               local_dip clucHA |      4 |           1.34 |           5.35 |            33.440 |           3.34 |        0:11:00 |     4     0     0   100 |
+|                  clucHA nfi_32 |      1 |           1.69 |           1.69 |            33.058 |           3.31 |        0:05:00 |     1     0     0   100 |
+|        bb local_uptrend clucHA |      1 |           4.83 |           4.83 |            27.818 |           2.78 |        0:25:00 |     1     0     0   100 |
+|                   gumbo nfi_13 |      1 |           6.01 |           6.01 |            22.677 |           2.27 |        0:10:00 |     1     0     0   100 |
+|       local_uptrend ewo clucHA |      1 |           1.15 |           1.15 |            22.661 |           2.27 |        0:05:00 |     1     0     0   100 |
+|                         nfi_38 |     48 |           0.90 |          42.97 |            22.406 |           2.24 |        3:25:00 |    43     0     5  89.6 |
+|                       bb gumbo |      1 |           2.11 |           2.11 |            17.464 |           1.75 |        0:20:00 |     1     0     0   100 |
+| local_uptrend local_dip clucHA |      1 |           4.05 |           4.05 |            14.145 |           1.41 |        0:20:00 |     1     0     0   100 |
+|     local_uptrend clucHA gumbo |      1 |           2.10 |           2.10 |             7.823 |           0.78 |        0:15:00 |     1     0     0   100 |
+|           local_uptrend nfi_32 |      1 |           1.59 |           1.59 |             3.247 |           0.32 |        0:10:00 |     1     0     0   100 |
+|                     r_deadfish |      1 |          -6.50 |          -6.50 |           -12.891 |          -1.29 |        9:05:00 |     0     0     1     0 |
+|                  local_uptrend |     10 |           2.52 |          25.24 |           -26.679 |          -2.67 |        1:36:00 |     9     0     1  90.0 |
+|    bb local_uptrend ewo clucHA |      1 |          -6.70 |          -6.70 |          -169.417 |         -16.94 |        7:40:00 |     0     0     1     0 |
+|                          TOTAL |    698 |           2.02 |        1412.74 |         14866.397 |        1486.64 |        1:50:00 |   652     0    46  93.4 |
+========================================================================= SELL REASON STATS =========================================================================
+|                                           Sell Reason |   Sells |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|-------------------------------------------------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+|                                    trailing_stop_loss |     133 |    133     0     0   100 |           3.18 |         422.48 |          4187.89  |          84.5  |
+|                      signal_profit_q_momdiv( clucHA ) |      60 |     60     0     0   100 |           4.87 |         292.26 |          3610.18  |          58.45 |
+|                           sell_profit_t_1_1( clucHA ) |      41 |     41     0     0   100 |           1.53 |          62.56 |           898.329 |          12.51 |
+|                   signal_profit_q_pmax_bear( clucHA ) |      34 |     34     0     0   100 |           3.3  |         112.26 |          1532.61  |          22.45 |
+|                        signal_profit_q_momdiv( ewo2 ) |      21 |     21     0     0   100 |           4.01 |          84.31 |           918.056 |          16.86 |
+|                      sell_profit_u_bear_1_1( clucHA ) |      17 |     17     0     0   100 |           1.44 |          24.51 |           405.462 |           4.9  |
+|                      signal_profit_q_momdiv( sqzmom ) |      16 |     16     0     0   100 |           3.37 |          53.84 |           877.697 |          10.77 |
+|                             sell_profit_t_1_1( ewo2 ) |      15 |     15     0     0   100 |           1.46 |          21.91 |           194.963 |           4.38 |
+|                      signal_profit_q_momdiv( nfi_38 ) |      15 |     15     0     0   100 |           3.18 |          47.77 |           504.425 |           9.55 |
+|                           sell_profit_t_0_2( clucHA ) |      15 |     15     0     0   100 |           0.65 |           9.81 |           138.633 |           1.96 |
+|                      sell_stoploss_deadfish( clucHA ) |      14 |      0     0    14     0 |          -8.33 |        -116.6  |         -1217.07  |         -23.32 |
+|                    signal_profit_q_momdiv_coh( ewo2 ) |      13 |     13     0     0   100 |           4.6  |          59.78 |           805.68  |          11.96 |
+|                   signal_profit_q_pmax_bear( sqzmom ) |      12 |     12     0     0   100 |           3.17 |          38.05 |           455.788 |           7.61 |
+|                        sell_stoploss_deadfish( ewo2 ) |      11 |      0     0    11     0 |          -9.13 |        -100.48 |         -1025     |         -20.1  |
+|                       signal_profit_q_momdiv( gumbo ) |      11 |     11     0     0   100 |           3.36 |          36.93 |           511.509 |           7.39 |
+|                     signal_profit_q_pmax_bear( ewo2 ) |      10 |     10     0     0   100 |           3.32 |          33.17 |           319.566 |           6.63 |
+|                    signal_profit_q_pmax_bear( gumbo ) |       9 |      9     0     0   100 |           3.54 |          31.82 |           622.693 |           6.36 |
+|                  signal_profit_q_momdiv_coh( clucHA ) |       9 |      9     0     0   100 |           4.14 |          37.26 |           285.206 |           7.45 |
+|                     sell_profit_t_cti_r_0_1( nfi_38 ) |       7 |      7     0     0   100 |           0.74 |           5.16 |           154.232 |           1.03 |
+|                        signal_profit_q_momdiv( cofi ) |       6 |      6     0     0   100 |           4.37 |          26.21 |           178.428 |           5.24 |
+|                       sell_profit_t_cti_r_0_1( ewo2 ) |       6 |      6     0     0   100 |           0.64 |           3.81 |            48.464 |           0.76 |
+|                     sell_profit_t_cti_r_0_1( sqzmom ) |       6 |      6     0     0   100 |           0.7  |           4.2  |            81.519 |           0.84 |
+|                      signal_profit_q_momdiv( nfi_13 ) |       6 |      6     0     0   100 |           3    |          17.98 |           190.005 |           3.6  |
+|                            sell_profit_t_1_10( ewo2 ) |       5 |      5     0     0   100 |           1.7  |           8.48 |            63.615 |           1.7  |
+|                      sell_stoploss_deadfish( nfi_38 ) |       5 |      0     0     5     0 |          -9.34 |         -46.69 |         -1107.96  |          -9.34 |
+|                      sell_stoploss_deadfish( sqzmom ) |       5 |      0     0     5     0 |          -8.46 |         -42.31 |          -816.75  |          -8.46 |
+|                           sell_profit_t_0_1( clucHA ) |       5 |      5     0     0   100 |           0.4  |           2    |            34.818 |           0.4  |
+|                     sell_profit_t_cti_r_0_1( clucHA ) |       5 |      5     0     0   100 |           0.35 |           1.76 |            30.205 |           0.35 |
+|                   signal_profit_q_pmax_bear( nfi_38 ) |       5 |      5     0     0   100 |           3.02 |          15.09 |           191.512 |           3.02 |
+|                               sell_profit_t_1_1( bb ) |       5 |      5     0     0   100 |           1.65 |           8.27 |           141.993 |           1.65 |
+|                   signal_profit_q_pmax_bear( nfix_5 ) |       4 |      4     0     0   100 |           2.67 |          10.66 |            93.289 |           2.13 |
+|                   signal_profit_q_momdiv_coh( gumbo ) |       4 |      4     0     0   100 |           3.62 |          14.5  |           155.982 |           2.9  |
+|                           sell_profit_t_1_1( sqzmom ) |       4 |      4     0     0   100 |           1.34 |           5.34 |           107.089 |           1.07 |
+|                          sell_profit_t_1_12( clucHA ) |       4 |      4     0     0   100 |           1.49 |           5.95 |            86.643 |           1.19 |
+|               signal_profit_q_momdiv( local_uptrend ) |       4 |      4     0     0   100 |           5.77 |          23.07 |           150.569 |           4.61 |
+|                           sell_profit_t_0_2( nfi_38 ) |       4 |      4     0     0   100 |           0.32 |           1.29 |             6.679 |           0.26 |
+|                             sell_profit_t_0_1( ewo2 ) |       4 |      4     0     0   100 |           0.59 |           2.35 |            43.856 |           0.47 |
+|                  signal_profit_q_momdiv_coh( nfi_38 ) |       4 |      4     0     0   100 |           2.53 |          10.11 |           169.987 |           2.02 |
+|                      sell_profit_t_cti_r_0_1( gumbo ) |       3 |      3     0     0   100 |           0.77 |           2.3  |            28.415 |           0.46 |
+|                      sell_profit_u_bear_1_1( sqzmom ) |       3 |      3     0     0   100 |           1.18 |           3.53 |            83.659 |           0.71 |
+|                      sell_profit_t_1_1( ewo2 clucHA ) |       3 |      3     0     0   100 |           1.35 |           4.06 |            38.969 |           0.81 |
+|                       sell_stoploss_deadfish( gumbo ) |       3 |      0     0     3     0 |         -13.27 |         -39.82 |         -1088.48  |          -7.96 |
+|                  signal_profit_q_momdiv_coh( sqzmom ) |       3 |      3     0     0   100 |           3.32 |           9.97 |           163.235 |           1.99 |
+|                   signal_profit_q_pmax_bear( nfi_13 ) |       3 |      3     0     0   100 |           3.42 |          10.26 |           122.129 |           2.05 |
+|                 sell_profit_t_1_1( local_dip clucHA ) |       3 |      3     0     0   100 |           1.59 |           4.78 |            19.11  |           0.96 |
+|                  signal_profit_q_momdiv_coh( nfi_13 ) |       3 |      3     0     0   100 |           2.5  |           7.5  |           153.483 |           1.5  |
+|                          sell_profit_t_1_11( clucHA ) |       2 |      2     0     0   100 |           1.55 |           3.1  |            34.153 |           0.62 |
+|                            sell_profit_t_1_12( ewo2 ) |       2 |      2     0     0   100 |           1.62 |           3.23 |            28.288 |           0.65 |
+|                          sell_profit_t_1_12( sqzmom ) |       2 |      2     0     0   100 |           1.59 |           3.19 |            12.747 |           0.64 |
+|                              sell_profit_t_1_1( ewo ) |       2 |      2     0     0   100 |           1.68 |           3.35 |            28.622 |           0.67 |
+|                    signal_profit_q_momdiv_coh( cofi ) |       2 |      2     0     0   100 |           5.57 |          11.13 |            87.934 |           2.23 |
+|        signal_profit_q_momdiv( local_uptrend clucHA ) |       2 |      2     0     0   100 |           7.74 |          15.48 |           292.84  |           3.1  |
+|                            sell_profit_t_1_11( ewo2 ) |       2 |      2     0     0   100 |           1.57 |           3.13 |            18.846 |           0.63 |
+|                          sell_profit_t_1_11( nfi_32 ) |       2 |      2     0     0   100 |           1.38 |           2.77 |             6.893 |           0.55 |
+|              signal_profit_q_pmax_bear( ewo2 clucHA ) |       2 |      2     0     0   100 |           3.03 |           6.06 |            43.425 |           1.21 |
+|                          signal_profit_q_momdiv( bb ) |       2 |      2     0     0   100 |           6.32 |          12.64 |           160.735 |           2.53 |
+|                      signal_profit_q_momdiv( nfi_32 ) |       2 |      2     0     0   100 |           4.46 |           8.92 |           126.807 |           1.78 |
+|                           sell_profit_t_1_1( nfi_38 ) |       2 |      2     0     0   100 |           1.49 |           2.97 |             6.972 |           0.59 |
+|                        sell_profit_t_1_1( local_dip ) |       2 |      2     0     0   100 |           1.69 |           3.37 |            70.323 |           0.67 |
+|                           sell_profit_t_1_1( bb ewo ) |       2 |      2     0     0   100 |           1.5  |           3    |            46.965 |           0.6  |
+|             sell_profit_t_1_1( local_uptrend clucHA ) |       2 |      2     0     0   100 |           1.43 |           2.87 |             9.925 |           0.57 |
+|                             sell_profit_t_0_1( cofi ) |       2 |      2     0     0   100 |           0.78 |           1.55 |            33.787 |           0.31 |
+|                       sell_profit_t_cti_r_0_1( cofi ) |       2 |      2     0     0   100 |           0.28 |           0.56 |             6.898 |           0.11 |
+|                      sell_profit_u_bear_1_1( nfi_38 ) |       2 |      2     0     0   100 |           1.1  |           2.19 |            22.161 |           0.44 |
+|                     sell_profit_t_cti_r_0_1( nfi_13 ) |       2 |      2     0     0   100 |           0.55 |           1.1  |            28.836 |           0.22 |
+|                           sell_profit_t_1_1( nfix_5 ) |       2 |      2     0     0   100 |           1.43 |           2.86 |            42.699 |           0.57 |
+|                 signal_profit_q_momdiv( ewo2 clucHA ) |       2 |      2     0     0   100 |           2.3  |           4.59 |            14.805 |           0.92 |
+|                   signal_profit_q_pmax_bear( nfi_32 ) |       2 |      2     0     0   100 |           4.41 |           8.82 |            28.713 |           1.76 |
+|                     sell_profit_t_1_10( ewo2 clucHA ) |       1 |      1     0     0   100 |           1.34 |           1.34 |            21.605 |           0.27 |
+|                      signal_profit_q_momdiv_coh( bb ) |       1 |      1     0     0   100 |           2.05 |           2.05 |            32.623 |           0.41 |
+|          signal_profit_q_momdiv( local_uptrend ewo2 ) |       1 |      1     0     0   100 |           4.59 |           4.59 |            82     |           0.92 |
+|                           sell_profit_t_0_1( sqzmom ) |       1 |      1     0     0   100 |           0.34 |           0.34 |             5.29  |           0.07 |
+|                         sell_stoploss_deadfish( ewo ) |       1 |      0     0     1     0 |          -7.33 |          -7.33 |          -144.62  |          -1.47 |
+|                           sell_profit_t_1_1( nfi_32 ) |       1 |      1     0     0   100 |           1.34 |           1.34 |            26.373 |           0.27 |
+|                    sell_profit_t_1_1( clucHA nfi_32 ) |       1 |      1     0     0   100 |           1.69 |           1.69 |            33.058 |           0.34 |
+|                   signal_profit_q_pmax_bear( nfi_33 ) |       1 |      1     0     0   100 |           2.31 |           2.31 |            35.11  |           0.46 |
+|    sell_profit_u_bear_1_1( local_uptrend ewo clucHA ) |       1 |      1     0     0   100 |           1.15 |           1.15 |            22.661 |           0.23 |
+|                  sell_stoploss_deadfish( r_deadfish ) |       1 |      0     0     1     0 |          -6.5  |          -6.5  |           -12.891 |          -1.3  |
+|                         sell_profit_t_cti_r_0_1( bb ) |       1 |      1     0     0   100 |           0.08 |           0.08 |             1.667 |           0.02 |
+|               signal_profit_q_momdiv( clucHA nfi_38 ) |       1 |      1     0     0   100 |           5.87 |           5.87 |           150.646 |           1.17 |
+|          sell_profit_t_1_1( local_uptrend local_dip ) |       1 |      1     0     0   100 |           1.57 |           1.57 |            48.131 |           0.31 |
+|                          sell_stoploss_deadfish( bb ) |       1 |      0     0     1     0 |         -20.4  |         -20.4  |          -661.231 |          -4.08 |
+|                               sell_profit_t_0_2( bb ) |       1 |      1     0     0   100 |           0.68 |           0.68 |            21.239 |           0.14 |
+|                         sell_profit_u_bear_1_1( ewo ) |       1 |      1     0     0   100 |           1.08 |           1.08 |            33.55  |           0.22 |
+|        sell_profit_u_bear_1_1( local_uptrend clucHA ) |       1 |      1     0     0   100 |           1.83 |           1.83 |            54.668 |           0.37 |
+|                   signal_profit_q_momdiv_1h( nfi_38 ) |       1 |      1     0     0   100 |           2.28 |           2.28 |            68.261 |           0.46 |
+|                  sell_profit_t_cti_r_0_1( bb clucHA ) |       1 |      1     0     0   100 |           0.34 |           0.34 |            10.299 |           0.07 |
+|          signal_profit_q_momdiv_coh( bb ewo2 clucHA ) |       1 |      1     0     0   100 |           4.38 |           4.38 |           128.453 |           0.88 |
+|                           sell_profit_t_0_2( sqzmom ) |       1 |      1     0     0   100 |           0.79 |           0.79 |            21.733 |           0.16 |
+|                 sell_stoploss_deadfish( ewo2 clucHA ) |       1 |      0     0     1     0 |          -7.31 |          -7.31 |          -186.775 |          -1.46 |
+|                     sell_profit_t_cti_r_0_1( bb ewo ) |       1 |      1     0     0   100 |           1.1  |           1.1  |            21.014 |           0.22 |
+|                           sell_stoploss_u_e_1( ewo2 ) |       1 |      0     0     1     0 |          -6.06 |          -6.06 |          -152.776 |          -1.21 |
+|               sell_stoploss_deadfish( local_uptrend ) |       1 |      0     0     1     0 |          -8.84 |          -8.84 |          -228.262 |          -1.77 |
+|                            sell_profit_t_0_1( gumbo ) |       1 |      1     0     0   100 |           0.08 |           0.08 |             2.023 |           0.02 |
+| sell_stoploss_deadfish( bb local_uptrend ewo clucHA ) |       1 |      0     0     1     0 |          -6.7  |          -6.7  |          -169.417 |          -1.34 |
+|                 sell_profit_t_0_2( local_dip clucHA ) |       1 |      1     0     0   100 |           0.57 |           0.57 |            14.329 |           0.11 |
+|                    signal_profit_q_momdiv_1h( gumbo ) |       1 |      1     0     0   100 |           2.81 |           2.81 |            58.188 |           0.56 |
+|                            sell_profit_t_1_5( gumbo ) |       1 |      1     0     0   100 |           1.71 |           1.71 |            39.728 |           0.34 |
+|                           sell_profit_t_0_3( clucHA ) |       1 |      1     0     0   100 |           1.07 |           1.07 |            21.258 |           0.21 |
+|                          sell_profit_t_1_10( clucHA ) |       1 |      1     0     0   100 |           1.9  |           1.9  |            36.633 |           0.38 |
+|                   signal_profit_q_momdiv( bb clucHA ) |       1 |      1     0     0   100 |           8.97 |           8.97 |           126.202 |           1.79 |
+|                      sell_profit_t_1_7( ewo2 clucHA ) |       1 |      1     0     0   100 |           1.23 |           1.23 |             6.763 |           0.25 |
+|                signal_profit_q_pmax_bear( bb clucHA ) |       1 |      1     0     0   100 |           3.95 |           3.95 |            53.668 |           0.79 |
+|                             sell_profit_t_1_4( ewo2 ) |       1 |      1     0     0   100 |           1.24 |           1.24 |             3.716 |           0.25 |
+|              signal_profit_q_momdiv( bb ewo2 clucHA ) |       1 |      1     0     0   100 |           2.03 |           2.03 |             8.434 |           0.41 |
+|                signal_profit_q_momdiv( gumbo sqzmom ) |       1 |      1     0     0   100 |           7.2  |           7.2  |            27.605 |           1.44 |
+|                signal_profit_q_momdiv( gumbo nfi_13 ) |       1 |      1     0     0   100 |           6.01 |           6.01 |            22.677 |           1.2  |
+|                     sell_profit_t_1_11( ewo2 nfi_32 ) |       1 |      1     0     0   100 |           1.51 |           1.51 |             5.487 |           0.3  |
+|        sell_profit_t_0_1( local_uptrend ewo2 clucHA ) |       1 |      1     0     0   100 |           1.12 |           1.12 |             4.043 |           0.22 |
+|                               sell_profit_t_0_1( bb ) |       1 |      1     0     0   100 |           0.44 |           0.44 |             1.443 |           0.09 |
+|                        sell_profit_t_0_1( bb clucHA ) |       1 |      1     0     0   100 |           0.65 |           0.65 |             2.079 |           0.13 |
+|                         signal_profit_q_momdiv( ewo ) |       1 |      1     0     0   100 |           4.85 |           4.85 |            15.206 |           0.97 |
+|             signal_profit_q_momdiv_coh( ewo2 nfi_32 ) |       1 |      1     0     0   100 |           4.79 |           4.79 |            14.759 |           0.96 |
+|                      signal_profit_q_momdiv( bb ewo ) |       1 |      1     0     0   100 |           8.63 |           8.63 |           109.484 |           1.73 |
+|                          sell_profit_t_1_1( bb ewo2 ) |       1 |      1     0     0   100 |           1.33 |           1.33 |             4.037 |           0.27 |
+|                    sell_profit_t_1_1( local_uptrend ) |       1 |      1     0     0   100 |           1.37 |           1.37 |             3.636 |           0.27 |
+|                    sell_profit_t_0_1( bb ewo clucHA ) |       1 |      1     0     0   100 |           0.87 |           0.87 |             2.157 |           0.17 |
+|                      sell_profit_u_bear_1_2( nfi_38 ) |       1 |      1     0     0   100 |           1    |           1    |             2.312 |           0.2  |
+|                           sell_profit_t_0_1( nfi_38 ) |       1 |      1     0     0   100 |           0.09 |           0.09 |             0.211 |           0.02 |
+|                          sell_profit_t_1_12( nfi_38 ) |       1 |      1     0     0   100 |           1.7  |           1.7  |             3.614 |           0.34 |
+|             sell_profit_t_0_1( local_uptrend clucHA ) |       1 |      1     0     0   100 |           1.19 |           1.19 |             2.516 |           0.24 |
+|        sell_profit_u_bear_1_1( local_uptrend nfi_32 ) |       1 |      1     0     0   100 |           1.59 |           1.59 |             3.247 |           0.32 |
+|                   sell_profit_t_1_1( bb ewo2 clucHA ) |       1 |      1     0     0   100 |           1.99 |           1.99 |             9.394 |           0.4  |
+|             signal_profit_q_momdiv_coh( ewo2 clucHA ) |       1 |      1     0     0   100 |           2.62 |           2.62 |            12.506 |           0.52 |
+|                           sell_profit_t_1_2( clucHA ) |       1 |      1     0     0   100 |           1.61 |           1.61 |             8.251 |           0.32 |
+|               sell_profit_t_0_3( ewo2 clucHA nfix_5 ) |       1 |      1     0     0   100 |           0.47 |           0.47 |             2.529 |           0.09 |
+|                       sell_profit_t_1_11( bb clucHA ) |       1 |      1     0     0   100 |           1.34 |           1.34 |            17.042 |           0.27 |
+|                          sell_profit_u_bear_1_1( bb ) |       1 |      1     0     0   100 |           1.19 |           1.19 |            15.083 |           0.24 |
+|                      sell_profit_u_bear_1_2( sqzmom ) |       1 |      1     0     0   100 |           1    |           1    |            11.656 |           0.2  |
+|                  signal_profit_q_momdiv_coh( nfix_5 ) |       1 |      1     0     0   100 |           3.34 |           3.34 |            38.642 |           0.67 |
+|                           signal_profit_q_2( clucHA ) |       1 |      1     0     0   100 |           2.03 |           2.03 |            22.076 |           0.41 |
+|                        sell_profit_t_1_1( bb clucHA ) |       1 |      1     0     0   100 |           1.41 |           1.41 |            15.118 |           0.28 |
+|                    sell_profit_t_0_1( local_uptrend ) |       1 |      1     0     0   100 |           0.25 |           0.25 |             2.554 |           0.05 |
+|                     signal_profit_q_momdiv_1h( ewo2 ) |       1 |      1     0     0   100 |          14.23 |          14.23 |           133.761 |           2.85 |
+|                        sell_stoploss_deadfish( cofi ) |       1 |      0     0     1     0 |         -10.92 |         -10.92 |          -101.349 |          -2.18 |
+|                     signal_profit_q_pmax_bear( cofi ) |       1 |      1     0     0   100 |           3.78 |           3.78 |            34.836 |           0.76 |
+|                    sell_profit_t_0_2( clucHA nfi_38 ) |       1 |      1     0     0   100 |           0.57 |           0.57 |             4.703 |           0.11 |
+|                               sell_profit_t_1_2( bb ) |       1 |      1     0     0   100 |           1.49 |           1.49 |            12.051 |           0.3  |
+|                           sell_profit_t_1_5( clucHA ) |       1 |      1     0     0   100 |           1.24 |           1.24 |             8.654 |           0.25 |
+|             sell_profit_t_cti_r_0_1( bb ewo2 clucHA ) |       1 |      1     0     0   100 |           0.45 |           0.45 |             3.051 |           0.09 |
+|                          sell_profit_t_1_11( nfi_13 ) |       1 |      1     0     0   100 |           1.53 |           1.53 |             9.356 |           0.31 |
+|             sell_profit_t_0_2( local_uptrend clucHA ) |       1 |      1     0     0   100 |           1.06 |           1.06 |             6.018 |           0.21 |
+|        sell_profit_t_0_1( ewo2 clucHA nfi_32 nfix_5 ) |       1 |      1     0     0   100 |           1.12 |           1.12 |             6.343 |           0.22 |
+|                           sell_profit_t_0_2( nfi_32 ) |       1 |      1     0     0   100 |           1.02 |           1.02 |            31.566 |           0.2  |
+====================================================== LEFT OPEN TRADES REPORT ======================================================
+|   Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|  TOTAL |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-09-11 00:00:00 |
+| Backtesting to         | 2022-02-05 00:00:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 698 / 4.75          |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 15866.397 USDT      |
+| Absolute profit        | 14866.397 USDT      |
+| Total profit %         | 1486.64%            |
+| Trades per day         | 4.75                |
+| Avg. daily profit %    | 10.11%              |
+| Avg. stake amount      | 1294.975 USDT       |
+| Total trade volume     | 903892.365 USDT     |
+|                        |                     |
+| Best Pair              | ELON/USDT 169.11%   |
+| Worst Pair             | ADS/USDT -26.77%    |
+| Best trade             | RMRK/USDT 14.44%    |
+| Worst trade            | SHIB/USDT -30.04%   |
+| Best day               | 1931.453 USDT       |
+| Worst day              | -1091.133 USDT      |
+| Days win/draw/lose     | 105 / 26 / 14       |
+| Avg. Duration Winners  | 1:20:00             |
+| Avg. Duration Loser    | 8:49:00             |
+| Rejected Buy signals   | 18107               |
+|                        |                     |
+| Min balance            | 987.109 USDT        |
+| Max balance            | 16356.030 USDT      |
+| Drawdown (Account)     | 8.43%               |
+| Drawdown               | 1379.478 USDT       |
+| Drawdown high          | 15356.030 USDT      |
+| Drawdown low           | 13976.551 USDT      |
+| Drawdown Start         | 2022-01-22 01:45:00 |
+| Drawdown End           | 2022-01-22 19:45:00 |
+| Market change          | 64.21%              |
+================================================
+## BB_RPB_TSLmeneguzzo
+============================================================================= BUY TAG STATS ==============================================================================
+|                                         TAG |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|---------------------------------------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|                                      sqzmom |    117 |           2.12 |         248.48 |          2374.269 |         237.43 |        1:47:00 |   111     0     6  94.9 |
+|                               local_uptrend |     87 |           2.80 |         243.77 |          1908.824 |         190.88 |        0:45:00 |    86     0     1  98.9 |
+|                                          bb |     76 |           2.42 |         183.74 |          1135.563 |         113.56 |        0:54:00 |    74     0     2  97.4 |
+|                                      nfi_32 |     30 |           3.18 |          95.34 |           626.875 |          62.69 |        0:39:00 |    29     0     1  96.7 |
+|                                      bb ewo |     18 |           3.66 |          65.90 |           613.130 |          61.31 |        0:41:00 |    18     0     0   100 |
+|                                      nfi_13 |     23 |           2.05 |          47.15 |           340.767 |          34.08 |        2:13:00 |    22     0     1  95.7 |
+|                                     nfi7_37 |     24 |           3.11 |          74.65 |           255.055 |          25.51 |        1:59:00 |    23     0     1  95.8 |
+|                                     nfi7_33 |     26 |           1.91 |          49.61 |           248.788 |          24.88 |        2:07:00 |    25     0     1  96.2 |
+|                                         ewo |     11 |           2.34 |          25.77 |           173.837 |          17.38 |        1:05:00 |    10     0     1  90.9 |
+|                        local_uptrend nfi_32 |      8 |           2.75 |          21.99 |           123.371 |          12.34 |        0:09:00 |     8     0     0   100 |
+|                        local_uptrend nfi_13 |      1 |          14.25 |          14.25 |            87.754 |           8.78 |        0:25:00 |     1     0     0   100 |
+|                            bb local_uptrend |      4 |           2.76 |          11.04 |            75.814 |           7.58 |        1:06:00 |     4     0     0   100 |
+|                           local_uptrend ewo |      3 |           3.01 |           9.02 |            50.290 |           5.03 |        0:07:00 |     3     0     0   100 |
+|                       local_uptrend nfi7_37 |      3 |           3.75 |          11.26 |            48.448 |           4.84 |        0:32:00 |     3     0     0   100 |
+| local_uptrend nfi_32 nfi_33 nfi7_33 nfi7_37 |      1 |           8.50 |           8.50 |            45.420 |           4.54 |        0:35:00 |     1     0     0   100 |
+|                              nfi_33 nfi7_33 |      2 |           2.25 |           4.49 |            31.611 |           3.16 |        1:38:00 |     2     0     0   100 |
+|                      nfi_32 nfi7_33 nfi7_37 |      1 |           4.49 |           4.49 |            16.083 |           1.61 |        0:20:00 |     1     0     0   100 |
+|                                     nfix_49 |      1 |           4.24 |           4.24 |            13.184 |           1.32 |        0:15:00 |     1     0     0   100 |
+|                local_uptrend nfi_32 nfi7_33 |      1 |           3.80 |           3.80 |            11.951 |           1.20 |        2:05:00 |     1     0     0   100 |
+|                                  r_deadfish |      2 |          -2.20 |          -4.40 |            11.846 |           1.18 |        4:45:00 |     1     0     1  50.0 |
+|                       local_uptrend nfi7_33 |      1 |           2.16 |           2.16 |             7.229 |           0.72 |        0:25:00 |     1     0     0   100 |
+|                              nfi_32 nfi7_33 |      1 |           2.38 |           2.38 |             7.000 |           0.70 |        0:45:00 |     1     0     0   100 |
+|                               sqzmom nfi_13 |      1 |           2.22 |           2.22 |             5.139 |           0.51 |        2:55:00 |     1     0     0   100 |
+|                        bb local_uptrend ewo |      2 |           1.02 |           2.04 |           -27.855 |          -2.79 |        4:08:00 |     1     0     1  50.0 |
+|                                       TOTAL |    444 |           2.55 |        1131.89 |          8184.393 |         818.44 |        1:18:00 |   428     0    16  96.4 |
+============================================================================== SELL REASON STATS ===============================================================================
+|                                                      Sell Reason |   Sells |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|------------------------------------------------------------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+|                                               trailing_stop_loss |     116 |    116     0     0   100 |           3.53 |         409.68 |          2811.36  |          81.94 |
+|                                                              roi |      36 |     36     0     0   100 |           2.43 |          87.41 |           600.343 |          17.48 |
+|                                 signal_profit_q_momdiv( sqzmom ) |      35 |     35     0     0   100 |           3.58 |         125.24 |          1276.19  |          25.05 |
+|                              signal_profit_q_pmax_bear( sqzmom ) |      27 |     27     0     0   100 |           3.34 |          90.2  |           763.773 |          18.04 |
+|                          signal_profit_q_momdiv( local_uptrend ) |      20 |     20     0     0   100 |           5.92 |         118.37 |          1095.62  |          23.67 |
+|                               sell_profit_t_1_1( local_uptrend ) |      16 |     16     0     0   100 |           1.59 |          25.49 |           174.931 |           5.1  |
+|                                signal_profit_q_momdiv( nfi7_37 ) |      11 |     11     0     0   100 |           5.46 |          60.01 |           290.314 |          12    |
+|                                          sell_profit_t_1_1( bb ) |      11 |     11     0     0   100 |           1.66 |          18.28 |           178.082 |           3.66 |
+|                               sell_profit_t_0_1( local_uptrend ) |      10 |     10     0     0   100 |           0.46 |           4.59 |            29.531 |           0.92 |
+|                                sell_profit_t_cti_r_0_1( sqzmom ) |       6 |      6     0     0   100 |           0.64 |           3.87 |            41.644 |           0.77 |
+|                                 signal_profit_q_momdiv( nfi_13 ) |       6 |      6     0     0   100 |           3.47 |          20.81 |           147.022 |           4.16 |
+|                                     signal_profit_q_momdiv( bb ) |       6 |      6     0     0   100 |           6.52 |          39.11 |           363.781 |           7.82 |
+|                                      sell_profit_t_1_1( sqzmom ) |       6 |      6     0     0   100 |           1.47 |           8.8  |            75.331 |           1.76 |
+|                                signal_profit_q_momdiv( nfi7_33 ) |       6 |      6     0     0   100 |           3.35 |          20.1  |           124.225 |           4.02 |
+|                                 sell_stoploss_deadfish( sqzmom ) |       6 |      0     0     6     0 |          -7.98 |         -47.9  |          -512.797 |          -9.58 |
+|                               sell_profit_t_0_2( local_uptrend ) |       6 |      6     0     0   100 |           0.45 |           2.69 |            21.201 |           0.54 |
+|                                 signal_profit_q_momdiv( nfi_32 ) |       5 |      5     0     0   100 |           5.92 |          29.58 |           154.569 |           5.92 |
+|                                      sell_profit_t_1_1( nfi_32 ) |       4 |      4     0     0   100 |           1.62 |           6.47 |            50.253 |           1.29 |
+|                             signal_profit_q_momdiv_coh( sqzmom ) |       4 |      4     0     0   100 |           2.51 |          10.05 |           111.014 |           2.01 |
+|                                          sell_profit_t_0_1( bb ) |       4 |      4     0     0   100 |           0.53 |           2.12 |            14.029 |           0.42 |
+|                                    sell_profit_t_cti_r_0_1( bb ) |       4 |      4     0     0   100 |           0.48 |           1.94 |            23.535 |           0.39 |
+|                              signal_profit_q_pmax_bear( nfi_13 ) |       4 |      4     0     0   100 |           3.15 |          12.61 |           110.937 |           2.52 |
+|                                     sell_profit_t_1_11( nfi_32 ) |       4 |      4     0     0   100 |           1.5  |           5.98 |            23.109 |           1.2  |
+|                                          sell_profit_t_0_2( bb ) |       3 |      3     0     0   100 |           0.39 |           1.17 |            17.491 |           0.23 |
+|                             signal_profit_q_pmax_bear( nfi7_37 ) |       3 |      3     0     0   100 |           2.57 |           7.7  |            48.053 |           1.54 |
+|                                 signal_profit_q_momdiv( bb ewo ) |       3 |      3     0     0   100 |           7.67 |          23    |           273.018 |           4.6  |
+|                                 sell_profit_u_bear_1_1( sqzmom ) |       3 |      3     0     0   100 |           1.18 |           3.53 |            49.548 |           0.71 |
+|                                     sell_profit_t_1_1( nfi7_33 ) |       3 |      3     0     0   100 |           1.55 |           4.65 |            32.261 |           0.93 |
+|                          sell_profit_u_bear_1_1( local_uptrend ) |       2 |      2     0     0   100 |           1.43 |           2.86 |            38.08  |           0.57 |
+|                                      sell_profit_t_0_2( nfi_32 ) |       2 |      2     0     0   100 |           0.74 |           1.47 |            19.346 |           0.29 |
+|                                    sell_profit_t_1_10( nfi7_37 ) |       2 |      2     0     0   100 |           1.59 |           3.18 |            22.493 |           0.64 |
+|                            signal_profit_q_momdiv_coh( nfi7_33 ) |       2 |      2     0     0   100 |           2.96 |           5.91 |            65.864 |           1.18 |
+|                                     sell_profit_t_1_12( sqzmom ) |       2 |      2     0     0   100 |           1.56 |           3.11 |            35.702 |           0.62 |
+|                                     sell_stoploss_deadfish( bb ) |       2 |      0     0     2     0 |         -13.56 |         -27.12 |          -464.919 |          -5.42 |
+|                                          sell_profit_t_1_2( bb ) |       2 |      2     0     0   100 |           1.54 |           3.09 |            26.99  |           0.62 |
+|                                      sell_profit_t_1_1( bb ewo ) |       2 |      2     0     0   100 |           1.5  |           3    |            29.984 |           0.6  |
+|                        sell_profit_t_1_1( local_uptrend nfi_32 ) |       2 |      2     0     0   100 |           1.71 |           3.43 |            17.445 |           0.69 |
+|                                     sell_profit_u_bear_1_1( bb ) |       2 |      2     0     0   100 |           1.29 |           2.59 |            32.436 |           0.52 |
+|                                         sell_profit_t_1_1( ewo ) |       2 |      2     0     0   100 |           1.68 |           3.35 |            22.063 |           0.67 |
+|                        sell_profit_t_0_1( local_uptrend nfi_32 ) |       2 |      2     0     0   100 |           0.49 |           0.98 |             4.708 |           0.2  |
+|                                      sell_profit_t_0_1( nfi_32 ) |       2 |      2     0     0   100 |           0.62 |           1.24 |             6.65  |           0.25 |
+|                             signal_profit_q_momdiv_coh( nfi_13 ) |       2 |      2     0     0   100 |           2.71 |           5.41 |            77.689 |           1.08 |
+|                               sell_profit_t_cti_r_0_1( nfi7_33 ) |       2 |      2     0     0   100 |           0.61 |           1.22 |             7.608 |           0.24 |
+|                             signal_profit_q_pmax_bear( nfi7_33 ) |       2 |      2     0     0   100 |           3.47 |           6.94 |            21.913 |           1.39 |
+|                                sell_profit_t_cti_r_0_1( nfi_13 ) |       2 |      2     0     0   100 |           0.55 |           1.1  |            16.882 |           0.22 |
+|                              signal_profit_q_pmax_bear( nfi_32 ) |       2 |      2     0     0   100 |           2.53 |           5.07 |            42.773 |           1.01 |
+|                   sell_stoploss_deadfish( bb local_uptrend ewo ) |       1 |      0     0     1     0 |          -6.7  |          -6.7  |           -95.476 |          -1.34 |
+|                                    sell_stoploss_deadfish( ewo ) |       1 |      0     0     1     0 |          -7.33 |          -7.33 |           -85.508 |          -1.47 |
+|                                    sell_profit_u_bear_1_1( ewo ) |       1 |      1     0     0   100 |           1.08 |           1.08 |            20.233 |           0.22 |
+|                                sell_stoploss_deadfish( nfi7_37 ) |       1 |      0     0     1     0 |         -19.34 |         -19.34 |          -224.151 |          -3.87 |
+|                                      sell_profit_t_1_5( sqzmom ) |       1 |      1     0     0   100 |           1.67 |           1.67 |            30.838 |           0.33 |
+|                      sell_profit_u_bear_1_1( local_uptrend ewo ) |       1 |      1     0     0   100 |           1.15 |           1.15 |            13.398 |           0.23 |
+|                              signal_profit_q_momdiv_1h( sqzmom ) |       1 |      1     0     0   100 |           2.14 |           2.14 |            39.011 |           0.43 |
+|                                     sell_profit_t_1_11( sqzmom ) |       1 |      1     0     0   100 |           1.38 |           1.38 |            18.575 |           0.28 |
+|                                      sell_profit_t_0_2( sqzmom ) |       1 |      1     0     0   100 |           0.79 |           0.79 |            12.455 |           0.16 |
+|                             signal_profit_q_momdiv( r_deadfish ) |       1 |      1     0     0   100 |           2.1  |           2.1  |            24.737 |           0.42 |
+|                      sell_profit_t_cti_r_0_1( bb local_uptrend ) |       1 |      1     0     0   100 |           0.04 |           0.04 |             0.425 |           0.01 |
+|                                sell_profit_t_cti_r_0_1( bb ewo ) |       1 |      1     0     0   100 |           1.1  |           1.1  |            13.016 |           0.22 |
+|                       signal_profit_q_pmax_bear( local_uptrend ) |       1 |      1     0     0   100 |           2.39 |           2.39 |            34.332 |           0.48 |
+|                          sell_stoploss_deadfish( local_uptrend ) |       1 |      0     0     1     0 |          -8.84 |          -8.84 |          -127.474 |          -1.77 |
+|                                 sell_profit_u_bear_1_2( nfi_13 ) |       1 |      1     0     0   100 |           1.86 |           1.86 |            21.717 |           0.37 |
+|                                      sell_profit_t_0_3( sqzmom ) |       1 |      1     0     0   100 |           1.18 |           1.18 |            13.891 |           0.24 |
+|                                      sell_profit_t_0_1( sqzmom ) |       1 |      1     0     0   100 |           0.34 |           0.34 |             3.463 |           0.07 |
+|                             sell_stoploss_deadfish( r_deadfish ) |       1 |      0     0     1     0 |          -6.5  |          -6.5  |           -12.891 |          -1.3  |
+|                      signal_profit_q_pmax_bear( nfi_33 nfi7_33 ) |       1 |      1     0     0   100 |           2.31 |           2.31 |            23.258 |           0.46 |
+|                                sell_stoploss_deadfish( nfi7_33 ) |       1 |      0     0     1     0 |         -11.44 |         -11.44 |          -116.058 |          -2.29 |
+|                   sell_profit_u_bear_1_1( local_uptrend nfi_32 ) |       1 |      1     0     0   100 |           1.59 |           1.59 |             3.371 |           0.32 |
+|                      signal_profit_q_momdiv_coh( sqzmom nfi_13 ) |       1 |      1     0     0   100 |           2.22 |           2.22 |             5.139 |           0.44 |
+|                                      sell_profit_t_0_1( bb ewo ) |       1 |      1     0     0   100 |           0.87 |           0.87 |             2.261 |           0.17 |
+|                                      sell_profit_t_1_7( nfi_32 ) |       1 |      1     0     0   100 |           1.7  |           1.7  |             5.129 |           0.34 |
+|                                     sell_profit_u_bear_1_2( bb ) |       1 |      1     0     0   100 |           1.57 |           1.57 |             5.497 |           0.31 |
+|                                    signal_profit_q_momdiv( ewo ) |       1 |      1     0     0   100 |           4.85 |           4.85 |            17.218 |           0.97 |
+|                                sell_profit_t_cti_r_0_1( nfi_32 ) |       1 |      1     0     0   100 |           0.87 |           0.87 |             3.157 |           0.17 |
+|                                     sell_profit_t_1_12( nfi_13 ) |       1 |      1     0     0   100 |           1.57 |           1.57 |             5.898 |           0.31 |
+|                                  signal_profit_q_momdiv_1h( bb ) |       1 |      1     0     0   100 |          15.54 |          15.54 |            59.593 |           3.11 |
+|                                      sell_profit_t_0_2( bb ewo ) |       1 |      1     0     0   100 |           0.27 |           0.27 |             1.164 |           0.05 |
+|                                 sell_stoploss_deadfish( nfi_32 ) |       1 |      0     0     1     0 |          -6.32 |          -6.32 |           -28.689 |          -1.26 |
+|                                     sell_profit_t_1_5( nfi7_37 ) |       1 |      1     0     0   100 |           1.79 |           1.79 |             9.215 |           0.36 |
+| signal_profit_q_momdiv( local_uptrend nfi_32 nfi_33 nfi7_33 nfi7 |       1 |      1     0     0   100 |           8.5  |           8.5  |            45.42  |           1.7  |
+|                                     sell_profit_t_1_11( nfi_13 ) |       1 |      1     0     0   100 |           1.53 |           1.53 |             8.74  |           0.31 |
+|                   signal_profit_q_momdiv( local_uptrend nfi_13 ) |       1 |      1     0     0   100 |          14.25 |          14.25 |            87.754 |           2.85 |
+|                           sell_profit_t_0_2( local_uptrend ewo ) |       1 |      1     0     0   100 |           1.15 |           1.15 |             7.389 |           0.23 |
+|                                 sell_profit_u_bear_1_2( sqzmom ) |       1 |      1     0     0   100 |           1    |           1    |             8.691 |           0.2  |
+|                                         sell_profit_t_1_11( bb ) |       1 |      1     0     0   100 |           1.34 |           1.34 |            11.85  |           0.27 |
+|                              signal_profit_q_pmax_bear( bb ewo ) |       1 |      1     0     0   100 |           2.37 |           2.37 |            23.91  |           0.47 |
+|                                 sell_stoploss_deadfish( nfi_13 ) |       1 |      0     0     1     0 |          -6.5  |          -6.5  |          -118.187 |          -1.3  |
+====================================================== LEFT OPEN TRADES REPORT ======================================================
+|   Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|  TOTAL |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-09-11 00:00:00 |
+| Backtesting to         | 2022-02-05 00:00:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 444 / 3.02          |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 9184.393 USDT       |
+| Absolute profit        | 8184.393 USDT       |
+| Total profit %         | 818.44%             |
+| Trades per day         | 3.02                |
+| Avg. daily profit %    | 5.57%               |
+| Avg. stake amount      | 842.428 USDT        |
+| Total trade volume     | 374037.829 USDT     |
+|                        |                     |
+| Best Pair              | ELON/USDT 173.54%   |
+| Worst Pair             | ADS/USDT -24.01%    |
+| Best trade             | RMRK/USDT 20.48%    |
+| Worst trade            | ADS/USDT -20.40%    |
+| Best day               | 822.357 USDT        |
+| Worst day              | -337.477 USDT       |
+| Days win/draw/lose     | 91 / 46 / 7         |
+| Avg. Duration Winners  | 1:05:00             |
+| Avg. Duration Loser    | 6:55:00             |
+| Rejected Buy signals   | 8299                |
+|                        |                     |
+| Min balance            | 987.109 USDT        |
+| Max balance            | 9558.119 USDT       |
+| Drawdown (Account)     | 5.28%               |
+| Drawdown               | 504.710 USDT        |
+| Drawdown high          | 8558.119 USDT       |
+| Drawdown low           | 8053.408 USDT       |
+| Drawdown Start         | 2022-01-31 05:40:00 |
+| Drawdown End           | 2022-02-01 13:10:00 |
+| Market change          | 64.21%              |
+================================================
+## BB_RPB_TSL_RNG_2
+======================================================= SELL REASON STATS ========================================================
+|        Sell Reason |   Sells |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|--------------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+| trailing_stop_loss |     707 |    655     0    52  92.6 |           1.53 |        1082.33 |         14304.7   |         216.47 |
+|                roi |      65 |     65     0     0   100 |           9.99 |         649.35 |         13513     |         129.87 |
+|         force_sell |       1 |      0     0     1     0 |         -11.41 |         -11.41 |          -645.569 |          -2.28 |
+======================================================== LEFT OPEN TRADES REPORT =========================================================
+|        Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|-------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+| 1EARTH/USDT |      1 |         -11.41 |         -11.41 |          -645.569 |         -64.56 |       13:40:00 |     0     0     1     0 |
+|       TOTAL |      1 |         -11.41 |         -11.41 |          -645.569 |         -64.56 |       13:40:00 |     0     0     1     0 |
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-09-11 00:00:00 |
+| Backtesting to         | 2022-02-05 00:00:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 773 / 5.26          |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 28172.124 USDT      |
+| Absolute profit        | 27172.124 USDT      |
+| Total profit %         | 2717.21%            |
+| Trades per day         | 5.26                |
+| Avg. daily profit %    | 18.48%              |
+| Avg. stake amount      | 2042.568 USDT       |
+| Total trade volume     | 1578904.757 USDT    |
+|                        |                     |
+| Best Pair              | BLOK/USDT 222.85%   |
+| Worst Pair             | ADS/USDT -43.41%    |
+| Best trade             | GALAX/USDT 9.99%    |
+| Worst trade            | QRDO/USDT -17.80%   |
+| Best day               | 1981.568 USDT       |
+| Worst day              | -1747.866 USDT      |
+| Days win/draw/lose     | 111 / 17 / 20       |
+| Avg. Duration Winners  | 2:03:00             |
+| Avg. Duration Loser    | 16:52:00            |
+| Rejected Buy signals   | 8335                |
+|                        |                     |
+| Min balance            | 1007.020 USDT       |
+| Max balance            | 30105.750 USDT      |
+| Drawdown (Account)     | 21.14%              |
+| Drawdown               | 3523.471 USDT       |
+| Drawdown high          | 15669.558 USDT      |
+| Drawdown low           | 12146.087 USDT      |
+| Drawdown Start         | 2021-12-04 03:10:00 |
+| Drawdown End           | 2021-12-04 05:25:00 |
+| Market change          | 64.21%              |
+================================================
+## ClucHAnix_hhll
+========================================================== BUY TAG STATS ===========================================================
+|   TAG |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|-------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+| TOTAL |   1922 |           1.16 |        2233.25 |         78738.695 |        7873.87 |        1:32:00 |  1756     0   166  91.4 |
+========================================================= SELL REASON STATS ==========================================================
+|            Sell Reason |   Sells |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|------------------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+|     trailing_stop_loss |     991 |    991     0     0   100 |           1.57 |        1553.91 |         78616.2   |         310.78 |
+|                    roi |     765 |    765     0     0   100 |           2.43 |        1859.23 |         78995.5   |         371.85 |
+| sell_stoploss_deadfish |     132 |      0     0   132     0 |          -7.5  |        -990.43 |        -67710.2   |        -198.09 |
+|            sell_signal |      30 |      0     0    30     0 |          -5.67 |        -170.04 |        -10325     |         -34.01 |
+| sell_stoploss_p_48_1_2 |       2 |      0     0     2     0 |          -4.69 |          -9.38 |          -398.429 |          -1.88 |
+| sell_stoploss_p_48_1_1 |       1 |      0     0     1     0 |          -5.88 |          -5.88 |           -60.036 |          -1.18 |
+| sell_stoploss_p_24_1_1 |       1 |      0     0     1     0 |          -4.17 |          -4.17 |          -379.31  |          -0.83 |
+====================================================== LEFT OPEN TRADES REPORT ======================================================
+|   Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|  TOTAL |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-09-11 00:00:00 |
+| Backtesting to         | 2022-02-05 00:00:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 1922 / 13.07        |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 79738.695 USDT      |
+| Absolute profit        | 78738.695 USDT      |
+| Total profit %         | 7873.87%            |
+| Trades per day         | 13.07               |
+| Avg. daily profit %    | 53.56%              |
+| Avg. stake amount      | 5046.742 USDT       |
+| Total trade volume     | 9699837.872 USDT    |
+|                        |                     |
+| Best Pair              | RMRK/USDT 288.68%   |
+| Worst Pair             | ATOM/USDT -26.22%   |
+| Best trade             | QRDO/USDT 10.29%    |
+| Worst trade            | PYR/USDT -19.31%    |
+| Best day               | 3949.092 USDT       |
+| Worst day              | -3484.742 USDT      |
+| Days win/draw/lose     | 122 / 1 / 24        |
+| Avg. Duration Winners  | 1:05:00             |
+| Avg. Duration Loser    | 6:22:00             |
+| Rejected Buy signals   | 77038               |
+|                        |                     |
+| Min balance            | 1002.568 USDT       |
+| Max balance            | 79768.129 USDT      |
+| Drawdown (Account)     | 14.58%              |
+| Drawdown               | 5945.120 USDT       |
+| Drawdown high          | 39781.892 USDT      |
+| Drawdown low           | 33836.772 USDT      |
+| Drawdown Start         | 2021-12-04 02:00:00 |
+| Drawdown End           | 2021-12-04 09:20:00 |
+| Market change          | 61.88%              |
+================================================
+## tesla7
+=========================================================== BUY TAG STATS ============================================================
+|     TAG |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|---------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|    ewo1 |    634 |           0.97 |         617.04 |          2805.201 |         280.52 |        0:39:00 |   517     0   117  81.5 |
+| bb_bull |    131 |           0.93 |         121.27 |           591.921 |          59.19 |        6:19:00 |   124     0     7  94.7 |
+|    ewo3 |     37 |           0.54 |          20.06 |            56.606 |           5.66 |        0:51:00 |    30     0     7  81.1 |
+|    ewo2 |     18 |           0.07 |           1.27 |           -38.284 |          -3.83 |        1:08:00 |    13     1     4  72.2 |
+|  ewolow |      1 |         -15.17 |         -15.17 |           -95.041 |          -9.50 |        0:00:00 |     0     0     1     0 |
+|   TOTAL |    821 |           0.91 |         744.46 |          3320.402 |         332.04 |        1:35:00 |   684     1   136  83.3 |
+======================================================= SELL REASON STATS ========================================================
+|        Sell Reason |   Sells |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|--------------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+| trailing_stop_loss |     567 |    566     0     1  99.8 |           2.05 |        1162.01 |          5275.11  |         232.4  |
+|        sell_signal |     221 |    105     0   116  47.5 |          -0.84 |        -184.54 |          -829.299 |         -36.91 |
+|          stop_loss |      19 |      0     0    19     0 |         -15.17 |        -288.23 |         -1347.88  |         -57.65 |
+|                roi |      14 |     13     1     0   100 |           3.94 |          55.21 |           222.468 |          11.04 |
+====================================================== LEFT OPEN TRADES REPORT ======================================================
+|   Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|  TOTAL |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-09-11 00:00:00 |
+| Backtesting to         | 2022-02-05 00:00:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 821 / 5.59          |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 4320.402 USDT       |
+| Absolute profit        | 3320.402 USDT       |
+| Total profit %         | 332.04%             |
+| Trades per day         | 5.59                |
+| Avg. daily profit %    | 2.26%               |
+| Avg. stake amount      | 463.308 USDT        |
+| Total trade volume     | 380375.473 USDT     |
+|                        |                     |
+| Best Pair              | ELON/USDT 92.46%    |
+| Worst Pair             | LRC/USDT -33.63%    |
+| Best trade             | 1INCH/USDT 21.48%   |
+| Worst trade            | MOVR/USDT -15.17%   |
+| Best day               | 227.756 USDT        |
+| Worst day              | -118.241 USDT       |
+| Days win/draw/lose     | 103 / 17 / 26       |
+| Avg. Duration Winners  | 1:06:00             |
+| Avg. Duration Loser    | 3:58:00             |
+| Rejected Buy signals   | 1084                |
+|                        |                     |
+| Min balance            | 1002.451 USDT       |
+| Max balance            | 4331.230 USDT       |
+| Drawdown (Account)     | 7.70%               |
+| Drawdown               | 255.872 USDT        |
+| Drawdown high          | 2321.883 USDT       |
+| Drawdown low           | 2066.011 USDT       |
+| Drawdown Start         | 2021-11-25 13:10:00 |
+| Drawdown End           | 2021-12-04 05:35:00 |
+| Market change          | 61.59%              |
+================================================
+## NostalgiaForInfinityX
+================================================================= SELL REASON STATS ==================================================================
+|                            Sell Reason |   Sells |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|----------------------------------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+|                 sell_profit_q_3 ( 65 ) |       6 |      6     0     0   100 |           4.1  |          24.61 |           131.562 |           4.92 |
+|           sell_profit_u_bear_1_1 ( 4 ) |       4 |      4     0     0   100 |           1.18 |           4.73 |            37.954 |           0.95 |
+|                   sell_long_t_0 ( 36 ) |       4 |      4     0     0   100 |           1.09 |           4.36 |            29.666 |           0.87 |
+|           sell_profit_u_bear_1_1 ( 3 ) |       4 |      4     0     0   100 |           1.13 |           4.5  |            20.264 |           0.9  |
+|               sell_profit_t_0_5 ( 52 ) |       3 |      3     0     0   100 |           0.36 |           1.08 |             3.286 |           0.22 |
+|           sell_profit_u_bear_1_1 ( 1 ) |       3 |      3     0     0   100 |           1.54 |           4.62 |            17.747 |           0.92 |
+|                             force_sell |       3 |      0     0     3     0 |         -45.45 |        -136.35 |         -2449.83  |         -27.27 |
+|          sell_profit_u_bear_1_1 ( 58 ) |       3 |      3     0     0   100 |           1.64 |           4.91 |            37.079 |           0.98 |
+|          sell_profit_u_bear_1_1 ( 46 ) |       3 |      3     0     0   100 |           1.51 |           4.53 |            25.923 |           0.91 |
+|          sell_profit_u_bear_1_1 ( 28 ) |       2 |      2     0     0   100 |           1.32 |           2.64 |            15.763 |           0.53 |
+|          sell_profit_o_bull_1_2 ( 15 ) |       2 |      2     0     0   100 |           1.22 |           2.43 |            13.372 |           0.49 |
+|            sell_profit_d_u_1_33 ( 65 ) |       2 |      2     0     0   100 |           1.64 |           3.27 |            26.397 |           0.65 |
+|               sell_profit_w_1_7 ( 65 ) |       2 |      2     0     0   100 |           1.13 |           2.27 |            16.414 |           0.45 |
+|                sell_profit_t_0_1 ( 4 ) |       2 |      2     0     0   100 |           0.5  |           1    |             3.778 |           0.2  |
+|            sell_profit_d_u_1_31 ( 65 ) |       2 |      2     0     0   100 |           1.54 |           3.07 |            13.711 |           0.61 |
+|               sell_profit_w_6_2 ( 42 ) |       2 |      2     0     0   100 |           6.86 |          13.72 |           104.07  |           2.74 |
+|             sell_profit_d_u_1_33 ( 9 ) |       2 |      2     0     0   100 |           1.8  |           3.6  |            30.798 |           0.72 |
+|          sell_profit_u_bear_1_1 ( 42 ) |       2 |      2     0     0   100 |           1.24 |           2.48 |             7.022 |           0.5  |
+|          sell_profit_u_bear_1_1 ( 14 ) |       2 |      2     0     0   100 |           1.28 |           2.56 |             6.626 |           0.51 |
+|              sell_profit_w_4_22 ( 28 ) |       2 |      2     0     0   100 |           4.61 |           9.21 |           115.515 |           1.84 |
+|           sell_profit_u_bear_1_1 ( 7 ) |       2 |      2     0     0   100 |           1.5  |           3    |            13.2   |           0.6  |
+|              sell_profit_w_1_46 ( 50 ) |       1 |      1     0     0   100 |           1.3  |           1.3  |            16.628 |           0.26 |
+|              sell_profit_t_1_13 ( 42 ) |       1 |      1     0     0   100 |           1.66 |           1.66 |            10.722 |           0.33 |
+|               sell_profit_w_0_1 ( 13 ) |       1 |      1     0     0   100 |           0.3  |           0.3  |             1.797 |           0.06 |
+|              sell_profit_w_1_90 ( 23 ) |       1 |      1     0     0   100 |           1.58 |           1.58 |             9.657 |           0.32 |
+|             sell_profit_d_u_1_25 ( 9 ) |       1 |      1     0     0   100 |           1.86 |           1.86 |            26.077 |           0.37 |
+|                sell_profit_t_0_1 ( 3 ) |       1 |      1     0     0   100 |           0.92 |           0.92 |             5.611 |           0.18 |
+|          sell_profit_u_bear_2_1 ( 14 ) |       1 |      1     0     0   100 |           2.12 |           2.12 |            12.961 |           0.42 |
+|           sell_profit_u_bear_2_1 ( 4 ) |       1 |      1     0     0   100 |           2.25 |           2.25 |            14.035 |           0.45 |
+|            sell_profit_d_u_2_18 ( 13 ) |       1 |      1     0     0   100 |           2.24 |           2.24 |            14.086 |           0.45 |
+|               sell_profit_t_0_3 ( 65 ) |       1 |      1     0     0   100 |           0.3  |           0.3  |             1.911 |           0.06 |
+|               sell_profit_t_4_3 ( 64 ) |       1 |      1     0     0   100 |           4.46 |           4.46 |            28.159 |           0.89 |
+|            sell_profit_t_2_4 ( 37 39 ) |       1 |      1     0     0   100 |           2.49 |           2.49 |            15.838 |           0.5  |
+|          sell_profit_u_bear_2_1 ( 42 ) |       1 |      1     0     0   100 |           2.29 |           2.29 |            14.676 |           0.46 |
+|          sell_profit_u_bear_1_5 ( 44 ) |       1 |      1     0     0   100 |           1.19 |           1.19 |             7.675 |           0.24 |
+|              sell_profit_w_1_84 ( 27 ) |       1 |      1     0     0   100 |           1.62 |           1.62 |            10.46  |           0.32 |
+|               sell_profit_t_0_5 ( 46 ) |       1 |      1     0     0   100 |           0.45 |           0.45 |             1.9   |           0.09 |
+|              sell_profit_t_2_13 ( 47 ) |       1 |      1     0     0   100 |           2.31 |           2.31 |            14.903 |           0.46 |
+|               sell_profit_t_1_6 ( 49 ) |       1 |      1     0     0   100 |           1.48 |           1.48 |            10.593 |           0.3  |
+|              sell_profit_w_3_49 ( 27 ) |       1 |      1     0     0   100 |           3.05 |           3.05 |            19.692 |           0.61 |
+|               sell_signal_3_1_1 ( 48 ) |       1 |      1     0     0   100 |          10.36 |          10.36 |            90.432 |           2.07 |
+|                sell_profit_w_1_2 ( 2 ) |       1 |      1     0     0   100 |           1.69 |           1.69 |            10.969 |           0.34 |
+|              sell_profit_w_2_49 ( 41 ) |       1 |      1     0     0   100 |           2.16 |           2.16 |            14.628 |           0.43 |
+|               sell_profit_t_1_1 ( 63 ) |       1 |      1     0     0   100 |           1.26 |           1.26 |             8.581 |           0.25 |
+|                sell_profit_t_0_1 ( 2 ) |       1 |      1     0     0   100 |           0.14 |           0.14 |             0.94  |           0.03 |
+|              sell_profit_w_4_18 ( 44 ) |       1 |      1     0     0   100 |           4.61 |           4.61 |            63.741 |           0.92 |
+|              sell_profit_w_8_36 ( 46 ) |       1 |      1     0     0   100 |           8.67 |           8.67 |            59.014 |           1.73 |
+|           sell_profit_u_bear_1_3 ( 3 ) |       1 |      1     0     0   100 |           1.72 |           1.72 |            11.886 |           0.34 |
+|              sell_profit_w_1_92 ( 65 ) |       1 |      1     0     0   100 |           1.23 |           1.23 |             8.57  |           0.25 |
+|              sell_profit_w_1_36 ( 42 ) |       1 |      1     0     0   100 |           1.66 |           1.66 |            19.412 |           0.33 |
+|            sell_profit_d_u_1_29 ( 47 ) |       1 |      1     0     0   100 |           1.35 |           1.35 |             9.215 |           0.27 |
+|                sell_profit_w_2_7 ( 3 ) |       1 |      1     0     0   100 |           2.47 |           2.47 |            17.368 |           0.49 |
+|               sell_profit_t_2_3 ( 42 ) |       1 |      1     0     0   100 |           2.3  |           2.3  |            16.261 |           0.46 |
+|               sell_profit_w_0_1 ( 28 ) |       1 |      1     0     0   100 |           0.51 |           0.51 |             7.176 |           0.1  |
+|           sell_profit_u_bear_1_2 ( 9 ) |       1 |      1     0     0   100 |           1.49 |           1.49 |             8.985 |           0.3  |
+|          sell_profit_u_bear_2_1 ( 11 ) |       1 |      1     0     0   100 |           2.4  |           2.4  |            14.474 |           0.48 |
+|          sell_profit_u_bear_3_1 ( 43 ) |       1 |      1     0     0   100 |           3.7  |           3.7  |            52.162 |           0.74 |
+|               sell_profit_w_0_6 ( 24 ) |       1 |      1     0     0   100 |           0.16 |           0.16 |             0.82  |           0.03 |
+|             sell_profit_w_10_14 ( 47 ) |       1 |      1     0     0   100 |          11.68 |          11.68 |            59.329 |           2.34 |
+|          sell_profit_u_bear_4_1 ( 26 ) |       1 |      1     0     0   100 |           4.09 |           4.09 |            21.251 |           0.82 |
+|                sell_profit_w_6_4 ( 9 ) |       1 |      1     0     0   100 |           6.44 |           6.44 |            33.733 |           1.29 |
+|            sell_profit_d_u_1_25 ( 54 ) |       1 |      1     0     0   100 |           1.69 |           1.69 |             8.965 |           0.34 |
+|          sell_profit_u_bear_5_1 ( 60 ) |       1 |      1     0     0   100 |           5.38 |           5.38 |            28.672 |           1.08 |
+|               sell_signal_2_1_1 ( 25 ) |       1 |      1     0     0   100 |           6.07 |           6.07 |            86.616 |           1.21 |
+|        sell_profit_u_bear_3_1 ( 4 11 ) |       1 |      1     0     0   100 |           3.36 |           3.36 |            18.084 |           0.67 |
+|              sell_profit_w_2_51 ( 51 ) |       1 |      1     0     0   100 |           2.3  |           2.3  |            12.355 |           0.46 |
+|                sell_profit_t_2_1 ( 4 ) |       1 |      1     0     0   100 |           2.2  |           2.2  |            11.819 |           0.44 |
+|               sell_profit_w_3_7 ( 46 ) |       1 |      1     0     0   100 |           3.51 |           3.51 |            19.215 |           0.7  |
+|               sell_profit_w_3_81 ( 4 ) |       1 |      1     0     0   100 |           3.94 |           3.94 |            21.221 |           0.79 |
+|          sell_profit_u_bear_9_1 ( 46 ) |       1 |      1     0     0   100 |           9.23 |           9.23 |            50.484 |           1.85 |
+|              sell_profit_w_1_51 ( 24 ) |       1 |      1     0     0   100 |           1.82 |           1.82 |            25.954 |           0.36 |
+|               sell_profit_t_2_1 ( 42 ) |       1 |      1     0     0   100 |           2.79 |           2.79 |            15.752 |           0.56 |
+|               sell_profit_t_0_3 ( 38 ) |       1 |      1     0     0   100 |           1.16 |           1.16 |             6.612 |           0.23 |
+|              sell_profit_w_2_49 ( 44 ) |       1 |      1     0     0   100 |           2.11 |           2.11 |            12.01  |           0.42 |
+|               sell_profit_t_1_3 ( 52 ) |       1 |      1     0     0   100 |           1.42 |           1.42 |             8.114 |           0.28 |
+|          sell_profit_u_bear_2_3 ( 65 ) |       1 |      1     0     0   100 |           2.01 |           2.01 |            11.522 |           0.4  |
+|               sell_profit_t_1_3 ( 65 ) |       1 |      1     0     0   100 |           1.35 |           1.35 |             7.794 |           0.27 |
+|            sell_profit_d_o_2_38 ( 22 ) |       1 |      1     0     0   100 |           2.98 |           2.98 |            17.356 |           0.6  |
+|               sell_profit_w_1_84 ( 7 ) |       1 |      1     0     0   100 |           1.15 |           1.15 |             6.74  |           0.23 |
+|               sell_profit_w_0_1 ( 11 ) |       1 |      1     0     0   100 |           0.72 |           0.72 |            10.163 |           0.14 |
+|              sell_profit_w_5_49 ( 42 ) |       1 |      1     0     0   100 |           5.9  |           5.9  |            34.536 |           1.18 |
+|          sell_profit_u_bear_1_1 ( 53 ) |       1 |      1     0     0   100 |           1.51 |           1.51 |             8.952 |           0.3  |
+|            sell_profit_d_u_2_11 ( 53 ) |       1 |      1     0     0   100 |           2.66 |           2.66 |            15.814 |           0.53 |
+|              sell_profit_w_1_59 ( 63 ) |       1 |      1     0     0   100 |           1.11 |           1.11 |             8.943 |           0.22 |
+|               sell_profit_w_1_1 ( 24 ) |       1 |      1     0     0   100 |           1.48 |           1.48 |            11.522 |           0.3  |
+|              sell_profit_w_1_84 ( 42 ) |       1 |      1     0     0   100 |           1.29 |           1.29 |             7.786 |           0.26 |
+|         sell_profit_u_bear_1_1 ( 5 8 ) |       1 |      1     0     0   100 |           1.64 |           1.64 |            11.678 |           0.33 |
+|              sell_profit_w_6_81 ( 38 ) |       1 |      1     0     0   100 |           6.19 |           6.19 |            80.685 |           1.24 |
+|              sell_profit_w_1_71 ( 28 ) |       1 |      1     0     0   100 |           1.41 |           1.41 |            18.283 |           0.28 |
+|                sell_profit_t_1_1 ( 3 ) |       1 |      1     0     0   100 |           1.4  |           1.4  |            13.142 |           0.28 |
+|          sell_profit_u_bear_2_1 ( 58 ) |       1 |      1     0     0   100 |           2.62 |           2.62 |            34.593 |           0.52 |
+| sell_profit_u_bear_3_1 ( 10 14 24 33 ) |       1 |      1     0     0   100 |           3.13 |           3.13 |            27.706 |           0.63 |
+|          sell_profit_u_bear_1_1 ( 12 ) |       1 |      1     0     0   100 |           1.85 |           1.85 |            16.459 |           0.37 |
+|            sell_profit_t_0_7 ( 21 27 ) |       1 |      1     0     0   100 |           0.69 |           0.69 |             6.193 |           0.14 |
+|             sell_profit_w_3_101 ( 63 ) |       1 |      1     0     0   100 |           3.91 |           3.91 |            34.596 |           0.78 |
+|          sell_profit_u_bull_4_2 ( 29 ) |       1 |      1     0     0   100 |           4.89 |           4.89 |            44.12  |           0.98 |
+|              sell_profit_t_2_13 ( 51 ) |       1 |      1     0     0   100 |           2.23 |           2.23 |            20.355 |           0.45 |
+|               sell_profit_w_1_51 ( 1 ) |       1 |      1     0     0   100 |           1.32 |           1.32 |             0.793 |           0.26 |
+|               sell_profit_t_0_5 ( 62 ) |       1 |      1     0     0   100 |           0.84 |           0.84 |             7.631 |           0.17 |
+|                   sell_long_t_1 ( 36 ) |       1 |      1     0     0   100 |           2.6  |           2.6  |            34.102 |           0.52 |
+|               sell_profit_w_4_4 ( 28 ) |       1 |      1     0     0   100 |           4.6  |           4.6  |            56.813 |           0.92 |
+|            sell_profit_d_o_1_38 ( 44 ) |       1 |      1     0     0   100 |           1.15 |           1.15 |            10.713 |           0.23 |
+|             sell_profit_d_u_3_15 ( 9 ) |       1 |      1     0     0   100 |           3.01 |           3.01 |            28.027 |           0.6  |
+|              sell_profit_d_u_1_5 ( 3 ) |       1 |      1     0     0   100 |           1.29 |           1.29 |            12.039 |           0.26 |
+|               sell_profit_w_1_99 ( 3 ) |       1 |      1     0     0   100 |           1.16 |           1.16 |            16.648 |           0.23 |
+|               sell_profit_w_2_81 ( 3 ) |       1 |      1     0     0   100 |           2.39 |           2.39 |            17.087 |           0.48 |
+|               sell_signal_3_1_1 ( 42 ) |       1 |      1     0     0   100 |          83.82 |          83.82 |          1357.57  |          16.76 |
+|  sell_profit_p_bear_48_3_1_1 ( 14 15 ) |       1 |      1     0     0   100 |           1.57 |           1.57 |            19.105 |           0.31 |
+|               sell_profit_w_1_91 ( 2 ) |       1 |      1     0     0   100 |           1.12 |           1.12 |            13.71  |           0.22 |
+|               sell_profit_w_1_2 ( 42 ) |       1 |      1     0     0   100 |           1.03 |           1.03 |            12.54  |           0.21 |
+|              sell_profit_w_1_91 ( 17 ) |       1 |      1     0     0   100 |           1.02 |           1.02 |             4.256 |           0.2  |
+|              sell_profit_w_2_79 ( 45 ) |       1 |      1     0     0   100 |           2.32 |           2.32 |            28.893 |           0.46 |
+|               sell_profit_w_1_1 ( 19 ) |       1 |      1     0     0   100 |           1.07 |           1.07 |            13.096 |           0.21 |
+|              sell_profit_w_1_26 ( 45 ) |       1 |      1     0     0   100 |           1.36 |           1.36 |            17.117 |           0.27 |
+|          sell_profit_u_bear_1_1 ( 41 ) |       1 |      1     0     0   100 |           2    |           2    |            25.223 |           0.4  |
+|               sell_profit_w_1_7 ( 19 ) |       1 |      1     0     0   100 |           1.44 |           1.44 |            18.201 |           0.29 |
+|               sell_profit_w_2_81 ( 9 ) |       1 |      1     0     0   100 |           2.92 |           2.92 |            37.085 |           0.58 |
+|          sell_profit_u_bear_2_3 ( 50 ) |       1 |      1     0     0   100 |           2.71 |           2.71 |            16.014 |           0.54 |
+|              sell_profit_t_4_13 ( 50 ) |       1 |      1     0     0   100 |           4.98 |           4.98 |            63.752 |           1    |
+|           sell_profit_u_bear_1_5 ( 9 ) |       1 |      1     0     0   100 |           1.05 |           1.05 |             6.832 |           0.21 |
+|          sell_profit_u_bear_5_1 ( 59 ) |       1 |      1     0     0   100 |           5.22 |           5.22 |            45.114 |           1.04 |
+|               sell_profit_t_0_1 ( 45 ) |       1 |      1     0     0   100 |           0.25 |           0.25 |             2.179 |           0.05 |
+|          sell_profit_u_bear_3_1 ( 60 ) |       1 |      1     0     0   100 |           3.19 |           3.19 |            27.412 |           0.64 |
+|         sell_profit_d_u_1_36 ( 41 53 ) |       1 |      1     0     0   100 |           1.24 |           1.24 |            10.612 |           0.25 |
+|        sell_profit_u_bear_1_2 ( 3 31 ) |       1 |      1     0     0   100 |           1.03 |           1.03 |            13.276 |           0.21 |
+|              sell_profit_w_1_99 ( 62 ) |       1 |      1     0     0   100 |           1.37 |           1.37 |            17.402 |           0.27 |
+|               sell_profit_w_0_2 ( 45 ) |       1 |      1     0     0   100 |           0.36 |           0.36 |             2.615 |           0.07 |
+|               sell_profit_w_5_4 ( 19 ) |       1 |      1     0     0   100 |           5.56 |           5.56 |            40.296 |           1.11 |
+|            sell_profit_d_u_1_31 ( 42 ) |       1 |      1     0     0   100 |           1.05 |           1.05 |             7.698 |           0.21 |
+|             sell_profit_d_u_3_25 ( 9 ) |       1 |      1     0     0   100 |           3.01 |           3.01 |            22.059 |           0.6  |
+|              sell_profit_w_1_26 ( 19 ) |       1 |      1     0     0   100 |           1.38 |           1.38 |            10.173 |           0.28 |
+|           sell_profit_u_bear_1_1 ( 6 ) |       1 |      1     0     0   100 |           1.22 |           1.22 |             9.081 |           0.24 |
+|               sell_profit_t_0_1 ( 27 ) |       1 |      1     0     0   100 |           0.97 |           0.97 |             6.457 |           0.19 |
+|            sell_profit_d_u_1_25 ( 11 ) |       1 |      1     0     0   100 |           1.64 |           1.64 |            12.279 |           0.33 |
+|              sell_profit_w_1_90 ( 56 ) |       1 |      1     0     0   100 |           1.66 |           1.66 |            20.835 |           0.33 |
+|             sell_profit_w_11_35 ( 39 ) |       1 |      1     0     0   100 |          14.93 |          14.93 |           150.955 |           2.99 |
+|          sell_profit_u_bear_5_1 ( 29 ) |       1 |      1     0     0   100 |           5.66 |           5.66 |            67.061 |           1.13 |
+|              sell_profit_t_1_13 ( 49 ) |       1 |      1     0     0   100 |           1.52 |           1.52 |             7.559 |           0.3  |
+|              sell_profit_w_3_37 ( 49 ) |       1 |      1     0     0   100 |           3.61 |           3.61 |            27.039 |           0.72 |
+|             sell_profit_w_5_2 ( 9 49 ) |       1 |      1     0     0   100 |           5.66 |           5.66 |            42.455 |           1.13 |
+|            sell_profit_d_u_1_36 ( 45 ) |       1 |      1     0     0   100 |           1.07 |           1.07 |             8.576 |           0.21 |
+|             sell_profit_t_0_1 ( 3 31 ) |       1 |      1     0     0   100 |           0.12 |           0.12 |             0.976 |           0.02 |
+|              sell_profit_w_11_2 ( 19 ) |       1 |      1     0     0   100 |          17.71 |          17.71 |           141.835 |           3.54 |
+|               sell_profit_w_2_81 ( 1 ) |       1 |      1     0     0   100 |           2.57 |           2.57 |            21.278 |           0.51 |
+|           sell_profit_t_1_12 ( 21 26 ) |       1 |      1     0     0   100 |           1.8  |           1.8  |            15.006 |           0.36 |
+|             sell_profit_w_1_100 ( 41 ) |       1 |      1     0     0   100 |           1.9  |           1.9  |            15.944 |           0.38 |
+|               sell_profit_w_1_81 ( 7 ) |       1 |      1     0     0   100 |           1.31 |           1.31 |            10.975 |           0.26 |
+|            sell_profit_d_u_1_28 ( 52 ) |       1 |      1     0     0   100 |           1.26 |           1.26 |            14.715 |           0.25 |
+|              sell_profit_w_1_81 ( 27 ) |       1 |      1     0     0   100 |           1.95 |           1.95 |            16.448 |           0.39 |
+|   sell_profit_u_bear_2_3 ( 5 8 11 21 ) |       1 |      1     0     0   100 |           2.77 |           2.77 |            23.454 |           0.55 |
+|        sell_profit_u_bear_1_1 ( 3 31 ) |       1 |      1     0     0   100 |           1.51 |           1.51 |            20.316 |           0.3  |
+|          sell_profit_u_bear_2_1 ( 46 ) |       1 |      1     0     0   100 |           2.71 |           2.71 |            23.09  |           0.54 |
+|          sell_profit_u_bear_1_3 ( 45 ) |       1 |      1     0     0   100 |           1.08 |           1.08 |            14.397 |           0.22 |
+|              sell_profit_w_1_51 ( 13 ) |       1 |      1     0     0   100 |           1.57 |           1.57 |             7.868 |           0.31 |
+|               sell_profit_t_0_3 ( 42 ) |       1 |      1     0     0   100 |           0.76 |           0.76 |             1.508 |           0.15 |
+|              sell_profit_w_1_14 ( 44 ) |       1 |      1     0     0   100 |           1.55 |           1.55 |             7.655 |           0.31 |
+|          sell_profit_o_bull_2_2 ( 40 ) |       1 |      1     0     0   100 |           2.33 |           2.33 |             5.53  |           0.47 |
+|          sell_profit_u_bear_2_2 ( 42 ) |       1 |      1     0     0   100 |           2.27 |           2.27 |             5.685 |           0.45 |
+|          sell_profit_u_bear_2_1 ( 28 ) |       1 |      1     0     0   100 |           2.05 |           2.05 |             5.105 |           0.41 |
+|              sell_profit_w_5_64 ( 42 ) |       1 |      1     0     0   100 |           5.36 |           5.36 |            13.196 |           1.07 |
+|               sell_profit_t_2_4 ( 26 ) |       1 |      1     0     0   100 |           2.4  |           2.4  |             5.88  |           0.48 |
+|               sell_profit_w_4_2 ( 16 ) |       1 |      1     0     0   100 |           4.79 |           4.79 |            11.643 |           0.96 |
+|              sell_profit_w_3_81 ( 54 ) |       1 |      1     0     0   100 |           3.79 |           3.79 |             9.127 |           0.76 |
+|            sell_profit_w_5_4 ( 14 27 ) |       1 |      1     0     0   100 |           5.19 |           5.19 |            12.327 |           1.04 |
+|               sell_profit_w_4_2 ( 42 ) |       1 |      1     0     0   100 |           4.04 |           4.04 |            26.884 |           0.81 |
+|               sell_profit_w_4_2 ( 28 ) |       1 |      1     0     0   100 |           4.99 |           4.99 |            11.733 |           1    |
+|               sell_profit_t_0_4 ( 65 ) |       1 |      1     0     0   100 |           1.06 |           1.06 |             2.477 |           0.21 |
+|            sell_profit_t_1_12 ( 7 15 ) |       1 |      1     0     0   100 |           1.75 |           1.75 |             4.075 |           0.35 |
+|               sell_profit_w_5_49 ( 7 ) |       1 |      1     0     0   100 |           5.96 |           5.96 |            13.732 |           1.19 |
+|              sell_profit_w_3_36 ( 18 ) |       1 |      1     0     0   100 |           3.23 |           3.23 |             7.317 |           0.65 |
+|               sell_profit_t_1_3 ( 48 ) |       1 |      1     0     0   100 |           1.22 |           1.22 |             2.796 |           0.24 |
+|          sell_profit_u_bear_1_1 ( 52 ) |       1 |      1     0     0   100 |           1.13 |           1.13 |             2.839 |           0.23 |
+|                   sell_long_t_0 ( 32 ) |       1 |      1     0     0   100 |           1.65 |           1.65 |             4.152 |           0.33 |
+|               sell_signal_2_1_1 ( 44 ) |       1 |      1     0     0   100 |           1.28 |           1.28 |             5.525 |           0.26 |
+|               sell_profit_w_4_4 ( 15 ) |       1 |      1     0     0   100 |           4.25 |           4.25 |            10.738 |           0.85 |
+|               sell_profit_t_0_1 ( 15 ) |       1 |      1     0     0   100 |           0.51 |           0.51 |             1.308 |           0.1  |
+|              sell_profit_w_6_85 ( 53 ) |       1 |      1     0     0   100 |           6.76 |           6.76 |            17.389 |           1.35 |
+|               sell_profit_w_1_69 ( 2 ) |       1 |      1     0     0   100 |           1.9  |           1.9  |             4.953 |           0.38 |
+|          sell_profit_u_bear_1_1 ( 65 ) |       1 |      1     0     0   100 |           1.26 |           1.26 |             3.303 |           0.25 |
+|               sell_profit_w_5_4 ( 39 ) |       1 |      1     0     0   100 |           5.95 |           5.95 |            15.611 |           1.19 |
+|          sell_profit_u_bear_1_1 ( 24 ) |       1 |      1     0     0   100 |           1.59 |           1.59 |             4.247 |           0.32 |
+|          sell_profit_o_bull_2_2 ( 11 ) |       1 |      1     0     0   100 |           2.13 |           2.13 |             5.686 |           0.43 |
+|             sell_profit_t_1_6 ( 5 27 ) |       1 |      1     0     0   100 |           1.74 |           1.74 |             4.684 |           0.35 |
+|              sell_profit_w_1_99 ( 40 ) |       1 |      1     0     0   100 |           1.85 |           1.85 |             4.974 |           0.37 |
+|                   sell_long_t_0 ( 31 ) |       1 |      1     0     0   100 |           1.74 |           1.74 |             4.71  |           0.35 |
+|               sell_profit_t_1_5 ( 30 ) |       1 |      1     0     0   100 |           1.47 |           1.47 |             3.99  |           0.29 |
+|            sell_profit_d_u_2_36 ( 41 ) |       1 |      1     0     0   100 |           2.04 |           2.04 |             5.56  |           0.41 |
+|               sell_profit_w_3_64 ( 7 ) |       1 |      1     0     0   100 |           3.81 |           3.81 |            10.419 |           0.76 |
+|            sell_profit_t_0_1 ( 42 50 ) |       1 |      1     0     0   100 |           0.42 |           0.42 |             0.954 |           0.08 |
+|            sell_profit_t_0_2 ( 11 26 ) |       1 |      1     0     0   100 |           0.07 |           0.07 |             0.168 |           0.01 |
+|        sell_profit_u_bear_1_1 ( 6 44 ) |       1 |      1     0     0   100 |           1.49 |           1.49 |             3.375 |           0.3  |
+|           sell_profit_o_bull_2_4 ( 8 ) |       1 |      1     0     0   100 |           2.57 |           2.57 |             5.432 |           0.51 |
+|              sell_profit_w_1_64 ( 39 ) |       1 |      1     0     0   100 |           1.13 |           1.13 |             2.258 |           0.23 |
+|               sell_profit_w_0_1 ( 65 ) |       1 |      1     0     0   100 |           0.7  |           0.7  |             1.396 |           0.14 |
+|            sell_profit_d_u_2_11 ( 65 ) |       1 |      1     0     0   100 |           2.85 |           2.85 |             5.728 |           0.57 |
+|              sell_profit_t_1_13 ( 65 ) |       1 |      1     0     0   100 |           1.66 |           1.66 |             3.359 |           0.33 |
+|           sell_profit_u_bear_2_1 ( 3 ) |       1 |      1     0     0   100 |           2.62 |           2.62 |             5.3   |           0.52 |
+|              sell_profit_w_1_92 ( 44 ) |       1 |      1     0     0   100 |           1.46 |           1.46 |             2.976 |           0.29 |
+|             sell_profit_d_u_2_31 ( 3 ) |       1 |      1     0     0   100 |           2.42 |           2.42 |             4.934 |           0.48 |
+|               sell_profit_t_0_2 ( 11 ) |       1 |      1     0     0   100 |           0.45 |           0.45 |             0.923 |           0.09 |
+|               sell_profit_t_0_1 ( 28 ) |       1 |      1     0     0   100 |           0.51 |           0.51 |             1.055 |           0.1  |
+|               sell_profit_w_1_90 ( 9 ) |       1 |      1     0     0   100 |           1.86 |           1.86 |             3.826 |           0.37 |
+|              sell_profit_w_5_29 ( 53 ) |       1 |      1     0     0   100 |           5.37 |           5.37 |            11.019 |           1.07 |
+|               sell_profit_w_1_4 ( 41 ) |       1 |      1     0     0   100 |           1.74 |           1.74 |             4.847 |           0.35 |
+|              sell_profit_w_1_96 ( 52 ) |       1 |      1     0     0   100 |           1.19 |           1.19 |             3.368 |           0.24 |
+|               sell_profit_w_2_2 ( 44 ) |       1 |      1     0     0   100 |           2.66 |           2.66 |             5.582 |           0.53 |
+|            sell_profit_pv_2_1_1 ( 24 ) |       1 |      1     0     0   100 |           1.19 |           1.19 |             2.518 |           0.24 |
+|               sell_profit_t_0_2 ( 58 ) |       1 |      1     0     0   100 |           0.23 |           0.23 |             0.526 |           0.05 |
+|          sell_profit_u_bear_1_1 ( 27 ) |       1 |      1     0     0   100 |           1.12 |           1.12 |             2.401 |           0.22 |
+|        sell_profit_u_bear_1_1 ( 1 18 ) |       1 |      1     0     0   100 |           1.41 |           1.41 |             3.023 |           0.28 |
+|             sell_profit_d_u_3_23 ( 9 ) |       1 |      1     0     0   100 |           3.16 |           3.16 |             6.811 |           0.63 |
+|              sell_profit_t_4_13 ( 49 ) |       1 |      1     0     0   100 |           4.44 |           4.44 |             9.564 |           0.89 |
+|            sell_profit_d_u_1_40 ( 29 ) |       1 |      1     0     0   100 |           1.48 |           1.48 |             3.244 |           0.3  |
+|       sell_profit_u_bear_1_1 ( 26 54 ) |       1 |      1     0     0   100 |           1.03 |           1.03 |             2.252 |           0.21 |
+|               sell_profit_t_0_1 ( 13 ) |       1 |      1     0     0   100 |           0.79 |           0.79 |             1.733 |           0.16 |
+|              sell_profit_w_1_90 ( 13 ) |       1 |      1     0     0   100 |           1.42 |           1.42 |             3.153 |           0.28 |
+|               sell_profit_w_1_71 ( 9 ) |       1 |      1     0     0   100 |           1.18 |           1.18 |             3.547 |           0.24 |
+|            sell_profit_d_u_1_33 ( 52 ) |       1 |      1     0     0   100 |           1.41 |           1.41 |             3.156 |           0.28 |
+|          sell_profit_u_bear_3_1 ( 46 ) |       1 |      1     0     0   100 |           3.4  |           3.4  |             7.596 |           0.68 |
+|               sell_profit_w_1_2 ( 40 ) |       1 |      1     0     0   100 |           1.32 |           1.32 |             2.968 |           0.26 |
+|            sell_profit_d_u_1_11 ( 65 ) |       1 |      1     0     0   100 |           1.03 |           1.03 |             2.32  |           0.21 |
+|          sell_profit_u_bear_1_1 ( 18 ) |       1 |      1     0     0   100 |           1.97 |           1.97 |             4.47  |           0.39 |
+|             sell_profit_d_u_1_31 ( 4 ) |       1 |      1     0     0   100 |           1.46 |           1.46 |             4.064 |           0.29 |
+|            sell_profit_t_0_1 ( 42 65 ) |       1 |      1     0     0   100 |           0.22 |           0.22 |             0.626 |           0.04 |
+|               sell_profit_w_7_2 ( 48 ) |       1 |      1     0     0   100 |           7.29 |           7.29 |            20.468 |           1.46 |
+|               sell_profit_t_4_3 ( 52 ) |       1 |      1     0     0   100 |           4.61 |           4.61 |            19.193 |           0.92 |
+|              sell_profit_w_5_49 ( 37 ) |       1 |      1     0     0   100 |           5.12 |           5.12 |            19.517 |           1.02 |
+|              sell_profit_w_1_14 ( 24 ) |       1 |      1     0     0   100 |           1.93 |           1.93 |             7.415 |           0.39 |
+|               sell_profit_t_1_13 ( 9 ) |       1 |      1     0     0   100 |           1.84 |           1.84 |             7.145 |           0.37 |
+|              sell_profit_w_4_49 ( 30 ) |       1 |      1     0     0   100 |           4.29 |           4.29 |            16.672 |           0.86 |
+|               sell_profit_t_3_3 ( 50 ) |       1 |      1     0     0   100 |           3.94 |           3.94 |            15.443 |           0.79 |
+|              sell_profit_t_1_11 ( 38 ) |       1 |      1     0     0   100 |           1.7  |           1.7  |             6.75  |           0.34 |
+|               sell_profit_w_2_14 ( 3 ) |       1 |      1     0     0   100 |           2.46 |           2.46 |             9.788 |           0.49 |
+|               sell_profit_t_2_3 ( 19 ) |       1 |      1     0     0   100 |           2.21 |           2.21 |             8.864 |           0.44 |
+|          sell_profit_u_bear_2_1 ( 15 ) |       1 |      1     0     0   100 |           2.04 |           2.04 |             8.204 |           0.41 |
+|          sell_profit_u_bear_1_5 ( 11 ) |       1 |      1     0     0   100 |           1.34 |           1.34 |             5.426 |           0.27 |
+|                 sell_profit_q_3 ( 64 ) |       1 |      1     0     0   100 |           2.87 |           2.87 |            11.551 |           0.57 |
+|               sell_profit_t_0_2 ( 41 ) |       1 |      1     0     0   100 |           0.22 |           0.22 |             0.91  |           0.04 |
+|               sell_profit_t_2_3 ( 65 ) |       1 |      1     0     0   100 |           3    |           3    |            12.257 |           0.6  |
+|               sell_profit_w_5_4 ( 42 ) |       1 |      1     0     0   100 |           5.25 |           5.25 |            21.622 |           1.05 |
+|          sell_profit_u_bear_2_1 ( 18 ) |       1 |      1     0     0   100 |           2.58 |           2.58 |            10.812 |           0.52 |
+|             sell_signal_3_1_1 ( 3 31 ) |       1 |      1     0     0   100 |          11.2  |          11.2  |            68.043 |           2.24 |
+|               sell_profit_w_3_9 ( 42 ) |       1 |      1     0     0   100 |           3.14 |           3.14 |            13.168 |           0.63 |
+|              sell_profit_w_5_47 ( 51 ) |       1 |      1     0     0   100 |           5.34 |           5.34 |            30.696 |           1.07 |
+|               sell_profit_t_0_1 ( 51 ) |       1 |      1     0     0   100 |           0.47 |           0.47 |             2.015 |           0.09 |
+|        sell_profit_w_11_20 ( 3 19 27 ) |       1 |      1     0     0   100 |          14.87 |          14.87 |            64.317 |           2.97 |
+|               sell_profit_t_0_2 ( 19 ) |       1 |      1     0     0   100 |           0.54 |           0.54 |             2.409 |           0.11 |
+|               sell_profit_t_3_3 ( 52 ) |       1 |      1     0     0   100 |           3    |           3    |            13.379 |           0.6  |
+|            sell_profit_d_u_1_23 ( 49 ) |       1 |      1     0     0   100 |           1.5  |           1.5  |             6.743 |           0.3  |
+|          sell_profit_u_bear_3_3 ( 11 ) |       1 |      1     0     0   100 |           3.66 |           3.66 |             7.258 |           0.73 |
+|               sell_profit_w_2_96 ( 9 ) |       1 |      1     0     0   100 |           2.86 |           2.86 |            11.396 |           0.57 |
+|               sell_signal_1_1_1 ( 10 ) |       1 |      1     0     0   100 |          10.66 |          10.66 |            81.981 |           2.13 |
+|              sell_profit_w_4_74 ( 24 ) |       1 |      1     0     0   100 |           4.23 |           4.23 |            25.826 |           0.85 |
+|           sell_profit_o_bull_7_1 ( 3 ) |       1 |      1     0     0   100 |           7.39 |           7.39 |            35.268 |           1.48 |
+|             sell_profit_pv_3_1_1 ( 7 ) |       1 |      1     0     0   100 |           1.84 |           1.84 |             8.985 |           0.37 |
+|              sell_profit_t_1_11 ( 63 ) |       1 |      1     0     0   100 |           1.91 |           1.91 |             9.381 |           0.38 |
+|       sell_profit_u_bear_4_1 ( 10 18 ) |       1 |      1     0     0   100 |           4.43 |           4.43 |            16.076 |           0.89 |
+|           sell_profit_o_bull_8_1 ( 1 ) |       1 |      1     0     0   100 |           8.27 |           8.27 |            29.558 |           1.65 |
+|       sell_profit_u_bear_1_5 ( 41 52 ) |       1 |      1     0     0   100 |           1.06 |           1.06 |             3.019 |           0.21 |
+|               sell_profit_t_2_13 ( 6 ) |       1 |      1     0     0   100 |           2.04 |           2.04 |             6.309 |           0.41 |
+|            sell_profit_d_u_1_33 ( 43 ) |       1 |      1     0     0   100 |           1.79 |           1.79 |             5.135 |           0.36 |
+|               sell_profit_w_5_2 ( 25 ) |       1 |      1     0     0   100 |           5.73 |           5.73 |            16.475 |           1.15 |
+|              sell_profit_w_1_77 ( 11 ) |       1 |      1     0     0   100 |           1.02 |           1.02 |             2.974 |           0.2  |
+|               sell_profit_w_2_79 ( 1 ) |       1 |      1     0     0   100 |           2.27 |           2.27 |             6.631 |           0.45 |
+|              sell_profit_t_1_12 ( 15 ) |       1 |      1     0     0   100 |           1.35 |           1.35 |             3.958 |           0.27 |
+|          sell_profit_u_bear_1_3 ( 63 ) |       1 |      1     0     0   100 |           1.67 |           1.67 |             4.907 |           0.33 |
+|          sell_profit_u_bear_2_1 ( 26 ) |       1 |      1     0     0   100 |           2.79 |           2.79 |             8.244 |           0.56 |
+|               sell_profit_t_0_1 ( 57 ) |       1 |      1     0     0   100 |           0.41 |           0.41 |             1.202 |           0.08 |
+|          sell_profit_o_bull_9_1 ( 39 ) |       1 |      1     0     0   100 |           9.33 |           9.33 |            27.705 |           1.87 |
+|          sell_profit_u_bear_2_1 ( 19 ) |       1 |      1     0     0   100 |           2.39 |           2.39 |             7.231 |           0.48 |
+|     sell_profit_p_bear_48_1_3_1 ( 11 ) |       1 |      1     0     0   100 |           3.47 |           3.47 |            10.573 |           0.69 |
+|              sell_profit_w_1_91 ( 15 ) |       1 |      1     0     0   100 |           1.08 |           1.08 |             3.331 |           0.22 |
+|          sell_profit_u_bear_2_2 ( 45 ) |       1 |      1     0     0   100 |           2.03 |           2.03 |             6.248 |           0.41 |
+|           sell_profit_w_2_92 ( 11 26 ) |       1 |      1     0     0   100 |           2.97 |           2.97 |             9.177 |           0.59 |
+|           sell_profit_w_3_79 ( 46 52 ) |       1 |      1     0     0   100 |           3.99 |           3.99 |            12.49  |           0.8  |
+|              sell_profit_w_2_27 ( 50 ) |       1 |      1     0     0   100 |           2.06 |           2.06 |             7.195 |           0.41 |
+|                 sell_long_8_1_1 ( 31 ) |       1 |      1     0     0   100 |          10.68 |          10.68 |            55.51  |           2.14 |
+|           sell_profit_w_3_79 ( 18 65 ) |       1 |      1     0     0   100 |           3.39 |           3.39 |            11.078 |           0.68 |
+|              sell_profit_w_11_2 ( 48 ) |       1 |      1     0     0   100 |          15.01 |          15.01 |            49.396 |           3    |
+|            sell_profit_t_3_4 ( 32 44 ) |       1 |      1     0     0   100 |           3.35 |           3.35 |            11.359 |           0.67 |
+|           sell_profit_u_bear_2_1 ( 1 ) |       1 |      1     0     0   100 |           2.23 |           2.23 |             7.614 |           0.45 |
+|          sell_profit_u_bear_1_1 ( 50 ) |       1 |      1     0     0   100 |           1.38 |           1.38 |             4.71  |           0.28 |
+|        sell_profit_u_bear_3_1 ( 6 10 ) |       1 |      1     0     0   100 |           3.2  |           3.2  |            10.922 |           0.64 |
+|                sell_profit_t_1_3 ( 9 ) |       1 |      1     0     0   100 |           1.71 |           1.71 |             5.842 |           0.34 |
+|              sell_profit_t_2_10 ( 11 ) |       1 |      1     0     0   100 |           2.39 |           2.39 |             8.139 |           0.48 |
+|          sell_profit_u_bear_1_1 ( 49 ) |       1 |      1     0     0   100 |           1.86 |           1.86 |             6.483 |           0.37 |
+|            sell_profit_d_u_1_33 ( 49 ) |       1 |      1     0     0   100 |           1.8  |           1.8  |             6.302 |           0.36 |
+|              sell_profit_t_1_12 ( 21 ) |       1 |      1     0     0   100 |           1.29 |           1.29 |             4.547 |           0.26 |
+|               sell_profit_t_2_13 ( 3 ) |       1 |      1     0     0   100 |           2.43 |           2.43 |             8.576 |           0.49 |
+|          sell_profit_u_bear_2_3 ( 28 ) |       1 |      1     0     0   100 |           2.25 |           2.25 |             7.967 |           0.45 |
+|                sell_profit_t_6_6 ( 1 ) |       1 |      1     0     0   100 |           6.41 |           6.41 |            28.906 |           1.28 |
+========================================================= LEFT OPEN TRADES REPORT =========================================================
+|      Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |      Avg Duration |   Win  Draw  Loss  Win% |
+|-----------+--------+----------------+----------------+-------------------+----------------+-------------------+-------------------------|
+|  PYR/USDT |      1 |         -43.62 |         -43.62 |          -708.813 |         -70.88 | 53 days, 23:45:00 |     0     0     1     0 |
+| ABBC/USDT |      1 |         -34.27 |         -34.27 |          -791.025 |         -79.10 | 19 days, 14:00:00 |     0     0     1     0 |
+|  BAX/USDT |      1 |         -58.46 |         -58.46 |          -949.988 |         -95.00 | 53 days, 22:45:00 |     0     0     1     0 |
+|     TOTAL |      3 |         -45.45 |        -136.35 |         -2449.826 |        -244.98 | 42 days, 12:10:00 |     0     0     3     0 |
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-09-11 00:00:00 |
+| Backtesting to         | 2022-02-05 00:00:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 327 / 2.22          |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 4842.060 USDT       |
+| Absolute profit        | 3842.060 USDT       |
+| Total profit %         | 384.21%             |
+| Trades per day         | 2.22                |
+| Avg. daily profit %    | 2.61%               |
+| Avg. stake amount      | 588.625 USDT        |
+| Total trade volume     | 192480.533 USDT     |
+|                        |                     |
+| Best Pair              | NEAR/USDT 92.21%    |
+| Worst Pair             | BAX/USDT -47.94%    |
+| Best trade             | NEAR/USDT 83.82%    |
+| Worst trade            | BAX/USDT -58.46%    |
+| Best day               | 1357.566 USDT       |
+| Worst day              | -2449.826 USDT      |
+| Days win/draw/lose     | 103 / 44 / 1        |
+| Avg. Duration Winners  | 5:17:00             |
+| Avg. Duration Loser    | 42 days, 12:10:00   |
+| Rejected Buy signals   | 4577                |
+|                        |                     |
+| Min balance            | 1001.508 USDT       |
+| Max balance            | 7291.886 USDT       |
+| Drawdown (Account)     | 33.60%              |
+| Drawdown               | 2449.826 USDT       |
+| Drawdown high          | 6291.886 USDT       |
+| Drawdown low           | 3842.060 USDT       |
+| Drawdown Start         | 2022-02-04 15:20:00 |
+| Drawdown End           | 2022-02-05 00:00:00 |
+| Market change          | 62.70%              |
+================================================
+## Hacklemost
+========================================================== BUY TAG STATS ===========================================================
+|   TAG |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|-------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+| TOTAL |    429 |           0.53 |         225.43 |           486.472 |          48.65 |        9:53:00 |   412     0    17  96.0 |
+===================================================== SELL REASON STATS =====================================================
+|   Sell Reason |   Sells |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|---------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+|           roi |     412 |    412     0     0   100 |           1.82 |         749.85 |          2505.78  |         149.97 |
+|     stop_loss |      16 |      0     0    16     0 |         -31.9  |        -510.42 |         -1966.69  |        -102.08 |
+|    force_sell |       1 |      0     0     1     0 |         -14    |         -14    |           -52.624 |          -2.8  |
+======================================================== LEFT OPEN TRADES REPORT ========================================================
+|      Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |    Avg Duration |   Win  Draw  Loss  Win% |
+|-----------+--------+----------------+----------------+-------------------+----------------+-----------------+-------------------------|
+| LUNA/USDT |      1 |         -14.00 |         -14.00 |           -52.624 |          -5.26 | 9 days, 4:40:00 |     0     0     1     0 |
+|     TOTAL |      1 |         -14.00 |         -14.00 |           -52.624 |          -5.26 | 9 days, 4:40:00 |     0     0     1     0 |
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2021-09-11 00:00:00 |
+| Backtesting to         | 2022-02-05 00:00:00 |
+| Max open trades        | 5                   |
+|                        |                     |
+| Total/Daily Avg Trades | 429 / 2.92          |
+| Starting balance       | 1000.000 USDT       |
+| Final balance          | 1486.472 USDT       |
+| Absolute profit        | 486.472 USDT        |
+| Total profit %         | 48.65%              |
+| Trades per day         | 2.92                |
+| Avg. daily profit %    | 0.33%               |
+| Avg. stake amount      | 339.745 USDT        |
+| Total trade volume     | 145750.627 USDT     |
+|                        |                     |
+| Best Pair              | AI/USDT 88.23%      |
+| Worst Pair             | BAX/USDT -53.48%    |
+| Best trade             | AI/USDT 8.45%       |
+| Worst trade            | SHIB/USDT -31.90%   |
+| Best day               | 121.596 USDT        |
+| Worst day              | -244.398 USDT       |
+| Days win/draw/lose     | 94 / 40 / 14        |
+| Avg. Duration Winners  | 5:43:00             |
+| Avg. Duration Loser    | 4 days, 14:52:00    |
+| Rejected Buy signals   | 34144               |
+|                        |                     |
+| Min balance            | 1000.978 USDT       |
+| Max balance            | 2426.999 USDT       |
+| Drawdown (Account)     | 38.75%              |
+| Drawdown               | 940.527 USDT        |
+| Drawdown high          | 1426.999 USDT       |
+| Drawdown low           | 486.472 USDT        |
+| Drawdown Start         | 2021-12-29 14:50:00 |
+| Drawdown End           | 2022-02-05 00:00:00 |
+| Market change          | 64.21%              |
+================================================
+les failles, la limite.
+##  GodStraNew_SMAonly
+===================================================== SELL REASON STATS =====================================================
+|   Sell Reason |   Sells |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|---------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+|           roi |      43 |     41     2     0   100 |           5.23 |         224.73 |           544.382 |          44.95 |
+====================================================== LEFT OPEN TRADES REPORT ======================================================
+|   Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|  TOTAL |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+================== SUMMARY METRICS ===================
+| Metric                 | Value                     |
+|------------------------+---------------------------|
+| Backtesting from       | 2021-09-11 00:00:00       |
+| Backtesting to         | 2022-02-05 00:00:00       |
+| Max open trades        | 5                         |
+|                        |                           |
+| Total/Daily Avg Trades | 43 / 0.29                 |
+| Starting balance       | 1000.000 USDT             |
+| Final balance          | 1544.382 USDT             |
+| Absolute profit        | 544.382 USDT              |
+| Total profit %         | 54.44%                    |
+| Trades per day         | 0.29                      |
+| Avg. daily profit %    | 0.37%                     |
+| Avg. stake amount      | 242.264 USDT              |
+| Total trade volume     | 10417.355 USDT            |
+|                        |                           |
+| Best Pair              | VRA/USDT 17.54%           |
+| Worst Pair             | ADA/USDT 0.00%            |
+| Best trade             | VRA/USDT 12.65%           |
+| Worst trade            | 1EARTH/USDT -0.00%        |
+| Best day               | 117.929 USDT              |
+| Worst day              | 0.000 USDT                |
+| Days win/draw/lose     | 16 / 130 / 0              |
+| Avg. Duration Winners  | 5:00:00                   |
+| Avg. Duration Loser    | 0:00:00                   |
+| Rejected Buy signals   | 10958                     |
+|                        |                           |
+| Min balance            | 0.000 USDT                |
+| Max balance            | 0.000 USDT                |
+| Drawdown (Account)     | 0.00%                     |
+| Drawdown               | 0.000 USDT                |
+| Drawdown high          | 0.000 USDT                |
+| Drawdown low           | 0.000 USDT                |
+| Drawdown Start         | 1970-01-01 00:00:00+00:00 |
+| Drawdown End           | 1970-01-01 00:00:00+00:00 |
+| Market change          | 64.21%                    |
+======================================================
+
+## décomposé
+new_turtle, elle bouffe de la RAM et du CPU. ??
+Miku_PP_v3, ??
+MACDStrategy_crossed, bad entry (DD/P).
+
+
+docker-compose run --rm freqtrade backtesting --timerange=20220101-20220201 --config user_data/config-bt-4.json --timeframe 5m --strategy-list new_turtle Miku_PP_v3 MACDStrategy_crossed
+
+docker-compose run --rm freqtrade backtesting --timerange=20210901-20211001 --config user_data/config-bt-4.json --timeframe 5m --strategy-list new_turtle Miku_PP_v3 MACDStrategy_crossed
+2021-09-01 00:00:00 -> 2021-10-01 00:00:00 | Max open trades : 5
+============================================================================ STRATEGY SUMMARY ============================================================================
+|             Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |             Drawdown |
+|----------------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------+----------------------|
+|           new_turtle |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |   0.000 USDT   0.00% |
+|           Miku_PP_v3 |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |   0.000 USDT   0.00% |
+| MACDStrategy_crossed |    153 |          -0.27 |         -41.93 |           -93.151 |          -9.32 |       20:28:00 |   138     0    15  90.2 | 259.538 USDT  22.25% |-
+==========================================================================================================================================================================
+
+
+docker-compose run --rm freqtrade backtesting --timerange=20211101-20211201 --config user_data/config-bt-4.json --timeframe 5m --strategy-list new_turtle Miku_PP_v3 MACDStrategy_crossed
+2021-11-01 00:00:00 -> 2021-12-01 00:00:00 | Max open trades : 5
+============================================================================ STRATEGY SUMMARY ===========================================================================
+|             Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |            Drawdown |
+|----------------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------+---------------------|
+|           new_turtle |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |   0.000 USDT  0.00% |
+|           Miku_PP_v3 |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |   0.000 USDT  0.00% |
+| MACDStrategy_crossed |    165 |           0.26 |          42.50 |            83.404 |           8.34 |       19:38:00 |   151     0    14  91.5 | 114.688 USDT  9.57% |-
+=========================================================================================================================================================================

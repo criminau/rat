@@ -1468,7 +1468,7 @@ docker-compose run --rm freqtrade backtesting --timerange=20211201-20220101 --co
 |               BB_RPB_TSL |    113 |           1.65 |         186.85 |           439.419 |          43.94 |         2:34:00 |   102     0    11  90.3 |  61.784 USDT   5.42% |+
 |    NostalgiaForInfinityX |     40 |           2.29 |          91.78 |           233.769 |          23.38 | 1 day, 10:30:00 |    38     0     2  95.0 | 270.564 USDT  17.99% |+
 ===============================================================================================================================================================================
-docker-compose run --rm freqtrade backtesting --timerange=20211201-202201011 --config user_data/config-bt-4.json --strategy 
+docker-compose run --rm freqtrade backtesting --timerange=20211201-20220101 --config user_data/config-bt-4.json --strategy 
 ## GodStraNew_SMAonly
 ========================================================== BUY TAG STATS ===========================================================
 |   TAG |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |

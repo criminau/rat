@@ -99,7 +99,16 @@ class BB_RPB_TSL_RNG_2(IStrategy):
 
     # really hard to use this
     minimal_roi = {
-        "0": 0.1,
+	"130": 0.01,
+	"120": 0.02,
+	"100": 0.03,
+	"80": 0.04,
+	"60": 0.05,
+	"40": 0.06,
+	"30": 0.07,
+	"20": 0.08,
+	"10": 0.09,
+        "0": 0.10
     }
 
     # Optimal timeframe for the strategy
@@ -107,7 +116,7 @@ class BB_RPB_TSL_RNG_2(IStrategy):
     inf_1h = '1h'
 
     # Disabled
-    stoploss = -0.99
+    stoploss = -0.51765
 
     # Custom stoploss
     use_custom_stoploss = True
