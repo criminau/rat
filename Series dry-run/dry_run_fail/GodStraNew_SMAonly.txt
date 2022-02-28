@@ -1,0 +1,81 @@
+
+# GodStraNew_SMAonly
+it's a holding strategy. a bad one !
+bien sur elle a passé le 24 février sans soucis, elle n'a n'a pas utilisé le SL.
+après 2 +5 jours déception. inutile de continuer.
+
+
+, [25.02.22 16:22]
+/status
+
+, [25.02.22 16:22]
+Trade ID: 5 (since 5 days ago)
+Current Pair: ICP/USDT
+Amount: 10.1375 (197.884 USDT)
+Open Rate: 19.52000000
+Current Rate: 17.13000000
+Current Profit: -12.42%
+Stoploss: 0.00000000 (-100.00%)
+Stoploss distance: -17.13000000 (-100.00%)
+
+, [25.02.22 16:22]
+Trade ID: 11 (since a day ago)
+Current Pair: HTR/USDT
+Amount: 371.654 (198.0544166 USDT)
+Open Rate: 0.53290000
+Current Rate: 0.48130000
+Current Profit: -10.04%
+Stoploss: 0.00000000 (-100.00%)
+Stoploss distance: -0.48130000 (-100.00%)
+
+, [25.02.22 16:22]
+/profit
+
+, [25.02.22 16:22]
+ROI: Closed trades
+∙ 4.059 USDT (0.19%) (0.41 Σ%)
+∙ 3.621 EUR
+ROI: All trades
+∙ -40.287 USDT (-1.56%) (-4.03 Σ%)
+∙ -35.940 EUR
+Total Trade Count: 13
+First Trade opened: 5 days ago
+Latest Trade opened: a day ago
+Win / Loss: 10 / 1
+Avg. Duration: 1 day, 11:08:56
+Best Performing: VRA/USDT: 0.82%
+
+, [25.02.22 16:22]
+/daily
+
+, [25.02.22 16:22]
+Daily Profit over the last 7 days:
+Day         Profit USDT    Profit EUR    Trades
+----------  -------------  ------------  --------
+2022-02-25  1.006 USDT     0.897 EUR     1 trades
+2022-02-24  2.778 USDT     2.479 EUR     3 trades
+2022-02-23  0.445 USDT     0.397 EUR     3 trades
+2022-02-22  0.000 USDT     0.000 EUR     0 trades
+2022-02-21  -0.170 USDT    -0.152 EUR    4 trades
+2022-02-20  0.000 USDT     0.000 EUR     0 trades
+2022-02-19  0.000 USDT     0.000 EUR     0 trades
+
+, [25.02.22 16:22]
+/weekly
+
+, [25.02.22 16:22]
+Weekly Profit over the last 8 weeks (starting from Monday):
+Monday      Profit USDT    Profit EUR    Trades
+----------  -------------  ------------  ---------
+2022-02-21  4.059 USDT     3.621 EUR     11 trades
+2022-02-14  0.000 USDT     0.000 EUR     0 trades
+2022-02-07  0.000 USDT     0.000 EUR     0 trades
+2022-01-31  0.000 USDT     0.000 EUR     0 trades
+2022-01-24  0.000 USDT     0.000 EUR     0 trades
+2022-01-17  0.000 USDT     0.000 EUR     0 trades
+2022-01-10  0.000 USDT     0.000 EUR     0 trades
+2022-01-03  0.000 USDT     0.000 EUR     0 trades
+
+, [25.02.22 16:27]
+/status
+bot off.s

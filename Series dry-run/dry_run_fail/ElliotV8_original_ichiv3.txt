@@ -1,6 +1,6 @@
 
 dry-run :
-ratcom3bot, [14.02.22 17:12]
+, [14.02.22 17:12]
 Daily Profit over the last 7 days:
 Day         Profit USDT    Profit EUR    Trades
 ----------  -------------  ------------  ---------
@@ -107,16 +107,7 @@ docker-compose run --rm freqtrade backtesting --config user_data/config-bt-4.jso
 
 ## stock
 
-"""
-    # ROI table:
-    minimal_roi = {
-        "0": 0.08,
-        "20": 0.04,
-        "40": 0.032,
-        "87": 0.016,
-        "201": 0,
-        "202": -1
-    }
+
 """
     minimal_roi = {"0": 10,}
 
