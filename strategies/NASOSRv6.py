@@ -63,7 +63,7 @@ sell_params = {
 }
 
 
-class NASOSRv6_private_Reinuvader_20211121(IStrategy):
+class NASOSRv6(IStrategy):
     INTERFACE_VERSION = 2
 
     # ROI table:
