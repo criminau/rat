@@ -17,7 +17,10 @@
 5+4+3+1, de la casse lourde.
 
 25/02/22
-6 GodStraNew_SMAonly (fin)
+6 GodStraNew_SMAonly (fin, L flag)
 
-03/03/22
+04/03/22
 1 ClucHAnixhhll ('market')
+
+05/03/22
+5 BB_RPB_TSL_RNG_2 (fin, L flag)
