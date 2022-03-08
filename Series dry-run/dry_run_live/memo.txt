@@ -21,6 +21,10 @@
 
 04/03/22
 1 ClucHAnixhhll ('market')
+6 BB_RPB_TSL_v104 (debut)
 
 05/03/22
 5 BB_RPB_TSL_RNG_2 (fin, L flag)
+
+08/03/22
+5 lacriminelle v.0.6 (début)
