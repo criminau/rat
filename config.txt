@@ -2,7 +2,7 @@
 
 oracle free tier. 4vcpu, 24Gb RAM, oracle linux.
 
-4 docker-container. 1 strategy / docker container.
+7 docker-container. 1 strategy / docker container.
 
 bt (backtesting, no dry-run)
 f1 (dry-run) ON, FreqUI OFF, TLG ON.
@@ -10,4 +10,4 @@ f2 (dry-run) ON, FreqUI OFF, TLG ON.
 f3 (dry-run) ON, FreqUI OFF, TLG ON.
 f4 (dry-run) ON, FreqUI OFF, TLG ON.
 f5 (dry-run) ON, FreqUI OFF, TLG ON.
-f6 (dry-run) OFF, FreqUI OFF, TLG OFF.
+f6 (dry-run) ON, FreqUI OFF, TLG ON.

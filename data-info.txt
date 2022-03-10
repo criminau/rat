@@ -15,15 +15,10 @@ docker-compose run --rm freqtrade download-data --exchange kucoin --days 200 -t 
 docker-compose run --rm freqtrade download-data --exchange kucoin --days 200 -t 1d (ok)
 ownload pairs: ['1EARTH/USDT', '1INCH/USDT', '2CRZ/USDT', 'AAVE/USDT', 'ABBC/USDT', 'ACA/USDT', 'ADA/USDT', 'ADS/USDT', 'ADX/USDT', 'AGIX/USDT', 'AI/USDT', 'ALGO/USDT', 'ATOM/USDT', 'AVAX/USDT', 'AXS/USDT', 'BAL/USDT', 'BASIC/USDT', 'BAT/USDT', 'BAX/USDT', 'BCH/USDT', 'BLOK/USDT', 'BTC/USDT', 'CRO/USDT', 'CRV/USDT', 'DOGE/USDT', 'DOT/USDT', 'EGLD/USDT', 'ELON/USDT', 'ENJ/USDT', 'EOS/USDT', 'ETH/USDT', 'FIL/USDT', 'FTM/USDT', 'FTT/USDT', 'GALAX/USDT', 'HBAR/USDT', 'ICP/USDT', 'KDA/USDT', 'LINK/USDT', 'LRC/USDT', 'LTC/USDT', 'LUNA/USDT', 'MANA/USDT', 'MATIC/USDT', 'MOVR/USDT', 'NEAR/USDT', 'ONE/USDT', 'PYR/USDT', 'QNT/USDT', 'QRDO/USDT', 'RMRK/USDT', 'RNDR/USDT', 'ROSE/USDT', 'SAND/USDT', 'SHIB/USDT', 'SOL/USDT', 'TEL/USDT', 'THETA/USDT', 'TRX/USDT', 'UNI/USDT', 'VET/USDT', 'VRA/USDT', 'XLM/USDT', 'XRP/USDT'], intervals: ['15m'] to /freqtrade/user_data/data/kucoin
 
-["version 2"]
-01/03/22 kucoin (ok) config-bt-4.json
-docker-compose run --rm freqtrade download-data --config user_data/config-bt-4.json --days 220 -t 5m (ok)
-docker-compose run --rm freqtrade download-data --config user_data/config-bt-4.json --days 220 -t 15m (ok)
-docker-compose run --rm freqtrade download-data --config user_data/config-bt-4.json --days 220 -t 1h (ok)
-docker-compose run --rm freqtrade download-data --config user_data/config-bt-4.json --days 220 -t 4h (ok)
-docker-compose run --rm freqtrade download-data --config user_data/config-bt-4.json --days 220 -t 1d (ok)
 
-01/03/22 binance (ok) config-bt-4-binance.json
+["version 2"]
+01/03/22 (ok)
+binance (we don't care) -> config-bt-4-binance.json
 docker-compose run --rm freqtrade download-data --config user_data/config-bt-4-binance.json --days 220 -t 5m (ok)
 docker-compose run --rm freqtrade download-data --config user_data/config-bt-4-binance.json --days 220 -t 15m (ok)
 docker-compose run --rm freqtrade download-data --config user_data/config-bt-4-binance.json --days 220 -t 1h (ok)

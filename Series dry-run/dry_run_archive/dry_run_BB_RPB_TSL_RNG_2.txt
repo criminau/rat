@@ -4,6 +4,8 @@ edit 14/02/22
 # Result 
 she did profit. please check Series another_test_3b
 
+----------------------- FLAG L -----------
+
 
 Trade ID: 3 (since 9 hours ago)
 Current Pair: SUPER/USDT
