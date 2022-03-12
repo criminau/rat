@@ -1,0 +1,149 @@
+
+{
+    "dry_run": true,
+    "max_open_trades": 5,
+    "stake_currency": "USDT",
+    "stake_amount": "unlimited",
+    "tradable_balance_ratio": 0.99,
+    "fiat_display_currency": "EUR",
+    "cancel_open_orders_on_exit": true,
+    "position_adjustment_enable": false,
+    "unfilledtimeout": {
+        "buy": 10,
+        "sell": 10,
+        "unit": "minutes"
+    },
+    "order_types": {
+        "buy": "market",
+        "sell": "market",
+        "emergencysell": "market",
+        "forcebuy": "market",
+        "forcesell": "market",
+        "stoploss": "market",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+    },
+    "bid_strategy": {
+        "price_side": "ask",
+        "ask_last_balance": 0,
+        "use_order_book": false,
+        "order_book_top": 1,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "ask_strategy": {
+        "price_side": "bid",
+        "use_order_book": false,
+        "order_book_top": 1
+    },
+    "exchange": {
+        "name": "kucoin",
+        "key": "",
+        "secret": "",
+        "password": "",
+        "ccxt_config": {},
+        "ccxt_async_config": {},
+        "pair_blacklist": [
+            // Exchange Tokens
+            "KCS/.*",
+            // Leverage tokens
+            ".*(3|3L|3S)/.*",
+            // Fiat
+            "(AUD|EUR|GBP|CHF|CAD|JPY)/.*",
+            // Stable tokens
+            "(BUSD|USDT|TUSD|USDC|CUSDT|DAI|USDN|CUSD)/.*",
+            // FAN Tokens
+            "(ACM|AFA|ALA|ALL|APL|ASR|ATM|BAR|CAI|CITY|FOR|GAL|GOZ|IBFK|JUV|LEG|LOCK-1|NAVI|NMR|NOV|OG|PFL|PORTO|PSG|ROUSH|STV|TH|TRA|UCH|UFC|YBO)/.*",
+            // Other Coins
+            "(MEM|AMPL|BOBA|CWAR|OMG|XYM|POLX|CARR|SKEY|KLV|KRL|PEOPLE)/.*"
+        ]
+    },
+    "pairlists": [
+    {
+      "method": "VolumePairList",
+      "number_assets": 60, // 50-80
+      "sort_key": "quoteVolume",
+      "refresh_period": 1800
+    },
+    {
+      "method": "AgeFilter",
+      "min_days_listed": 10
+    },
+    {
+      "method": "PrecisionFilter"
+    },
+    {
+      "method": "PriceFilter",
+      "low_price_ratio": 0.01,
+      "min_price": 1e-7
+    },
+    {
+      "method": "SpreadFilter",
+      "max_spread_ratio": 0.005
+    },
+    {
+      "method": "RangeStabilityFilter",
+      "lookback_days": 10,
+      "min_rate_of_change": 0.01,
+      "refresh_period": 1440
+    }
+    ],
+    
+    "edge": {
+        "enabled": false,
+        "process_throttle_secs": 3600,
+        "calculate_since_number_of_days": 7,
+        "allowed_risk": 0.01,
+        "stoploss_range_min": -0.01,
+        "stoploss_range_max": -0.1,
+        "stoploss_range_step": -0.01,
+        "minimum_winrate": 0.60,
+        "minimum_expectancy": 0.20,
+        "min_trade_number": 10,
+        "max_trade_duration_minute": 1440,
+        "remove_pumps": false
+    },
+    "telegram": {
+        "enabled": true,
+        "token": "yourtokenid",
+        "chat_id": "yourchatid",
+	    "keyboard": [   
+        ["/start", "/stop", "/status", "/profit"],
+        ["/daily", "/weekly", "/balance", "/reload_config"],
+        ["/show_config", "/version", "/help"],
+        ["/status table", "/monthly", "/performance", "/whitelist"],
+        ["/stats", "/count", "/blacklist", "/logs"],
+      ],
+	"notification_settings": {
+        	"status": "on",
+        	"warning": "on",
+        	"startup": "on",
+        	"buy": "off",
+        	"sell": "off",
+        	"buy_cancel": "off",
+        	"sell_cancel": "off",
+        	"buy_fill": "on",
+        	"sell_fill": "on",
+        	"protection_trigger": "off",
+        	"protection_trigger_global": "off"
+    		},
+    	"reload": true,
+    },
+    "api_server": {
+        "enabled": false,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 8080,
+        "username": "root",
+        // Use a good password here!!!
+        "password": "root123!"
+    },
+    "bot_name": "freqtrade",
+    "initial_state": "running",
+    "heartbeat_interval": 5,
+    "forcebuy_enable": false,
+    "internals": {
+        "process_throttle_secs": 5
+    }
+}
