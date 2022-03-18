@@ -1,0 +1,53 @@
+
+
+, [18.03.22 13:30]
+ROI: Closed trades
+∙ -74.255 USDT (-0.10%) (-7.43 Σ%)
+∙ -0 EUR
+ROI: All trades
+∙ -89.422 USDT (-0.12%) (-8.94 Σ%)
+∙ -0 EUR
+Total Trade Count: 329
+First Trade opened: 3 weeks ago
+Latest Trade opened: a day ago
+Win / Loss: 276 / 51
+Avg. Duration: 2:33:23
+Best Performing: GARI/USDT: 20.25%
+
+
+/monthly, [18.03.22 13:35]
+Monthly Profit over the last 6 months:
+Month    Profit USDT    Profit EUR    Trades
+-------  -------------  ------------  ----------
+2022-03  -61.048 USDT   -0.000 EUR    170 trades
+2022-02  -13.207 USDT   -0.000 EUR    157 trades
+2022-01  0 USDT         0.000 EUR     0 trades
+2021-12  0 USDT         0.000 EUR     0 trades
+2021-11  0 USDT         0.000 EUR     0 trades
+2021-10  0 USDT         0.000 EUR     0 trades
+
+/weekly, [18.03.22 13:35]
+Weekly Profit over the last 8 weeks (starting from Monday):
+Monday      Profit USDT    Profit EUR    Trades
+----------  -------------  ------------  ----------
+2022-03-14  -70.223 USDT   -0.000 EUR    43 trades
+2022-03-07  5.037 USDT     0.000 EUR     57 trades
+2022-02-28  15.62 USDT     0.000 EUR     76 trades
+2022-02-21  -25.945 USDT   -0.000 EUR    123 trades
+2022-02-14  1.256 USDT     0.000 EUR     28 trades
+2022-02-07  0 USDT         0.000 EUR     0 trades
+2022-01-31  0 USDT         0.000 EUR     0 trades
+2022-01-24  0 USDT         0.000 EUR     0 trades
+
+/daily, [18.03.22 13:36]
+Daily Profit over the last 7 days:
+Day         Profit USDT    Profit EUR    Trades
+----------  -------------  ------------  ---------
+2022-03-18  0 USDT         0.000 EUR     0 trades
+2022-03-17  8.256 USDT     0.000 EUR     4 trades
+2022-03-16  -0.64 USDT     -0.000 EUR    9 trades
+2022-03-15  -36.643 USDT   -0.000 EUR    14 trades
+2022-03-14  -41.196 USDT   -0.000 EUR    16 trades
+2022-03-13  -5.301 USDT    -0.000 EUR    9 trades
+2022-03-12  8.549 USDT     0.000 EUR     2 trades
+

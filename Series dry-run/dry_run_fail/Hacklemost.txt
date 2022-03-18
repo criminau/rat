@@ -1,0 +1,49 @@
+, [18.03.22 13:49]
+ROI: Closed trades
+∙ -78.198 USDT (-1.11%) (-7.82 Σ%)
+∙ -0 EUR
+ROI: All trades
+∙ -118.992 USDT (-1.70%) (-11.9 Σ%)
+∙ -0 EUR
+Total Trade Count: 35
+First Trade opened: 4 weeks ago
+Latest Trade opened: 2 days ago
+Win / Loss: 31 / 3
+Avg. Duration: 1 day, 2:32:33
+Best Performing: GLMR/USDT: 7.82%
+
+, [18.03.22 13:50]
+Monthly Profit over the last 6 months:
+Month    Profit USDT    Profit EUR    Trades
+-------  -------------  ------------  ---------
+2022-03  -25.975 USDT   -0.000 EUR    13 trades
+2022-02  -52.224 USDT   -0.000 EUR    21 trades
+2022-01  0 USDT         0.000 EUR     0 trades
+2021-12  0 USDT         0.000 EUR     0 trades
+2021-11  0 USDT         0.000 EUR     0 trades
+2021-10  0 USDT         0.000 EUR     0 trades
+
+, [18.03.22 13:50]
+Weekly Profit over the last 8 weeks (starting from Monday):
+Monday      Profit USDT    Profit EUR    Trades
+----------  -------------  ------------  ---------
+2022-03-14  25.007 USDT    0.000 EUR     4 trades
+2022-03-07  -56.11 USDT    -0.000 EUR    4 trades
+2022-02-28  11.204 USDT    0.000 EUR     6 trades
+2022-02-21  -93.277 USDT   -0.000 EUR    15 trades
+2022-02-14  34.977 USDT    0.000 EUR     5 trades
+2022-02-07  0 USDT         0.000 EUR     0 trades
+2022-01-31  0 USDT         0.000 EUR     0 trades
+2022-01-24  0 USDT         0.000 EUR     0 trades
+
+, [18.03.22 13:50]
+Daily Profit over the last 7 days:
+Day         Profit USDT    Profit EUR    Trades
+----------  -------------  ------------  --------
+2022-03-18  0 USDT         0.000 EUR     0 trades
+2022-03-17  0 USDT         0.000 EUR     0 trades
+2022-03-16  0 USDT         0.000 EUR     0 trades
+2022-03-15  11.659 USDT    0.000 EUR     3 trades
+2022-03-14  13.349 USDT    0.000 EUR     1 trades
+2022-03-13  0 USDT         0.000 EUR     0 trades
+2022-03-12  0 USDT         0.000 EUR     0 trades

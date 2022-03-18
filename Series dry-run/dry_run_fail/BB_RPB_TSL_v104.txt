@@ -1,0 +1,38 @@
+, [18.03.22 13:56]
+ROI: Closed trades
+∙ -119.85 USDT (-1.53%) (-11.99 Σ%)
+∙ -0 EUR
+ROI: All trades
+∙ -119.85 USDT (-1.53%) (-11.99 Σ%)
+∙ -0 EUR
+Total Trade Count: 41
+First Trade opened: 2 weeks ago
+Latest Trade opened: 3 days ago
+Win / Loss: 25 / 16
+Avg. Duration: 3:28:00
+Best Performing: WAL/USDT: 5.98%
+
+, [18.03.22 13:57]
+Weekly Profit over the last 8 weeks (starting from Monday):
+Monday      Profit USDT    Profit EUR    Trades
+----------  -------------  ------------  ---------
+2022-03-14  -20.515 USDT   -0.000 EUR    10 trades
+2022-03-07  -32.223 USDT   -0.000 EUR    17 trades
+2022-02-28  -67.113 USDT   -0.000 EUR    14 trades
+2022-02-21  0 USDT         0.000 EUR     0 trades
+2022-02-14  0 USDT         0.000 EUR     0 trades
+2022-02-07  0 USDT         0.000 EUR     0 trades
+2022-01-31  0 USDT         0.000 EUR     0 trades
+2022-01-24  0 USDT         0.000 EUR     0 trades
+
+, [18.03.22 13:57]
+Daily Profit over the last 7 days:
+Day         Profit USDT    Profit EUR    Trades
+----------  -------------  ------------  --------
+2022-03-18  0 USDT         0.000 EUR     0 trades
+2022-03-17  0 USDT         0.000 EUR     0 trades
+2022-03-16  0 USDT         0.000 EUR     0 trades
+2022-03-15  -8.831 USDT    -0.000 EUR    2 trades
+2022-03-14  -11.684 USDT   -0.000 EUR    8 trades
+2022-03-13  13.639 USDT    0.000 EUR     4 trades
+2022-03-12  0 USDT         0.000 EUR     0 trades

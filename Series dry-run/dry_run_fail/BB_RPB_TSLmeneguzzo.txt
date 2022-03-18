@@ -1,0 +1,49 @@
+, [18.03.22 13:53]
+ROI: Closed trades
+∙ -129.675 USDT (-1.14%) (-12.97 Σ%)
+∙ -0 EUR
+ROI: All trades
+∙ -129.675 USDT (-1.14%) (-12.97 Σ%)
+∙ -0 EUR
+Total Trade Count: 59
+First Trade opened: 3 weeks ago
+Latest Trade opened: 2 days ago
+Win / Loss: 43 / 16
+Avg. Duration: 3:10:27
+Best Performing: SURV/USDT: 10.53%
+
+, [18.03.22 13:53]
+Monthly Profit over the last 6 months:
+Month    Profit USDT    Profit EUR    Trades
+-------  -------------  ------------  ---------
+2022-03  -84.131 USDT   -0.000 EUR    35 trades
+2022-02  -45.544 USDT   -0.000 EUR    24 trades
+2022-01  0 USDT         0.000 EUR     0 trades
+2021-12  0 USDT         0.000 EUR     0 trades
+2021-11  0 USDT         0.000 EUR     0 trades
+2021-10  0 USDT         0.000 EUR     0 trades
+
+, [18.03.22 13:53]
+Weekly Profit over the last 8 weeks (starting from Monday):
+Monday      Profit USDT    Profit EUR    Trades
+----------  -------------  ------------  ---------
+2022-03-14  -71.659 USDT   -0.000 EUR    13 trades
+2022-03-07  4.403 USDT     0.000 EUR     8 trades
+2022-02-28  -32.125 USDT   -0.000 EUR    15 trades
+2022-02-21  -57.964 USDT   -0.000 EUR    15 trades
+2022-02-14  27.669 USDT    0.000 EUR     8 trades
+2022-02-07  0 USDT         0.000 EUR     0 trades
+2022-01-31  0 USDT         0.000 EUR     0 trades
+2022-01-24  0 USDT         0.000 EUR     0 trades
+
+, [18.03.22 13:54]
+Daily Profit over the last 7 days:
+Day         Profit USDT    Profit EUR    Trades
+----------  -------------  ------------  --------
+2022-03-18  0 USDT         0.000 EUR     0 trades
+2022-03-17  0 USDT         0.000 EUR     0 trades
+2022-03-16  -11.295 USDT   -0.000 EUR    2 trades
+2022-03-15  13.721 USDT    0.000 EUR     6 trades
+2022-03-14  -74.085 USDT   -0.000 EUR    5 trades
+2022-03-13  9.985 USDT     0.000 EUR     2 trades
+2022-03-12  0 USDT         0.000 EUR     0 trades

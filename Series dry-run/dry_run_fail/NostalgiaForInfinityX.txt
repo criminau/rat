@@ -1,0 +1,50 @@
+
+, [18.03.22 13:39]
+ROI: Closed trades
+∙ -112.669 USDT (-1.60%) (-11.27 Σ%)
+∙ -0 EUR
+ROI: All trades
+∙ -164.993 USDT (-2.20%) (-16.5 Σ%)
+∙ -0 EUR
+Total Trade Count: 37
+First Trade opened: 3 weeks ago
+Latest Trade opened: 2 days ago
+Win / Loss: 30 / 5
+Avg. Duration: 9:11:07
+Best Performing: IMX/USDT: 11.76%
+
+, [18.03.22 13:39]
+Monthly Profit over the last 6 months:
+Month    Profit USDT    Profit EUR    Trades
+-------  -------------  ------------  ---------
+2022-03  -175.177 USDT  -0.000 EUR    17 trades
+2022-02  62.508 USDT    0.000 EUR     18 trades
+2022-01  0 USDT         0.000 EUR     0 trades
+2021-12  0 USDT         0.000 EUR     0 trades
+2021-11  0 USDT         0.000 EUR     0 trades
+2021-10  0 USDT         0.000 EUR     0 trades
+
+, [18.03.22 13:42]
+Weekly Profit over the last 8 weeks (starting from Monday):
+Monday      Profit USDT    Profit EUR    Trades
+----------  -------------  ------------  ---------
+2022-03-14  -52.875 USDT   -0.000 EUR    4 trades
+2022-03-07  -26.646 USDT   -0.000 EUR    6 trades
+2022-02-28  -91.862 USDT   -0.000 EUR    8 trades
+2022-02-21  53.507 USDT    0.000 EUR     15 trades
+2022-02-14  5.206 USDT     0.000 EUR     2 trades
+2022-02-07  0 USDT         0.000 EUR     0 trades
+2022-01-31  0 USDT         0.000 EUR     0 trades
+2022-01-24  0 USDT         0.000 EUR     0 trades
+
+, [18.03.22 13:42]
+Daily Profit over the last 7 days:
+Day         Profit USDT    Profit EUR    Trades
+----------  -------------  ------------  --------
+2022-03-18  0 USDT         0.000 EUR     0 trades
+2022-03-17  0 USDT         0.000 EUR     0 trades
+2022-03-16  0 USDT         0.000 EUR     0 trades
+2022-03-15  -52.788 USDT   -0.000 EUR    3 trades
+2022-03-14  -0.088 USDT    -0.000 EUR    1 trades
+2022-03-13  0 USDT         0.000 EUR     0 trades
+2022-03-12  15.365 USDT    0.000 EUR     1 trades
