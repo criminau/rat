@@ -1,23 +1,9 @@
-# SELECTED (* WR >90% all 3 test) 
-GodStraNew_SMAonly*
-BB_RPB_TSL*
-NASOSv5_mod3*
-VWAP*
-NFIX_BB_RPB*
 
 
+# 2.0
 
-MultiOffsetLamboV0 BB_RPB_TSL BB_RPB_TSL_BI GodStraNew_SMAonly NASOSv5_mod3 NFIX_BB_RPB VWAP BinClucMadSMADevelop CombinedBinHClucAndMADV6 CombinedBinHAndClucV8 Combined_NFIv7_SMA NFI46Offset
-
-
-
-# POTENTIEL
-MACDStrategy_crossed
-Miku_PP_v3
-new_turtle
-
-# config-bt-4-BINANCE --days147 (--timerange=20210911-20220205) (4.9 mois)
-docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4-binance.json --timeframe 5m --strategy-list MultiOffsetLamboV0 BB_RPB_TSL BB_RPB_TSL_BI GodStraNew_SMAonly NASOSv5_mod3 NFIX_BB_RPB BinHV45 VWAP BinClucMadSMADevelop CombinedBinHClucAndMADV6 CombinedBinHAndClucV8XH CombinedBinHAndClucV8 Combined_NFIv7_SMA Combined_NFIv6_SMA NFI46Offset
+## config-bt-4-BINANCE --days147 (--timerange=20210911-20220205) (4.9 mois)
+docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4-binance.json --timeframe 5m --strategy-list
 2021-09-11 00:00:00 -> 2022-02-05 00:00:00 | Max open trades : 5
 ============================================================================== STRATEGY SUMMARY ==============================================================================
 |                 Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |             Drawdown |
@@ -39,9 +25,7 @@ docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --co
 |              NFI46Offset |    557 |           0.46 |         254.78 |           632.272 |          63.23 |        1:18:00 |   457     0   100  82.0 | 130.724 USDT   8.47% |
 ==============================================================================================================================================================================
 
-
-
-# config-bt-4--days147 (--timerange=20210911-20220205) (4.9 mois) (oracle) (kucoin)
+## config-bt-4--days147 (--timerange=20210911-20220205) (4.9 mois) (oracle) (kucoin)
 2021-09-11 00:00:00 -> 2022-02-05 00:00:00 | Max open trades : 5
 =============================================================================== STRATEGY SUMMARY ==============================================================================
 |                 Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |              Drawdown |
@@ -68,13 +52,7 @@ docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --co
 |        NFIX_BB_RPB |    388 |           2.13 |         828.27 |          4099.612 |         409.96 |        3:50:00 |   372     0    16  95.9 |  243.127 USDT   5.57% |
 =========================================================================================================================================================================
 
-
-docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4.json --timeframe 5m --strategy-list BinHV45 VWAP BinClucMadSMADevelop CombinedBinHClucAndMADV6 CombinedBinHAndClucV8XH CombinedBinHAndClucV8 Combined_NFIv7_SMA Combined_NFIv6_SMA NFI46OffsetHOA1 NFI46Offset
-
-docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4.json  --timeframe 5m --strategy-list MultiOffsetLamboV0 BB_RPB_TSL BB_RPB_TSL_BI GodStraNew_SMAonly NASOSv5_mod3 NFIX_BB_RPB
-
-
-# config-bt-4--days90 (sur oracle) (kucoin)
+## config-bt-4--days90 (sur oracle) (kucoin)
 --timerange=20211109-20220209 --timeframe 5m --config user_data/config-bt-4.json
 2021-11-09 00:00:00 -> 2022-02-09 00:00:00 | Max open trades : 5
 ============================================================================== STRATEGY SUMMARY ==============================================================================
@@ -103,23 +81,11 @@ docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --co
 |        NFIX_BB_RPB |    182 |           2.00 |         363.34 |          1038.572 |         103.86 |        4:49:00 |   172     0    10  94.5 |  89.856 USDT   5.57% |+
 =================================
 
+
 # 2.1
 
-## potentiel (lol)
-new_turtle
-Miku_PP_v3
-
-## eliminated
-
-MACDStrategy_crossed
-
-## list
-
-
-GodStraNew_SMAonly Hacklemost NostalgiaForInfinityX tesla7 ClucHAnix_hhll BB_RPB_TSL_RNG_2 BB_RPB_TSLmeneguzzo BB_RPB_TSL VWAP SMAOG NASOSv5_mod3 BinClucMadSMADevelop
-
 ## config-bt-4-binance --days147 (--timerange=20210911-20220205) (4.9 mois) (oracle) (binance)
-docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4-binance.json --timeframe 5m --strategy-list GodStraNew_SMAonly Hacklemost NostalgiaForInfinityX tesla7 ClucHAnix_hhll BB_RPB_TSL_RNG_2 BB_RPB_TSLmeneguzzo BB_RPB_TSL VWAP SMAOG NASOSv5_mod3 BinClucMadSMADevelop
+docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4-binance.json --timeframe 5m --strategy-list
 2021-09-11 00:00:00 -> 2022-02-05 00:00:00 | Max open trades : 5
 ============================================================================= STRATEGY SUMMARY ============================================================================
 |              Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |             Drawdown |
@@ -138,10 +104,8 @@ docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --co
 |  BinClucMadSMADevelop |    314 |           0.64 |         201.00 |           454.582 |          45.46 |        1:41:00 |   261    19    34  83.1 | 199.904 USDT  13.66% |
 ===========================================================================================================================================================================
 
-
-
 ## config-bt-4 --days147 (--timerange=20210911-20220205) (4.9 mois) (oracle) (kucoin) (market +62%)
-docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4.json --timeframe 5m --strategy-list GodStraNew_SMAonly Hacklemost NostalgiaForInfinityX tesla7 ClucHAnix_hhll BB_RPB_TSL_RNG_2 BB_RPB_TSLmeneguzzo BB_RPB_TSL VWAP SMAOG NASOSv5_mod3 BinClucMadSMADevelop
+docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4.json --timeframe 5m --strategy-list
 2021-09-11 00:00:00 -> 2022-02-05 00:00:00 | Max open trades : 5
 ============================================================================= STRATEGY SUMMARY =============================================================================
 |              Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |              Drawdown |
@@ -174,46 +138,8 @@ BinClucMadSMADevelop, du DD, du bas WR, pour moins de profit.
 
 Beaucoup de DD, cela peut signifier que elles ne fonctionnent qu'en bull market. Ou bien que leur SL est mal positionné.
 
-docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4.json --strategy NASOSv5_mod3
-
-
-
-
-## décomposé
-new_turtle, ??
-Miku_PP_v3, ??
-MACDStrategy_crossed, bad entry (DD/P).
-
-
-docker-compose run --rm freqtrade backtesting --timerange=20220101-20220201 --config user_data/config-bt-4.json --timeframe 5m --strategy-list new_turtle Miku_PP_v3 MACDStrategy_crossed
-
-docker-compose run --rm freqtrade backtesting --timerange=20210901-20211001 --config user_data/config-bt-4.json --timeframe 5m --strategy-list new_turtle Miku_PP_v3 MACDStrategy_crossed
-2021-09-01 00:00:00 -> 2021-10-01 00:00:00 | Max open trades : 5
-============================================================================ STRATEGY SUMMARY ============================================================================
-|             Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |             Drawdown |
-|----------------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------+----------------------|
-|           new_turtle |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |   0.000 USDT   0.00% |
-|           Miku_PP_v3 |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |   0.000 USDT   0.00% |
-| MACDStrategy_crossed |    153 |          -0.27 |         -41.93 |           -93.151 |          -9.32 |       20:28:00 |   138     0    15  90.2 | 259.538 USDT  22.25% |-
-==========================================================================================================================================================================
-
-
-docker-compose run --rm freqtrade backtesting --timerange=20211101-20211201 --config user_data/config-bt-4.json --timeframe 5m --strategy-list new_turtle Miku_PP_v3 MACDStrategy_crossed
-2021-11-01 00:00:00 -> 2021-12-01 00:00:00 | Max open trades : 5
-============================================================================ STRATEGY SUMMARY ===========================================================================
-|             Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |            Drawdown |
-|----------------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------+---------------------|
-|           new_turtle |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |   0.000 USDT  0.00% |
-|           Miku_PP_v3 |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |   0.000 USDT  0.00% |
-| MACDStrategy_crossed |    165 |           0.26 |          42.50 |            83.404 |           8.34 |       19:38:00 |   151     0    14  91.5 | 114.688 USDT  9.57% |-
-=========================================================================================================================================================================
-
 
 # 2.2
-
-## liste
-NostalgiaForInfinityX NASOSv5_mod3 NASOSRv6_private_Reinuvader_20211121 MultiMA_TSL3 Hacklemost ClucHAnix_hhll BB_RPB_TSL_RNG_2 BB_RPB_TSLmeneguzzo BB_RPB_TSL_RNG_VWAP SMAOffsetProtectOptV1 CombinedBinHAndClucV8XH
- 
 ## config-bt-4-binance --days147 (--timerange=20210911-20220205) (4.9 mois) (oracle) (binance) (market -2.2%)
 docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4-binance.json --timeframe 5m --strategy-list
 2021-09-11 00:00:00 -> 2022-02-05 00:00:00 | Max open trades : 5
@@ -255,8 +181,6 @@ docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --co
 
 
 # 2.3
-## liste
-NostalgiaForInfinityX NostalgiaForInfinityNextW NASOSv5_mod3 NASOSRv6_private_Reinuvader_20211121 MultiMA_TSL3 Hacklemost GodStraNew_SMAonly ClucHAnix_hhll BeastBotXBLR7 BeastBotXBLR6 BB_RPB_TSL_RNG_2 BB_RPB_TSLmeneguzzo
 
 ## config-bt-4-BINANCE --days147 (--timerange=20210911-20220205) (4.9 mois)
 docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4-binance.json --timeframe 5m --strategy-list
@@ -278,10 +202,8 @@ docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --co
 |                  BB_RPB_TSLmeneguzzo |    169 |           1.82 |         307.61 |           816.459 |          81.65 |        1:28:00 |   156     0    13  92.3 |  81.902 USDT   4.57% |
 ==========================================================================================================================================================================================
 
-
 ## config-bt-4--days147 (--timerange=20210911-20220205) (4.9 mois) (oracle) (kucoin)
-docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4.json --timeframe 5m --strategy-list NostalgiaForInfinityX NostalgiaForInfinityNextW NASOSv5_mod3 NASOSRv6_private_Reinuvader_20211121 MultiMA_TSL3 Hacklemost GodStraNew_SMAonly ClucHAnix_hhll BeastBotXBLR7 BeastBotXBLR6 BB_RPB_TSL_RNG_2 BB_RPB_TSLmeneguzzo
-
+docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --config user_data/config-bt-4.json --timeframe 5m --strategy-list
 2021-09-11 00:00:00 -> 2022-02-05 00:00:00 | Max open trades : 5
 ===================================================================================== STRATEGY SUMMARY ====================================================================================
 |                             Strategy |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |              Drawdown |
