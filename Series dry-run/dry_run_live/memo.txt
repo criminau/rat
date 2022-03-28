@@ -1,4 +1,8 @@
 
+28/03/22
+4 lacriminelle (début @v.1.6)
+1 NostalgiaForInfinityX (update @v11.0.483)
+
 27/03/22
 3 lacriminelle (début @v.1.4)
 
@@ -24,7 +28,7 @@
 
 12/03/22
 incident 08:46GMT status died, 2,3,4,5,6 (2022.2.1)
-reboot 10:45GMT (nouvelle config + 2022.2.1)+(raison: espace disque ?)
+reboot 10:45GMT (nouvelle config + 2022.2.1)+(raison: lacriminelle)
 
 11/03/22
 incident 10:05GMT status died.
