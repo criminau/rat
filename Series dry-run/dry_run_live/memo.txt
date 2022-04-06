@@ -1,7 +1,13 @@
 
+30/03/22
+1 NostalgiaForInfinityX (redémarrage perte des données) @v11.0.487
+2 lacriminelle fin. (@v.1.0)
+1 NostalgiaForInfinityX status died (erreur de ma part, supression).
+
 28/03/22
 4 lacriminelle (début @v.1.6)
 1 NostalgiaForInfinityX (update @v11.0.483)
+5 BB_RTR
 
 27/03/22
 3 lacriminelle (début @v.1.4)
