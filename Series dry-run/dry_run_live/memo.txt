@@ -1,7 +1,24 @@
 
+07/04/22
+4 lacriminelle -début @2.0
+3 BB_RTR
+2 lacriminelle -début @1.5
+1 NostalgiaForInfinityX -début @v11.0.487
+
+all stop.
+
+06/04/22
+3 lacriminelle (@1.5) -mise à jour, conservation des données.
+4 lacriminelle début (@2.0)
+4 lacriminelle fin. (@1.9) -mise à jour importante -remise à zéro des données.
+
+31/03/22
+4 lacriminelle début. (@1.9)
+4 lacriminelle fin. (@1.6) -échec.
+
 30/03/22
 1 NostalgiaForInfinityX (redémarrage perte des données) @v11.0.487
-2 lacriminelle fin. (@v.1.0)
+2 lacriminelle fin. (@v.1.0) -échec.
 1 NostalgiaForInfinityX status died (erreur de ma part, supression).
 
 28/03/22
