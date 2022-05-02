@@ -9,5 +9,5 @@ f1 (dry-run) ON, FreqUI OFF, TLG ON.
 f2 (dry-run) ON, FreqUI ON, TLG ON.
 f3 (dry-run) ON, FreqUI ON, TLG ON.
 f4 (dry-run) ON, FreqUI OFF, TLG ON.
-f5 (dry-run) OFF, FreqUI OFF, TLG ON.
+f5 (live) OFF, FreqUI OFF, TLG ON.
 f6 (dry-run) OFF, FreqUI OFF, TLG ON.

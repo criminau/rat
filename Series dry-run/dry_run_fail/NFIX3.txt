@@ -1,0 +1,13 @@
+
+depuis le 07/04/22.
+NFIX a toujours le même problème. une erreur mange le gain.
+Performance:
+1.  HBB/USDT 23.18 USDT (11.49%) (3)
+2.  GMT/USDT 15.416 USDT (7.72%) (3)
+3.  FXS/USDT 4.019 USDT (2.02%) (1)
+4.  SNX/USDT 2.966 USDT (1.46%) (1)
+5.  ELON/USDT 2.216 USDT (1.09%) (1)
+6.  VELO/USDT 2.099 USDT (1.03%) (1)
+7.  XCN/USDT 1.239 USDT (0.62%) (2)
+8.  SURV/USDT 0.874 USDT (0.43%) (1)
+9.  KOK/USDT -50.403 USDT (-24.88%) (1)

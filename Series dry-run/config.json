@@ -9,21 +9,21 @@
     "cancel_open_orders_on_exit": true,
     "position_adjustment_enable": false,
     "unfilledtimeout": {
-        "buy": 10,
-        "sell": 10,
+        "entry": 10,
+        "exit": 10,
         "unit": "minutes"
     },
     "order_types": {
-        "buy": "market",
-        "sell": "market",
-        "emergencysell": "market",
-        "forcebuy": "market",
-        "forcesell": "market",
+        "entry": "market",
+        "exit": "market",
+        "emergency_exit": "market",
+        "force_entry": "market",
+        "force_exit": "market",
         "stoploss": "market",
         "stoploss_on_exchange": false,
         "stoploss_on_exchange_interval": 60
     },
-    "bid_strategy": {
+    "entry_pricing": {
         "price_side": "ask",
         "ask_last_balance": 0,
         "use_order_book": false,
@@ -33,7 +33,7 @@
             "bids_to_ask_delta": 1
         }
     },
-    "ask_strategy": {
+    "exit_pricing": {
         "price_side": "bid",
         "use_order_book": false,
         "order_book_top": 1
@@ -53,7 +53,7 @@
             // Fiat
             "(AUD|EUR|GBP|CHF|CAD|JPY)/.*",
             // Stable tokens
-            "(BUSD|USDT|TUSD|USDC|CUSDT|DAI|USDN|CUSD)/.*",
+            "(BUSD|USDT|TUSD|USDC|CUSDT|DAI|USDN|CUSD|UST)/.*",
             // FAN Tokens
             "(ACM|AFA|ALA|ALL|APL|ASR|ATM|BAR|CAI|CITY|FOR|GAL|GOZ|IBFK|JUV|LEG|LOCK-1|NAVI|NMR|NOV|OG|PFL|PORTO|PSG|ROUSH|STV|TH|TRA|UCH|UFC|YBO)/.*",
             // Other Coins
@@ -63,7 +63,7 @@
     "pairlists": [
     {
       "method": "VolumePairList",
-      "number_assets": 60, // 50-80
+      "number_assets": 60,
       "sort_key": "quoteVolume",
       "refresh_period": 1800
     },
@@ -90,7 +90,6 @@
       "refresh_period": 1440
     }
     ],
-    
     "edge": {
         "enabled": false,
         "process_throttle_secs": 3600,
@@ -132,17 +131,17 @@
     	"reload": true,
     },
     "api_server": {
-        "enabled": false,
+        "enabled": true,
         "listen_ip_address": "0.0.0.0",
         "listen_port": 8080,
-        "username": "root",
+        "username": "userA",
         // Use a good password here!!!
-        "password": "root123!"
+        "password": "yourpassord"
     },
-    "bot_name": "freqtrade",
+    "bot_name": "botname",
     "initial_state": "running",
     "heartbeat_interval": 5,
-    "forcebuy_enable": false,
+    "force_entry_enable": false,
     "internals": {
         "process_throttle_secs": 5
     }
