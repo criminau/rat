@@ -1,6 +1,7 @@
 
 
-02/05/22 -mise à jour ft.v.2022.4.1 + config 
+02/05/22 -mise à jour ft.v.2022.4.1 + config
+4 BB_RPB_TSL_RNG_TBS_GOLD
 3 BB_RTR 
 2 lacriminelle -début @1.6
 1 NostalgiaForInfinityX -mise à jour (@v11.0.632)

@@ -1,6 +1,6 @@
 ["version 1"]
 11/02/2022 (ok)
-binance (we don't care) -> config-bt-4-binance.json
+binance -> config-bt-4-binance.json
 docker-compose run --rm freqtrade download-data --config user_data/config-bt-4.json  --days 200 -t 5m (ok)
 docker-compose run --rm freqtrade download-data --config user_data/config-bt-4.json  --days 200 -t 15m (ok)
 docker-compose run --rm freqtrade download-data --config user_data/config-bt-4.json  --days 200 -t 1h (ok)
@@ -18,7 +18,7 @@ ownload pairs: ['1EARTH/USDT', '1INCH/USDT', '2CRZ/USDT', 'AAVE/USDT', 'ABBC/USD
 
 ["version 2"]
 01/03/22 (ok)
-binance (we don't care) -> config-bt-4-binance.json
+binance -> config-bt-4-binance.json
 docker-compose run --rm freqtrade download-data --config user_data/config-bt-4-binance.json --days 220 -t 5m (ok)
 docker-compose run --rm freqtrade download-data --config user_data/config-bt-4-binance.json --days 220 -t 15m (ok)
 docker-compose run --rm freqtrade download-data --config user_data/config-bt-4-binance.json --days 220 -t 1h (ok)

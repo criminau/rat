@@ -136,7 +136,7 @@
         "listen_port": 8080,
         "username": "userA",
         // Use a good password here!!!
-        "password": "yourpassord"
+        "password": "yourpassword"
     },
     "bot_name": "botname",
     "initial_state": "running",
