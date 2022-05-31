@@ -1,5 +1,25 @@
 
 
+
+31/05/22
+2 lacriminelle -fin @1.6 (échec)
+4 BB_RPB_TSL_RNG_TBS_GOLD -fin (échec).
+3 BB_RTR - SL+@protections.
+
+13/05/22 
+1 NostalgiaForInfinityX, -fin (échec, toujours le même problème)
+
+09/05/22
+observations:
+- Tout le monde est dans le rouge.
+analyse:
+- Celles sans SL prennent tarif.
+- Il faut ajouter des protections : MD + LPP -> ANC+LUNA
+- Il faut vérifier manuellement si les actifs sont à la hausse sur une longue période de temps. -> ANC.
+- Il faut trouver une alternative aux "stablecoins" qui ne sont pas stable. -> autres devises ou EUR. (autre exchange)
+- Au bout de 4 semaines il faut augmenter le MOT (+1 / mois) si gain.
+
+
 02/05/22 -mise à jour ft.v.2022.4.1 + config
 4 BB_RPB_TSL_RNG_TBS_GOLD
 3 BB_RTR 
