@@ -1,6 +1,14 @@
 
 
 
+20/08/22
+3 BB_RTR -fin
+observations:
+- Mise à jour vers DISTRIB_DESCRIPTION="Ubuntu 22.04.1 LTS"
+- Mise à jour vers freqtrade 2022.7 stable
+1 lacriminelle -début @1.7 (missSL) (2022.7)
+2 BB_RTR -début @1 (2022.7)
+
 31/05/22
 2 lacriminelle -fin @1.6 (échec)
 4 BB_RPB_TSL_RNG_TBS_GOLD -fin (échec).

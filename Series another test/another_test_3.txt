@@ -10,6 +10,8 @@ NFIX -> v11.0.246
 // AT 3
 // AT 3b
 // AT 4
+// AT 5
+// AT 5b
 
 ## selected (ranked)
 
@@ -660,3 +662,8 @@ docker-compose run --rm freqtrade backtesting --timerange=20220101-20220201 --co
 | BB_RPB_TSL_RNG_TBS_GOLD |    132 |           1.05 |         138.66 |           306.255 |          30.63 |        0:31:00 |    94     0    38  71.2 | 97.754 USDT  7.86% |
 |                  BB_RTR |    129 |           1.24 |         159.55 |           361.905 |          36.19 |        2:17:00 |   114     0    15  88.4 | 93.184 USDT  6.84% |
 ===========================================================================================================================================================================
+
+// AT 5
+entre le 09 et le 02 sur kucoin, lacriminelle finit chaque fin de mois en positif.
+// AT 5b
+entre le 09 et le 03 sur binance lacriminelle finit en positif sur chaque mois.

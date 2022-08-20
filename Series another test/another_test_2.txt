@@ -1,4 +1,7 @@
 
+AT 5(+b) -> 2022.7 freqtrade --version
+
+
 # 3.0
 BB_RPB_TSL_RNG_TBS_GOLD BB_RTR
 BB_RPB_TSL_RNG_TBS_GOLD attention au DD.
@@ -245,3 +248,141 @@ docker-compose run --rm freqtrade backtesting --timerange=20210911-20220205 --co
 |                     BB_RPB_TSL_RNG_2 |    761 |           2.00 |        1519.88 |         18058.964 |        1805.90 |        1:52:00 |   716     0    45  94.1 | 2283.045 USDT  21.13% |
 |                  BB_RPB_TSLmeneguzzo |    426 |           2.48 |        1057.66 |          6940.488 |         694.05 |        1:20:00 |   410     0    16  96.2 |  436.354 USDT   5.28% |
 ===========================================================================================================================================================================================
+
+
+// AT 5
+docker-compose run --rm freqtrade backtesting --timerange=20210901-20220201 --config user_data/config-bt-k.json --strategy lacriminelle
+================================================================ ENTER TAG STATS =================================================================
+|                 TAG |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|---------------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+| entry_Local_Uptrend |     87 |           4.08 |         355.39 |          2242.458 |         224.25 |        1:25:00 |    73     0    14  83.9 |
+|     entry_RsiQuiMix |    225 |           1.38 |         310.59 |          2151.537 |         215.15 |        2:13:00 |   150     0    75  66.7 |
+|     entry_EMALowBuy |     78 |           4.63 |         361.14 |          2010.008 |         201.00 |        1:34:00 |    59     0    19  75.6 |
+|               TOTAL |    390 |           2.63 |        1027.11 |          6404.004 |         640.40 |        1:55:00 |   282     0   108  72.3 |
+====================================================== EXIT REASON STATS ======================================================
+|     Exit Reason |   Exits |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|-----------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+|      deadfish 2 |     104 |     62     0    42  59.6 |           1.01 |         104.81 |           387.533 |          20.96 |
+| exit_FastQuiMix |      80 |     74     0     6  92.5 |           5.08 |         406.3  |          3135.51  |          81.26 |
+|      deadfish 1 |      78 |     56     0    22  71.8 |           1.39 |         108.56 |           703.308 |          21.71 |
+|      deadfish 3 |      72 |     43     0    29  59.7 |           1.17 |          84.18 |           522.105 |          16.84 |
+|    bearCond_cci |      15 |     15     0     0   100 |           4.77 |          71.62 |           347.71  |          14.32 |
+|    bearCond_roc |      14 |     14     0     0   100 |           5.36 |          75.08 |           594.483 |          15.02 |
+|             roi |      10 |     10     0     0   100 |          19.98 |         199.8  |           883.356 |          39.96 |
+|     deadfish_bb |       7 |      3     0     4  42.9 |          -0.61 |          -4.29 |           -60.07  |          -0.86 |
+|       exit_b_bb |       7 |      2     0     5  28.6 |          -4.21 |         -29.45 |          -191.32  |          -5.89 |
+|    bearCond_rsi |       3 |      3     0     0   100 |           3.5  |          10.51 |            81.389 |           2.1  |
+====================================================== LEFT OPEN TRADES REPORT ======================================================
+|   Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|  TOTAL |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+================== SUMMARY METRICS ==================
+| Metric                      | Value               |
+|-----------------------------+---------------------|
+| Backtesting from            | 2021-09-01 00:00:00 |
+| Backtesting to              | 2022-02-01 00:00:00 |
+| Max open trades             | 5                   |
+|                             |                     |
+| Total/Daily Avg Trades      | 390 / 2.55          |
+| Starting balance            | 1000 USDT           |
+| Final balance               | 7404.004 USDT       |
+| Absolute profit             | 6404.004 USDT       |
+| Total profit %              | 640.40%             |
+| CAGR %                      | 11763.63%           |
+| Profit factor               | 3.98                |
+| Trades per day              | 2.55                |
+| Avg. daily profit %         | 4.19%               |
+| Avg. stake amount           | 647.647 USDT        |
+| Total trade volume          | 252582.159 USDT     |
+|                             |                     |
+| Best Pair                   | ELON/USDT 119.40%   |
+| Worst Pair                  | SHIB/USDT -22.91%   |
+| Best trade                  | FTM/USDT 19.98%     |
+| Worst trade                 | SHIB/USDT -18.73%   |
+| Best day                    | 914.342 USDT        |
+| Worst day                   | -133.786 USDT       |
+| Days win/draw/lose          | 97 / 20 / 35        |
+| Avg. Duration Winners       | 1:39:00             |
+| Avg. Duration Loser         | 2:35:00             |
+| Rejected Entry signals      | 3668                |
+| Entry/Exit Timeouts         | 0 / 0               |
+|                             |                     |
+| Min balance                 | 1002.264 USDT       |
+| Max balance                 | 7506.982 USDT       |
+| Max % of account underwater | 7.02%               |
+| Absolute Drawdown (Account) | 7.02%               |
+| Absolute Drawdown           | 285.751 USDT        |
+| Drawdown high               | 3068.12 USDT        |
+| Drawdown low                | 2782.369 USDT       |
+| Drawdown Start              | 2021-12-03 21:30:00 |
+| Drawdown End                | 2021-12-04 05:55:00 |
+| Market change               | 56.39%              |
+=====================================================
+
+// AT 5b
+docker-compose run --rm freqtrade backtesting --timerange=20210901-20220301 --config user_data/config-bt.json --strategy lacriminelle
+================================================================ ENTER TAG STATS =================================================================
+|                 TAG |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|---------------------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+| entry_Local_Uptrend |     51 |           3.95 |         201.25 |           538.583 |          53.86 |        1:53:00 |    42     0     9  82.4 |
+|     entry_RsiQuiMix |    127 |           0.88 |         111.97 |           367.446 |          36.74 |        2:10:00 |    83     0    44  65.4 |
+|     entry_EMALowBuy |     19 |           2.89 |          54.88 |           135.943 |          13.59 |        1:26:00 |    13     0     6  68.4 |
+|               TOTAL |    197 |           1.87 |         368.10 |          1041.973 |         104.20 |        2:01:00 |   138     0    59  70.1 |
+====================================================== EXIT REASON STATS ======================================================
+|     Exit Reason |   Exits |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|-----------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+|      deadfish 2 |      49 |     30     0    19  61.2 |           0.95 |          46.34 |           142.605 |           9.27 |
+|      deadfish 1 |      42 |     29     0    13  69.0 |           1.33 |          55.86 |           126.988 |          11.17 |
+| exit_FastQuiMix |      39 |     38     0     1  97.4 |           3.57 |         139.29 |           405.461 |          27.86 |
+|      deadfish 3 |      34 |     20     0    14  58.8 |           1.4  |          47.71 |            95.369 |           9.54 |
+|     deadfish_bb |      13 |      3     0    10  23.1 |          -0.11 |          -1.44 |             3.086 |          -0.29 |
+|    bearCond_cci |      11 |     11     0     0   100 |           4.91 |          54.06 |           189.649 |          10.81 |
+|       exit_b_bb |       4 |      2     0     2  50.0 |          -1.98 |          -7.93 |           -14.537 |          -1.59 |
+|    bearCond_roc |       4 |      4     0     0   100 |           3.56 |          14.24 |            34.353 |           2.85 |
+|             roi |       1 |      1     0     0   100 |          19.98 |          19.98 |            59.001 |           4    |
+====================================================== LEFT OPEN TRADES REPORT ======================================================
+|   Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|  TOTAL |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+================== SUMMARY METRICS ==================
+| Metric                      | Value               |
+|-----------------------------+---------------------|
+| Backtesting from            | 2021-09-01 00:00:00 |
+| Backtesting to              | 2022-03-01 00:00:00 |
+| Max open trades             | 5                   |
+|                             |                     |
+| Total/Daily Avg Trades      | 197 / 1.09          |
+| Starting balance            | 1000 USDT           |
+| Final balance               | 2041.973 USDT       |
+| Absolute profit             | 1041.973 USDT       |
+| Total profit %              | 104.20%             |
+| CAGR %                      | 321.93%             |
+| Profit factor               | 3.20                |
+| Trades per day              | 1.09                |
+| Avg. daily profit %         | 0.58%               |
+| Avg. stake amount           | 274.682 USDT        |
+| Total trade volume          | 54112.433 USDT      |
+|                             |                     |
+| Best Pair                   | FTM/USDT 51.87%     |
+| Worst Pair                  | SHIB/USDT -9.48%    |
+| Best trade                  | PYR/USDT 19.98%     |
+| Worst trade                 | PYR/USDT -21.97%    |
+| Best day                    | 170.456 USDT        |
+| Worst day                   | -68.582 USDT        |
+| Days win/draw/lose          | 65 / 83 / 32        |
+| Avg. Duration Winners       | 1:51:00             |
+| Avg. Duration Loser         | 2:26:00             |
+| Rejected Entry signals      | 2279                |
+| Entry/Exit Timeouts         | 0 / 0               |
+|                             |                     |
+| Min balance                 | 975.736 USDT        |
+| Max balance                 | 2041.973 USDT       |
+| Max % of account underwater | 6.04%               |
+| Absolute Drawdown (Account) | 6.04%               |
+| Absolute Drawdown           | 94.132 USDT         |
+| Drawdown high               | 559.54 USDT         |
+| Drawdown low                | 465.408 USDT        |
+| Drawdown Start              | 2021-12-12 12:50:00 |
+| Drawdown End                | 2021-12-20 01:45:00 |
+| Market change               | 3.04%               |
+=====================================================
