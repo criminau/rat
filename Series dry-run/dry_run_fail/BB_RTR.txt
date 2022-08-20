@@ -1,6 +1,9 @@
 
 20/08/2022
 a souffert en mai et juin.
+quand les protections s'activent, elles ne dure pas dans le temps. ex: ANC. -99% puis + 1000% puis -50%. la protection s'active, puis se désactive, manuellement à chaque mise à jour la blacklist se nettoie.
+- recherche d'une pairlist, basée sur marketcap + haussière sur plusieurs années + qui ne se nettoie pas aisément. (statique ?)
+
 
 ROI: Closed trades
 ∙ -413.658 USDT (-0.16%) (-41.37 Σ%)
