@@ -23,8 +23,8 @@
     "trading_mode": "spot",
     "margin_mode": "",
     "unfilledtimeout": {
-        "entry": 10,
-        "exit": 10,
+        "entry": 5,
+        "exit": 5,
         "exit_timeout_count": 0,
         "unit": "minutes"
     },
@@ -49,11 +49,11 @@
     
     "order_types": {
         "entry": "market",
-        "exit": "market",
-        "emergency_exit": "market",
+        "exit": "limit",
+        "emergency_exit": "limit",
         "force_exit": "market",
         "force_entry": "market",
-        "stoploss": "market",
+        "stoploss": "limit",
         "stoploss_on_exchange": false,
         "stoploss_on_exchange_interval": 60,
         "stoploss_on_exchange_limit_ratio": 0.99
@@ -87,7 +87,7 @@
             // FAN Tokens
             "(ACM|AFA|ALA|ALL|APL|ASR|ATM|BAR|CAI|CITY|FOR|GAL|GOZ|IBFK|JUV|LEG|LOCK-1|NAVI|NMR|NOV|OG|PFL|PORTO|PSG|ROUSH|STV|TH|TRA|UCH|UFC|YBO)/.*",
             // Other Coins
-            "(MEM|AMPL|BOBA|CWAR|OMG|XYM|POLX|CARR|SKEY|KLV|KRL|PEOPLE)/.*"
+            "(MEM|AMPL|BOBA|CWAR|OMG|XYM|POLX|CARR|SKEY|KLV|KRL|PEOPLE|LUNA|ANC)/.*"
         ],
         "outdated_offset": 5,
         "markets_refresh_interval": 60

@@ -106,43 +106,41 @@ class BB_RTR(IStrategy):
         (1) add btc protection to conditions prone to buy high
 
     '''
+    
+    INTERFACE_VERSION = 3
+    
     @property
     def protections(self):
         return [
-            {
-            # nous stoppons la spéculation 48 heures si sur les 48 dernières heures il y a eu 2 ordres minimum qui ont causé 10% ou plus de DD.
-                "method": "MaxDrawdown",
-                "lookback_period_candles": 48,
-                "trade_limit": 2,
-                "stop_duration_candles": 48,
-                "max_allowed_drawdown": 0.1
-            },
-            {
-            # nous stoppons la spéculation 48 heures si sur les 12 dernières heures il y a eu plus de 3 stoploss, toutes paires confondues.
-                "method": "StoplossGuard",
-                "lookback_period_candles": 12,
-                "trade_limit": 3,
-                "stop_duration_candles": 48,
-                "only_per_pair": False
-            },
-            {
-            # nous stoppons la spéculation 48 heures si sur les 12 dernières heures il y a eu plus de 1 stoploss, paire par paire.
-                "method": "StoplossGuard",
-                "lookback_period_candles": 12,
-                "trade_limit": 1,
-                "stop_duration_candles": 48,
-                "only_per_pair": True
-            },
-            #{
-            # nous stoppons la spéculation sur une paire 48 heures si sur les 12 dernières heures le profit sur cette paire est inférieur à 0% ou égal.
-            #    "method": "LowProfitPairs",
-            #    "lookback_period_candles": 12,
-            #    "trade_limit": 2,
-            #    "stop_duration_candles": 24,
-            #    "required_profit": 0
-            #},
-
+        {
+            "method": "StoplossGuard",
+            "lookback_period_candles": 144,
+            "trade_limit": 1,
+            "stop_duration_candles": 144,
+            "only_per_pair": False,
+            "only_per_side": False
+        },
+        {
+            "method": "MaxDrawdown",
+            "lookback_period_candles": 144,
+            "trade_limit": 1,
+            "stop_duration_candles": 288,
+            "max_allowed_drawdown": 0.1
+        },
+        {
+            "method": "LowProfitPairs",
+            "lookback_period_candles": 288,
+            "trade_limit": 1,
+            "stop_duration_candles": 216,
+            "required_profit": 0
+        },
+        {
+            "method": "CooldownPeriod",
+            "stop_duration_candles": 1
+        }
         ]
+        
+
     ##########################################################################
 
     # Hyperopt result area
@@ -443,50 +441,50 @@ class BB_RTR(IStrategy):
 
         dataframe, _ = self.dp.get_analyzed_dataframe(pair, self.timeframe)
 
-        last_candle = dataframe.iloc[-1]
-        previous_candle_1 = dataframe.iloc[-2]
+        last_candle = dataframe.iloc[-1].squeeze()
+        previous_candle_1 = dataframe.iloc[-2].squeeze()
 
         max_profit = ((trade.max_rate - trade.open_rate) / trade.open_rate)
         max_loss = ((trade.open_rate - trade.min_rate) / trade.min_rate)
 
-        buy_tag = 'empty'
-        if hasattr(trade, 'buy_tag') and trade.buy_tag is not None:
-            buy_tag = trade.buy_tag
-        buy_tags = buy_tag.split()
+        enter_tag = 'empty'
+        if hasattr(trade, 'enter_tag') and trade.enter_tag is not None:
+            enter_tag = trade.enter_tag
+        enter_tags = enter_tag.split()
 
         pump_tags = ['adaptive ']
 
         # main sell
         if current_profit > 0.02:
             if (last_candle['momdiv_sell_1h'] == True):
-                return f"signal_profit_q_momdiv_1h( {buy_tag})"
+                return f"signal_profit_q_momdiv_1h( {enter_tag})"
             if (last_candle['momdiv_sell'] == True):
-                return f"signal_profit_q_momdiv( {buy_tag})"
+                return f"signal_profit_q_momdiv( {enter_tag})"
             if (last_candle['momdiv_coh'] == True):
-                return f"signal_profit_q_momdiv_coh( {buy_tag})"
+                return f"signal_profit_q_momdiv_coh( {enter_tag})"
             if (last_candle['cti_40_1h'] > 0.844) and (last_candle['r_84_1h'] > -20):
-                return f"signal_profit_cti_r( {buy_tag})"
+                return f"signal_profit_cti_r( {enter_tag})"
 
         # sell cti_r
         if 0.012 > current_profit >= 0.0 :
             if (last_candle['cti'] > self.sell_cti_r_cti.value) and (last_candle['r_14'] > self.sell_cti_r_r.value):
-                return f"sell_profit_cti_r_1( {buy_tag})"
+                return f"sell_profit_cti_r_1( {enter_tag})"
 
         # sell over 200
         if last_candle['close'] > last_candle['ema_200']:
             if (current_profit > 0.01) and (last_candle['rsi'] > 83):
-                return f"sell_profit_o_1 ( {buy_tag})"
+                return f"sell_profit_o_1 ( {enter_tag})"
 
         # sell quick
         if (0.06 > current_profit > 0.02) and (last_candle['rsi'] > 80.0):
-            return f"signal_profit_q_1( {buy_tag})"
+            return f"signal_profit_q_1( {enter_tag})"
 
         if (0.06 > current_profit > 0.02) and (last_candle['cti'] > 0.95):
-            return f"signal_profit_q_2( {buy_tag})"
+            return f"signal_profit_q_2( {enter_tag})"
 
         # sell recover
         if (max_loss > 0.06) and (0.05 > current_profit > 0.01) and (last_candle['rsi'] < 46):
-            return f"signal_profit_r_1( {buy_tag})"
+            return f"signal_profit_r_1( {enter_tag})"
 
         # sell vwap dump
         if (
@@ -494,7 +492,7 @@ class BB_RTR(IStrategy):
                 and (last_candle['ema_vwap_diff_50'] > 0.0)
                 and (last_candle['ema_vwap_diff_50'] < 0.012)
         ):
-            return f"sell_vwap_dump( {buy_tag})"
+            return f"sell_vwap_dump( {enter_tag})"
 
         # sell cmf div
         if (
@@ -502,7 +500,7 @@ class BB_RTR(IStrategy):
                 and (last_candle['cmf'] > 0)
                 and (last_candle['cmf_div_slow'] == 1)
         ):
-            return f"sell_cmf_div( {buy_tag})"
+            return f"sell_cmf_div( {enter_tag})"
 
         # stoploss
         if (
@@ -513,7 +511,7 @@ class BB_RTR(IStrategy):
                 and last_candle['rsi'] > previous_candle_1['rsi']
                 and (last_candle['rsi'] > (last_candle['rsi_1h'] + self.sell_u_e_2_rsi.value))
         ):
-            return f"sell_stoploss_u_e_2( {buy_tag})"
+            return f"sell_stoploss_u_e_2( {enter_tag})"
 
         # stoploss - deadfish
         if (    (current_profit < self.sell_deadfish_profit.value)
@@ -523,7 +521,7 @@ class BB_RTR(IStrategy):
                 and (last_candle['volume_mean_12'] < last_candle['volume_mean_24'] * self.sell_deadfish_volume_factor.value)
                 and (last_candle['cmf'] < 0.0)
         ):
-            return f"sell_stoploss_deadfish( {buy_tag})"
+            return f"sell_stoploss_deadfish( {enter_tag})"
 
     ############################################################################
 
