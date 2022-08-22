@@ -1,10 +1,11 @@
 
 
 22/08/22
-config -> +blacklist LUNA+ANC+USTC + limit/market ordertype + unfilledtimeout
+config -> +blacklist LUNA+ANC+USTC + limit/market ordertype + unfilledtimeout + cleanup
 1 lacriminelle -> 1.7.1 @binance
-2 BB_RTR -> +protections+(2022.7)common_mistake.
+2 BB_RTR -> +protections+(2022.7)common_mistake. @binance
 3 lacriminelle -début @1.7.1 @kucoin
+4 ComboMix -début @1.1 @binance
 
 20/08/22
 3 BB_RTR -fin
